@@ -1,6 +1,20 @@
 {
   "name": "pipes",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "kneurgao",
+  "description": "A collection of Angular libraries",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nglrx/pipes.git"
+  },
+  "homepage": "https://github.com/nglrx/pipes#readme",
+  "bugs": "https://github.com/nglrx/pipes/issues",
+  "keywords": [
+    "angular",
+    "pipes",
+    "library"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
