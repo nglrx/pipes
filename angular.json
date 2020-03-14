@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1, 
   "newProjectRoot": "packages",
-  "projects": {}
+  "projects": {
+    "pipes": {
+      "projectType": "library",
+      "root": "packages/pipes",
+      "sourceRoot": "packages/pipes/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "packages/pipes/tsconfig.lib.json",
+            "project": "packages/pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "packages/pipes/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "packages/pipes/src/test.ts",
+            "tsConfig": "packages/pipes/tsconfig.spec.json",
+            "karmaConfig": "packages/pipes/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "packages/pipes/tsconfig.lib.json",
+              "packages/pipes/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "pipes"
 }
