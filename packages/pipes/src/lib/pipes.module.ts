@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { PipesComponent } from './pipes.component';
-
-
+import { StringPipesModule } from './string-pipes/string-pipes.module';
 
 @NgModule({
-  declarations: [PipesComponent],
-  imports: [
+  declarations: [
   ],
-  exports: [PipesComponent]
+  imports: [
+    StringPipesModule
+  ],
+  exports: [
+    StringPipesModule
+  ]
 })
 export class PipesModule { }
