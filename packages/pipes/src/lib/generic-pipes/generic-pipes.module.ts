@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
+
 import { ReversePipe } from './reverse/reverse.pipe';
+import { LengthPipe } from './length/length.pipe';
 
 @NgModule({
   declarations: [
-    ReversePipe
+    ReversePipe,
+    LengthPipe
   ],
   imports: [
   ],
   exports: [
-    ReversePipe
+    ReversePipe,
+    LengthPipe
   ]
 })
 export class GenericPipesModule { }

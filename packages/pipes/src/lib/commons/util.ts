@@ -7,6 +7,10 @@ export class Util {
     return typeof value === 'number';
   }
 
+  static isBoolean(value: any): boolean {
+    return typeof value === 'boolean';
+  }
+
   static isArray(value: any): boolean {
     return Array.isArray(value);
   }
