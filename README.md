@@ -1,3 +1,7 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nglrx_pipes&metric=alert_status)](https://sonarcloud.io/dashboard?id=nglrx_pipes)
+![GitHub last commit](https://img.shields.io/github/last-commit/nglrx/pipes)
+![GitHub](https://img.shields.io/github/license/nglrx/pipes?color=blue)
+
 # Pipes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
