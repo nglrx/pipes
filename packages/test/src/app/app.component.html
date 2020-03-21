@@ -1,0 +1,39 @@
+<div class="container">
+  <div>
+    <header>Reverse</header>
+    {{ title }}: {{ title | reverse }}
+    <br>
+    {{ num }}: {{ num | reverse }}
+    <br>
+    {{ arr }}: {{ arr | reverse }}
+    <br>
+    {{ (nul | reverse) == null }}
+    <br>
+    []: {{ emptyArr | reverse | length }}
+    <br>
+    {{ obj | reverse | json }}
+    <br>
+    {{ date }}: {{ date | reverse }}
+  </div>
+
+  <br>
+
+  <div>
+    <header>Length</header>
+    {{ title }}: {{ title | length }}
+    <br>
+    {{ num }}: {{ num | length }}
+    <br>
+    {{ arr }}: {{ arr | length }}
+    <br>
+    null:{{ nul | length }}
+    <br>
+    []: {{ emptyArr | length }}
+    <br>
+    obj: {{ obj | length }}
+    <br>
+    {{ date }}: {{ date | length }}
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
