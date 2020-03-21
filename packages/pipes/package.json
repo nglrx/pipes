@@ -1,0 +1,23 @@
+{
+  "name": "@nglrx/pipes",
+  "version": "1.0.0",
+  "author": "Kapil Neurgaonkar",
+  "description": "A collection of Angular pipes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nglrx/pipes.git"
+  },
+  "homepage": "https://github.com/nglrx/pipes#readme",
+  "bugs": "https://github.com/nglrx/pipes/issues",
+  "keywords": [
+    "angular",
+    "pipes",
+    "library"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^9.0.5",
+    "@angular/core": "^9.0.5",
+    "tslib": "^1.10.0"
+  }
+}
