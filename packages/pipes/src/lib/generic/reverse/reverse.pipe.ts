@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Util } from '../../commons/util';
+import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
   name: 'reverse'
@@ -7,11 +7,11 @@ import { Util } from '../../commons/util';
 export class ReversePipe implements PipeTransform {
 
   transform(value: any): any {
-    if (Util.isString(value)) {
+    if (TypeUtils.isString(value)) {
       return value.split('').reverse().join('');
-    } else if (Util.isNumber(value)) {
+    } else if (TypeUtils.isNumber(value)) {
       return value.toString().split('').reverse().join('');
-    } else if (Util.isArray(value)) {
+    } else if (TypeUtils.isArray(value)) {
       return Object.assign([], value).reverse();
     }
     return value;

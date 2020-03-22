@@ -15,4 +15,7 @@ import { LengthPipe } from './length/length.pipe';
     LengthPipe
   ]
 })
-export class GenericPipesModule { }
+export class NglrxGenericPipesModule { }
+
+export { ReversePipe } from './reverse/reverse.pipe';
+export { LengthPipe } from './length/length.pipe';
