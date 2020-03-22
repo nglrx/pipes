@@ -1,4 +1,4 @@
-export class Util {
+export class TypeUtils {
   static isString(value: any): boolean {
     return typeof value === 'string';
   }
