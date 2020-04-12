@@ -24,7 +24,8 @@ describe('ReversePipe', () => {
   });
 
   it(`should reverse an array`, () => {
-    expect(pipe.transform(arr)).toEqual(arr.reverse());
+    const revArr = [...arr].reverse();
+    expect(pipe.transform(arr)).toEqual(revArr);
   });
 
 });
