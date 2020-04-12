@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NglrxPipesModule } from '@nglrx/pipes';
-
 import { PipesRoutingModule } from './pipes-routing.module';
 import { PipesComponent } from './pipes.component';
 
@@ -12,7 +10,6 @@ import { PipesComponent } from './pipes.component';
   ],
   imports: [
     CommonModule,
-    NglrxPipesModule,
     PipesRoutingModule
   ]
 })

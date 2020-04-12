@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NglrxGenericPipesModule } from '@nglrx/pipes';
 
 import { GenericPipesRoutingModule } from './generic-pipes-routing.module';
 import { GenericPipesComponent } from './generic-pipes.component';
@@ -14,6 +15,7 @@ import { ReverseComponent } from './reverse/reverse.component';
   ],
   imports: [
     CommonModule,
+    NglrxGenericPipesModule,
     GenericPipesRoutingModule
   ]
 })
