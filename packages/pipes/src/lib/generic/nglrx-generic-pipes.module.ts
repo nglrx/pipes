@@ -8,14 +8,9 @@ import { LengthPipe } from './length/length.pipe';
     ReversePipe,
     LengthPipe
   ],
-  imports: [
-  ],
   exports: [
     ReversePipe,
     LengthPipe
   ]
 })
 export class NglrxGenericPipesModule { }
-
-export { ReversePipe } from './reverse/reverse.pipe';
-export { LengthPipe } from './length/length.pipe';

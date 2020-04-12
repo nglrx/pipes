@@ -8,5 +8,3 @@ import { NglrxGenericPipesModule } from './generic/nglrx-generic-pipes.module';
   ]
 })
 export class NglrxPipesModule { }
-
-export * from './generic/nglrx-generic-pipes.module';

@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NglrxGenericPipesModule } from '@nglrx/pipes';
 
 import { LengthComponent } from './length.component';
 
@@ -8,6 +10,7 @@ describe('LengthComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ RouterTestingModule, NglrxGenericPipesModule ],
       declarations: [ LengthComponent ]
     })
     .compileComponents();
