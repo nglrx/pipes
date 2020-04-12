@@ -8,8 +8,6 @@ import { LengthPipe } from './length/length.pipe';
     ReversePipe,
     LengthPipe
   ],
-  imports: [
-  ],
   exports: [
     ReversePipe,
     LengthPipe
