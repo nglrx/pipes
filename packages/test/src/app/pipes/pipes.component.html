@@ -1,6 +1,8 @@
-<ul>
-  <li>
-    <h4>Generic</h4>
+<ul class="links">
+  <li *ngFor="let pipe of pipes">
+    <h3 class="link">
+      <a [routerLink]="pipe.path">{{ pipe.title }}</a>
+    </h3>
   </li>
 </ul>
 
