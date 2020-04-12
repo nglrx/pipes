@@ -10,3 +10,4 @@ export { ReversePipe } from './generic/reverse/reverse.pipe';
 export { NglrxStringPipesModule } from './string/nglrx-string-pipes.module';
 export { TrimPipe } from './string/trim/trim.pipe';
 export { TrimLeftPipe } from './string/trim-left/trim-left.pipe';
+export { TrimRightPipe } from './string/trim-right/trim-right.pipe';
