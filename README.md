@@ -1,32 +1,80 @@
-![GitHub package.json version](https://img.shields.io/github/package-json/v/nglrx/pipes)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nglrx_pipes&metric=alert_status)](https://sonarcloud.io/dashboard?id=nglrx_pipes)
+![npm](https://img.shields.io/npm/v/@nglrx/pipes?label=npm)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nglrx/pipes)
+![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@nglrx/pipes)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nglrx_pipes&metric=alert_status)](https://sonarcloud.io/dashboard?id=nglrx_pipes)
 ![GitHub](https://img.shields.io/github/license/nglrx/pipes?color=blue)
 
-# Pipes
+# @nglrx/pipes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+A collection of pipes for Angular apps.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Use [npm](https://www.npmjs.com/) to install  @nglrx/pipes.
 
-## Code scaffolding
+```bash
+npm i @nglrx/pipes
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Import
 
-## Build
+Import module `NglrxPipesModule` to your module for using all pipes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```typescript
+import { NglrxPipesModule } from '@nglrx/pipes';
 
-## Running unit tests
+@NgModule({
+  //...
+  imports: [
+    NglrxPipesModule
+  ]
+})
+export class YourModule { }
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Alternatively, you can use pipes from specific module(s)
 
-## Running end-to-end tests
+```typescript
+import { NglrxGenericPipesModule, NglrxStringPipesModule } from '@nglrx/pipes';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  //...
+  imports: [
+    NglrxGenericPipesModule,
+    NglrxStringPipesModule
+  ]
+})
+export class YourModule { }
+```
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Pipes can be used in your component's *template*
+
+```html
+{{ 'This-is-a-string' | length }} <!-- Returns 16 -->
+```
+
+They can also be *chained*
+
+```html
+{{ '  Another-string  ' | trim | length }} <!-- Returns 14 -->
+```
+
+Or they can be used within *components* or *services* by calling the `transform` method
+
+```typescript
+import { LengthPipe } from '@nglrx/pipes';
+
+@Component({
+  providers: [ LengthPipe ]
+})
+export class YourComponent {
+  
+  constructor(private lengthPipe: LengthPipe) {
+    this.lengthPipe.transform('Yet-another-string'); // Returns 18
+  }
+}
+```
+
+For more information on pipes, refer to [Angular - pipes](https://angular.io/guide/pipes) documentation.

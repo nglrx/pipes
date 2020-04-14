@@ -6,7 +6,7 @@ import { TypeUtils } from '../../utils/type-utils';
 })
 export class LengthPipe implements PipeTransform {
 
-  transform(value: any, ...args: string[]): number {
+  transform(value: any): number {
     if (TypeUtils.isString(value) || TypeUtils.isArray(value) || (value && value.hasOwnProperty('length'))) {
       return value.length;
     } else if (TypeUtils.isNumber(value) || TypeUtils.isBoolean(value)) {
