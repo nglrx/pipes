@@ -8,7 +8,7 @@ export class StringUtils {
   }
 
   static toSentenceCase(value: string): string {
-    return value && this.toUpperCase(this.charAt(value, 0)) + value.substr(1);
+    return value && this.toUpperCase(this.charAt(value, 0)) + this.toLowerCase(value.substr(1));
   }
 
   static toTitleCase(value: string, separator?: string, exclusions?: string[]): string {
