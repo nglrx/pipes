@@ -4,13 +4,16 @@ export class StringUtils {
   }
 
   static toSentenceCase(value: string): string {
-    return value && value.charAt(0).toUpperCase() + value.substr(1);
+    return value && this.toUpperCase(value.charAt(0)) + value.substr(1);
   }
 
-  static toTitleCase(value: string): string {
-    return value && value.split(' ').map(word => {
-      return word.charAt(0).toUpperCase() + word.substr(1);
-    }).join(' ');
+  static toTitleCase(value: string, separator?: string, exclusions?: string[]): string {
+    separator = separator || ' ';
+    return value && value.split(separator)
+    .map((word, index) => {
+      return index > 0 && exclusions && exclusions.includes(word)
+            ? word : this.toSentenceCase(word);
+    }).join(separator);
   }
 
   static toUpperCase(value: string): string {

@@ -5,6 +5,7 @@ describe('TitleCasePipe', () => {
   let pipe: TitleCasePipe;
 
   const str = 'test is running!';
+  const sluggishStr = 'test-is-running';
   const singleCharacterStr = 'a';
   const singleWordStr = 'single';
   const specialCharStr = '*** is converted.';
@@ -21,6 +22,18 @@ describe('TitleCasePipe', () => {
 
   it(`should convert a string to title case`, () => {
     expect(pipe.transform(str)).toEqual(StringUtils.toTitleCase(str));
+  });
+
+  it(`should convert a string to title case with separator`, () => {
+    expect(pipe.transform(sluggishStr, '\-')).toEqual(StringUtils.toTitleCase(sluggishStr, '\-'));
+  });
+
+  it(`should convert a string to title case with exclusions`, () => {
+    expect(pipe.transform(str, null, [ 'is' ])).toEqual(StringUtils.toTitleCase(str, null, [ 'is' ]));
+  });
+
+  it(`should convert a string to title case with separator and exclusions`, () => {
+    expect(pipe.transform(sluggishStr, '\-', [ 'is' ])).toEqual(StringUtils.toTitleCase(sluggishStr, '\-', [ 'is' ]));
   });
 
   it(`should convert a string with single character to title case`, () => {

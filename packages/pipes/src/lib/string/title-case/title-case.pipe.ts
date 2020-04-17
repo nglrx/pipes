@@ -6,8 +6,8 @@ import { StringUtils } from '../../utils/string-utils';
 })
 export class TitleCasePipe implements PipeTransform {
 
-  transform(value: string): string {
-    return StringUtils.toTitleCase(value);
+  transform(value: string, separator?: string, exclusions?: string[]): string {
+    return StringUtils.toTitleCase(value, separator, exclusions);
   }
 
 }
