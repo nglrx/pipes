@@ -9,6 +9,9 @@ export { ReversePipe } from './generic/reverse/reverse.pipe';
 
 export { NglrxStringPipesModule } from './string/nglrx-string-pipes.module';
 export { CharAtPipe } from './string/char-at/char-at.pipe';
+export { LowerCasePipe } from './string/lower-case/lower-case.pipe';
+export { SentenceCasePipe } from './string/sentence-case/sentence-case.pipe';
 export { TrimPipe } from './string/trim/trim.pipe';
 export { TrimLeftPipe } from './string/trim-left/trim-left.pipe';
 export { TrimRightPipe } from './string/trim-right/trim-right.pipe';
+export { UpperCasePipe } from './string/upper-case/upper-case.pipe';
