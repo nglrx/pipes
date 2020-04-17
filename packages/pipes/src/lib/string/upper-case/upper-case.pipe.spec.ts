@@ -1,4 +1,5 @@
 import { UpperCasePipe } from './upper-case.pipe';
+import { StringUtils } from '../../utils/string-utils';
 
 describe('UpperCasePipe', () => {
   let pipe: UpperCasePipe;
@@ -16,23 +17,19 @@ describe('UpperCasePipe', () => {
   });
 
   it(`should convert a string to upper case`, () => {
-    expect(pipe.transform(str)).toEqual(toUpperCase(str));
+    expect(pipe.transform(str)).toEqual(StringUtils.toUpperCase(str));
   });
 
   it(`should return empty string on converting an empty string to upper case`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(toUpperCase(emptyStr));
+    expect(pipe.transform(emptyStr)).toEqual(StringUtils.toUpperCase(emptyStr));
   });
 
-  it(`should return same string on converting an white space string to upper case`, () => {
-    expect(pipe.transform(whiteSpaceStr)).toEqual(toUpperCase(whiteSpaceStr));
+  it(`should return same string on converting a white space string to upper case`, () => {
+    expect(pipe.transform(whiteSpaceStr)).toEqual(StringUtils.toUpperCase(whiteSpaceStr));
   });
 
   it(`should be null safe`, () => {
     expect(pipe.transform(null)).toEqual(null);
   });
-
-  function toUpperCase(value: string) {
-    return value && value.toUpperCase();
-  }
 
 });

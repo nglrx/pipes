@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CharAtPipe } from './char-at/char-at.pipe';
 import { LowerCasePipe } from './lower-case/lower-case.pipe';
 import { SentenceCasePipe } from './sentence-case/sentence-case.pipe';
+import { TitleCasePipe } from './title-case/title-case.pipe';
 import { TrimPipe } from './trim/trim.pipe';
 import { TrimLeftPipe } from './trim-left/trim-left.pipe';
 import { TrimRightPipe } from './trim-right/trim-right.pipe';
@@ -13,6 +14,7 @@ import { UpperCasePipe } from './upper-case/upper-case.pipe';
     CharAtPipe,
     LowerCasePipe,
     SentenceCasePipe,
+    TitleCasePipe,
     TrimPipe,
     TrimLeftPipe,
     TrimRightPipe,
@@ -22,6 +24,7 @@ import { UpperCasePipe } from './upper-case/upper-case.pipe';
     CharAtPipe,
     LowerCasePipe,
     SentenceCasePipe,
+    TitleCasePipe,
     TrimPipe,
     TrimLeftPipe,
     TrimRightPipe,

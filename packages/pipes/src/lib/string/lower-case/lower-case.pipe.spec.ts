@@ -1,4 +1,5 @@
 import { LowerCasePipe } from './lower-case.pipe';
+import { StringUtils } from '../../utils/string-utils';
 
 describe('LowerCasePipe', () => {
   let pipe: LowerCasePipe;
@@ -16,23 +17,19 @@ describe('LowerCasePipe', () => {
   });
 
   it(`should convert a string to lower case`, () => {
-    expect(pipe.transform(str)).toEqual(toLowerCase(str));
+    expect(pipe.transform(str)).toEqual(StringUtils.toLowerCase(str));
   });
 
   it(`should return empty string on converting an empty string to lower case`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(toLowerCase(emptyStr));
+    expect(pipe.transform(emptyStr)).toEqual(StringUtils.toLowerCase(emptyStr));
   });
 
-  it(`should return same string on converting an white space string to lower case`, () => {
-    expect(pipe.transform(whiteSpaceStr)).toEqual(toLowerCase(whiteSpaceStr));
+  it(`should return same string on converting a white space string to lower case`, () => {
+    expect(pipe.transform(whiteSpaceStr)).toEqual(StringUtils.toLowerCase(whiteSpaceStr));
   });
 
   it(`should be null safe`, () => {
     expect(pipe.transform(null)).toEqual(null);
   });
-
-  function toLowerCase(value: string) {
-    return value && value.toLowerCase();
-  }
 
 });

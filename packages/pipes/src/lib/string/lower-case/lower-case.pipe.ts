@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { StringUtils } from '../../utils/string-utils';
 
 @Pipe({
   name: 'lowerCase'
@@ -6,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class LowerCasePipe implements PipeTransform {
 
   transform(value: string): string {
-    return value && value.toLowerCase();
+    return StringUtils.toLowerCase(value);
   }
 
 }
