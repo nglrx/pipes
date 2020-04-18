@@ -3,6 +3,12 @@ export class StringUtils {
     return value && value.charAt(position);
   }
 
+  static slugify(value: string): string {
+    return value && this.toLowerCase(value)
+                        .replace(/[^a-z0-9\-_ ]/g, '')
+                        .replace(/[\-_ ]+/g, '-');
+  }
+
   static toLowerCase(value: string): string {
     return value && value.toLowerCase();
   }

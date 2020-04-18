@@ -11,6 +11,7 @@ export { NglrxStringPipesModule } from './string/nglrx-string-pipes.module';
 export { CharAtPipe } from './string/char-at/char-at.pipe';
 export { LowerCasePipe } from './string/lower-case/lower-case.pipe';
 export { SentenceCasePipe } from './string/sentence-case/sentence-case.pipe';
+export { SlugifyPipe } from './string/slugify/slugify.pipe';
 export { TitleCasePipe } from './string/title-case/title-case.pipe';
 export { TrimPipe } from './string/trim/trim.pipe';
 export { TrimLeftPipe } from './string/trim-left/trim-left.pipe';
