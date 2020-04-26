@@ -6,8 +6,8 @@ import { StringUtils } from '../../utils/string-utils';
 })
 export class SlugifyPipe implements PipeTransform {
 
-  transform(value: string): string {
-    return StringUtils.slugify(value);
+  transform(value: string, separator?: string): string {
+    return StringUtils.slugify(value, separator);
   }
 
 }

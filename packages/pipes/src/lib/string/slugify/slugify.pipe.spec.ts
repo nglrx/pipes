@@ -5,6 +5,7 @@ describe('SlugifyPipe', () => {
   let pipe: SlugifyPipe;
 
   const str = 'test_-is__always - running!';
+  const separator = '_';
   const emptyStr = '';
   const whiteSpaceStr = '\t\n ';
 
@@ -16,8 +17,12 @@ describe('SlugifyPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it(`should slugify a string`, () => {
+  it(`should slugify a string with default separator`, () => {
     expect(pipe.transform(str)).toEqual(StringUtils.slugify(str));
+  });
+
+  it(`should slugify a string with specified separator`, () => {
+    expect(pipe.transform(str, separator)).toEqual(StringUtils.slugify(str, separator));
   });
 
   it(`should return empty string on slugifying an empty string`, () => {

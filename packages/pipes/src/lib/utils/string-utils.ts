@@ -3,10 +3,11 @@ export class StringUtils {
     return value && value.charAt(position);
   }
 
-  static slugify(value: string): string {
+  static slugify(value: string, separator?: string): string {
+    separator = separator || '-';
     return value && this.toLowerCase(value)
                         .replace(/[^a-z0-9\-_ ]/g, '')
-                        .replace(/[\-_ ]+/g, '-');
+                        .replace(/[\-_ ]+/g, separator);
   }
 
   static toLowerCase(value: string): string {
@@ -20,10 +21,11 @@ export class StringUtils {
   static toTitleCase(value: string, separator?: string, exclusions?: string[]): string {
     separator = separator || ' ';
     return value && value.split(separator)
-    .map((word, index) => {
-      return index > 0 && exclusions && exclusions.includes(word)
-            ? word : this.toSentenceCase(word);
-    }).join(separator);
+                         .map((word, index) => {
+                           return index > 0 && exclusions && exclusions.includes(word)
+                                  ? word : this.toSentenceCase(word);
+                         })
+                         .join(separator);
   }
 
   static toUpperCase(value: string): string {
