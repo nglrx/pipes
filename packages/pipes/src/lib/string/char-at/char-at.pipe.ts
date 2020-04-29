@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { StringUtils } from '../../utils/string-utils';
 
 @Pipe({
   name: 'charAt'
@@ -6,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CharAtPipe implements PipeTransform {
 
   transform(value: string, position?: number): string {
-    return value && value.charAt(position);
+    return StringUtils.charAt(value, position);
   }
 
 }
