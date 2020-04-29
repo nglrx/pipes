@@ -22,6 +22,14 @@ export class StringUtils {
     return value && value.toLowerCase();
   }
 
+  static toPascalCase(value: string): string {
+    return value && value.split(/[\-_ ]+/g)
+                         .map((word) => {
+                           return this.toSentenceCase(word);
+                         })
+                         .join('');
+  }
+
   static toSentenceCase(value: string): string {
     return value && this.toUpperCase(this.charAt(value)) + this.toLowerCase(value.substr(1));
   }
