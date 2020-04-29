@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+import { CamelCasePipe } from './camel-case/camel-case.pipe';
 import { CharAtPipe } from './char-at/char-at.pipe';
 import { LowerCasePipe } from './lower-case/lower-case.pipe';
 import { SentenceCasePipe } from './sentence-case/sentence-case.pipe';
@@ -12,6 +13,7 @@ import { UpperCasePipe } from './upper-case/upper-case.pipe';
 
 @NgModule({
   declarations: [
+    CamelCasePipe,
     CharAtPipe,
     LowerCasePipe,
     SentenceCasePipe,
@@ -23,6 +25,7 @@ import { UpperCasePipe } from './upper-case/upper-case.pipe';
     UpperCasePipe,
   ],
   exports: [
+    CamelCasePipe,
     CharAtPipe,
     LowerCasePipe,
     SentenceCasePipe,

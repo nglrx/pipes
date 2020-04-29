@@ -10,12 +10,20 @@ export class StringUtils {
                         .replace(/[\-_ ]+/g, separator);
   }
 
+  static toCamelCase(value: string): string {
+    return value && value.split(/[\-_ ]+/g)
+                         .map((word, index) => {
+                           return index === 0 ? this.toLowerCase(word) : this.toSentenceCase(word);
+                         })
+                         .join('');
+  }
+
   static toLowerCase(value: string): string {
     return value && value.toLowerCase();
   }
 
   static toSentenceCase(value: string): string {
-    return value && this.toUpperCase(this.charAt(value, 0)) + this.toLowerCase(value.substr(1));
+    return value && this.toUpperCase(this.charAt(value)) + this.toLowerCase(value.substr(1));
   }
 
   static toTitleCase(value: string, separator?: string, exclusions?: string[]): string {

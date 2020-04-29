@@ -8,6 +8,7 @@ export { LengthPipe } from './generic/length/length.pipe';
 export { ReversePipe } from './generic/reverse/reverse.pipe';
 
 export { NglrxStringPipesModule } from './string/nglrx-string-pipes.module';
+export { CamelCasePipe } from './string/camel-case/camel-case.pipe';
 export { CharAtPipe } from './string/char-at/char-at.pipe';
 export { LowerCasePipe } from './string/lower-case/lower-case.pipe';
 export { SentenceCasePipe } from './string/sentence-case/sentence-case.pipe';
