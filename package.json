@@ -33,7 +33,7 @@
     "@angular/platform-browser": "^9.1.6",
     "@angular/platform-browser-dynamic": "^9.1.6",
     "@angular/router": "^9.1.6",
-    "@nglrx/pipes": "^0.1.5",
+    "@nglrx/pipes": "^0.1.6",
     "rxjs": "^6.5.5",
     "tslib": "^1.11.2",
     "zone.js": "^0.10.3"
