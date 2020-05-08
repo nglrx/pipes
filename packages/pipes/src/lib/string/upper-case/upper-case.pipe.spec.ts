@@ -1,12 +1,12 @@
 import { UpperCasePipe } from './upper-case.pipe';
-import { StringUtils } from '../../utils/string-utils';
 
 describe('UpperCasePipe', () => {
   let pipe: UpperCasePipe;
 
-  const str = 'test is running!';
+  const str = 'This is A Test string!';
+  const uppercaseStr = 'THIS IS A TEST STRING!'
   const emptyStr = '';
-  const whiteSpaceStr = '\t\n ';
+  const whitespaceStr = '\t\n ';
 
   beforeEach(() => {
     pipe = new UpperCasePipe();
@@ -17,15 +17,15 @@ describe('UpperCasePipe', () => {
   });
 
   it(`should convert a string to upper case`, () => {
-    expect(pipe.transform(str)).toEqual(StringUtils.toUpperCase(str));
+    expect(pipe.transform(str)).toEqual(uppercaseStr);
   });
 
   it(`should return empty string on converting an empty string to upper case`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(StringUtils.toUpperCase(emptyStr));
+    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
   });
 
   it(`should return same string on converting a white space string to upper case`, () => {
-    expect(pipe.transform(whiteSpaceStr)).toEqual(StringUtils.toUpperCase(whiteSpaceStr));
+    expect(pipe.transform(whitespaceStr)).toEqual(whitespaceStr);
   });
 
   it(`should be null safe`, () => {

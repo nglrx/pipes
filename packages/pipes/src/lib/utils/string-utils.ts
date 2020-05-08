@@ -6,12 +6,12 @@ export class StringUtils {
   static slugify(value: string, separator?: string): string {
     separator = separator || '-';
     return value && this.toLowerCase(value)
-                        .replace(/[^a-z0-9\-_ ]/g, '')
-                        .replace(/[\-_ ]+/g, separator);
+                        .replace(/[^a-z0-9\-_]/g, '')
+                        .replace(/[\-_\s]+/g, separator);
   }
 
   static toCamelCase(value: string): string {
-    return value && value.split(/[\-_ ]+/g)
+    return value && value.split(/[\-_\s]+/g)
                          .map((word, index) => {
                            return index === 0 ? this.toLowerCase(word) : this.toSentenceCase(word);
                          })
@@ -23,7 +23,7 @@ export class StringUtils {
   }
 
   static toPascalCase(value: string): string {
-    return value && value.split(/[\-_ ]+/g)
+    return value && value.split(/[\-_\s]+/g)
                          .map((word) => {
                            return this.toSentenceCase(word);
                          })
@@ -38,8 +38,8 @@ export class StringUtils {
     separator = separator || ' ';
     return value && value.split(separator)
                          .map((word, index) => {
-                           return index > 0 && exclusions && exclusions.includes(word)
-                                  ? word : this.toSentenceCase(word);
+                           return index > 0 && exclusions && exclusions.includes(word.toLowerCase())
+                                  ? word.toLowerCase() : this.toSentenceCase(word);
                          })
                          .join(separator);
   }

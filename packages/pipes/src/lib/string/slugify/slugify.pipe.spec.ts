@@ -1,13 +1,14 @@
 import { SlugifyPipe } from './slugify.pipe';
-import { StringUtils } from '../../utils/string-utils';
 
 describe('SlugifyPipe', () => {
   let pipe: SlugifyPipe;
 
-  const str = 'test_-is__always - running!';
+  const str = 'this_-is__a__ test - string!';
+  const sluggifiedStr = 'this-is-a-test-string'
   const separator = '_';
+  const sluggifiedStrWithSeparator = 'this_is_a_test_string'
   const emptyStr = '';
-  const whiteSpaceStr = '\t\n ';
+  const whitespaceStr = '\t\n ';
 
   beforeEach(() => {
     pipe = new SlugifyPipe();
@@ -18,19 +19,19 @@ describe('SlugifyPipe', () => {
   });
 
   it(`should slugify a string with default separator`, () => {
-    expect(pipe.transform(str)).toEqual(StringUtils.slugify(str));
+    expect(pipe.transform(str)).toEqual(sluggifiedStr);
   });
 
   it(`should slugify a string with specified separator`, () => {
-    expect(pipe.transform(str, separator)).toEqual(StringUtils.slugify(str, separator));
+    expect(pipe.transform(str, separator)).toEqual(sluggifiedStrWithSeparator);
   });
 
   it(`should return empty string on slugifying an empty string`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(StringUtils.slugify(emptyStr));
+    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
   });
 
-  it(`should return same string on slugifying a white space string`, () => {
-    expect(pipe.transform(whiteSpaceStr)).toEqual(StringUtils.slugify(whiteSpaceStr));
+  it(`should return same string on slugifying a whitespace string`, () => {
+    expect(pipe.transform(whitespaceStr)).toEqual(emptyStr);
   });
 
   it(`should be null safe`, () => {

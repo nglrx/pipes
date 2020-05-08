@@ -3,11 +3,15 @@ import { ReversePipe } from './reverse.pipe';
 describe('ReversePipe', () => {
   let pipe: ReversePipe;
 
-  const str = 'test is running!';
+  const str = 'This is a test string!';
+  const reverseStr = '!gnirts tset a si sihT'
   const emptyStr = '';
   const num = -12345.67890;
+  const reverseNumStr = '9876.54321-';
   const bool = false;
+  const boolReverse = 'eslaf'
   const arr = ['a', 'b', 'c', 'd', 'e'];
+  const arrReverse = ['e', 'd', 'c', 'b', 'a'];
   const emptyArr = [];
   const obj = { foo: 'bar' };
   const date = new Date();
@@ -21,24 +25,23 @@ describe('ReversePipe', () => {
   });
 
   it(`should reverse a string`, () => {
-    expect(pipe.transform(str)).toEqual(reverseStr(str));
+    expect(pipe.transform(str)).toEqual(reverseStr);
   });
 
   it(`should reverse an empty string`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(reverseStr(emptyStr));
+    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
   });
 
   it(`should reverse a number`, () => {
-    expect(pipe.transform(num)).toEqual(reverseStr(num.toString()));
+    expect(pipe.transform(num)).toEqual(reverseNumStr);
   });
 
   it(`should reverse a boolean`, () => {
-    expect(pipe.transform(bool)).toEqual(reverseStr(bool.toString()));
+    expect(pipe.transform(bool)).toEqual(boolReverse);
   });
 
   it(`should reverse an array`, () => {
-    const revArr = [...arr].reverse();
-    expect(pipe.transform(arr)).toEqual(revArr);
+    expect(pipe.transform(arr)).toEqual(arrReverse);
   });
 
   it(`should reverse an empty array`, () => {
@@ -55,8 +58,3 @@ describe('ReversePipe', () => {
   });
 
 });
-
-function reverseStr(str: string): any {
-  return str.split('').reverse().join('');
-}
-
