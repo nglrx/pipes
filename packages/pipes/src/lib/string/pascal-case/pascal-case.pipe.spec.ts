@@ -3,15 +3,16 @@ import { PascalCasePipe } from './pascal-case.pipe';
 describe('PascalCasePipe', () => {
   let pipe: PascalCasePipe;
 
-  const str = 'test iS ruNNing';
-  const strPascalCase = 'TestIsRunning';
-  const sluggishStr = 'this tEst-IS_runninG';
-  const sluggishStrPascalCase = 'ThisTestIsRunning';
+  const str = 'This iS A TEST string';
+  const strPascalCase = 'ThisIsATestString';
+  const sluggishStr = 'This IS another-tEst-_strinG';
+  const sluggishStrPascalCase = 'ThisIsAnotherTestString';
   const singleCharacterStr = 'a';
   const singleCharacterStrPascalCase = 'A';
   const singleWordStr = 'siNGle';
   const singleWordStrPascalCase = 'Single';
   const emptyStr = '';
+  const whitespaceStr = '\t\n ';
 
   beforeEach(() => {
     pipe = new PascalCasePipe();
@@ -39,6 +40,10 @@ describe('PascalCasePipe', () => {
 
   it(`should return empty string on converting an empty string to pascal case`, () => {
     expect(pipe.transform(emptyStr)).toEqual(emptyStr);
+  });
+
+  it(`should return empty string on converting a white space string to pascal case`, () => {
+    expect(pipe.transform(whitespaceStr)).toEqual(emptyStr);
   });
 
   it(`should be null safe`, () => {
