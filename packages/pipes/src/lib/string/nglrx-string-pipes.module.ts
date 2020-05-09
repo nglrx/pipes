@@ -12,32 +12,22 @@ import { TrimLeftPipe } from './trim-left/trim-left.pipe';
 import { TrimRightPipe } from './trim-right/trim-right.pipe';
 import { UpperCasePipe } from './upper-case/upper-case.pipe';
 
+const STRING_PIPES = [
+  CamelCasePipe,
+  CharAtPipe,
+  LowerCasePipe,
+  PascalCasePipe,
+  SentenceCasePipe,
+  SlugifyPipe,
+  TitleCasePipe,
+  TrimPipe,
+  TrimLeftPipe,
+  TrimRightPipe,
+  UpperCasePipe,
+];
+
 @NgModule({
-  declarations: [
-    CamelCasePipe,
-    CharAtPipe,
-    LowerCasePipe,
-    PascalCasePipe,
-    SentenceCasePipe,
-    SlugifyPipe,
-    TitleCasePipe,
-    TrimPipe,
-    TrimLeftPipe,
-    TrimRightPipe,
-    UpperCasePipe,
-  ],
-  exports: [
-    CamelCasePipe,
-    CharAtPipe,
-    LowerCasePipe,
-    PascalCasePipe,
-    SentenceCasePipe,
-    SlugifyPipe,
-    TitleCasePipe,
-    TrimPipe,
-    TrimLeftPipe,
-    TrimRightPipe,
-    UpperCasePipe,
-  ]
+  declarations: STRING_PIPES,
+  exports: STRING_PIPES
 })
 export class NglrxStringPipesModule { }
