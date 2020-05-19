@@ -19,3 +19,7 @@ export { TrimPipe } from './string/trim/trim.pipe';
 export { TrimLeftPipe } from './string/trim-left/trim-left.pipe';
 export { TrimRightPipe } from './string/trim-right/trim-right.pipe';
 export { UpperCasePipe } from './string/upper-case/upper-case.pipe';
+
+export { NglrxNumberPipesModule } from './number/nglrx-number-pipes.module';
+export { MaxPipe } from './number/max/max.pipe';
+export { MinPipe } from './number/min/min.pipe';
