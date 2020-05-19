@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MinPipe implements PipeTransform {
 
-  transform(...values: number[]): number {
+  transform(values: number[]): number {
     return values && values.length > 0 ? Math.min(...values) : null;
   }
 

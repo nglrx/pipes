@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MaxPipe implements PipeTransform {
 
-  transform(...values: number[]): number {
+  transform(values: number[]): number {
     return values && values.length > 0 ? Math.max(...values) : null;
   }
 
