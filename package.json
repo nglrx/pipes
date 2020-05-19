@@ -1,6 +1,6 @@
 {
   "name": "pipes",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "Kapil Neurgaonkar",
   "description": "A collection of Angular libraries",
   "license": "MIT",
@@ -33,15 +33,14 @@
     "@angular/platform-browser": "^9.1.6",
     "@angular/platform-browser-dynamic": "^9.1.6",
     "@angular/router": "^9.1.6",
-    "@nglrx/pipes": "^0.1.6",
     "rxjs": "^6.5.5",
     "tslib": "^1.11.2",
     "zone.js": "^0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.901.4",
-    "@angular-devkit/build-ng-packagr": "^0.901.4",
-    "@angular/cli": "^9.1.4",
+    "@angular-devkit/build-angular": "^0.901.5",
+    "@angular-devkit/build-ng-packagr": "^0.901.5",
+    "@angular/cli": "^9.1.5",
     "@angular/compiler-cli": "^9.1.6",
     "@angular/language-service": "^9.1.6",
     "@types/jasmine": "^3.5.10",
