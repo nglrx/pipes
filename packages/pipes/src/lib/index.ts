@@ -23,3 +23,4 @@ export { UpperCasePipe } from './string/upper-case/upper-case.pipe';
 export { NglrxNumberPipesModule } from './number/nglrx-number-pipes.module';
 export { MaxPipe } from './number/max/max.pipe';
 export { MinPipe } from './number/min/min.pipe';
+export { SumPipe } from './number/sum/sum.pipe';

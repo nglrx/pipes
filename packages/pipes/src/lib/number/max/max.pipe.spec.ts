@@ -20,23 +20,23 @@ describe('MaxPipe', () => {
   });
 
   it(`should find maximum from an array of numbers`, () => {
-    expect(pipe.transform(...arr)).toEqual(maxOfArr);
+    expect(pipe.transform(arr)).toEqual(maxOfArr);
   });
 
   it(`should find maximum from an array of both positive and negative numbers`, () => {
-    expect(pipe.transform(...mixedArr)).toEqual(maxOfMixedArr);
+    expect(pipe.transform(mixedArr)).toEqual(maxOfMixedArr);
   });
 
   it(`should find maximum from an array with single value`, () => {
-    expect(pipe.transform(...singleValueArr)).toEqual(maxOfSingleValueArr);
+    expect(pipe.transform(singleValueArr)).toEqual(maxOfSingleValueArr);
   });
 
   it(`should return null for an empty array`, () => {
-    expect(pipe.transform(...emptyArr)).toBeNull();
+    expect(pipe.transform(emptyArr)).toBeNull();
   });
 
   it(`should be null safe`, () => {
-    expect(pipe.transform()).toBeNull();
+    expect(pipe.transform(null)).toBeNull();
   });
 
 });

@@ -20,23 +20,23 @@ describe('MinPipe', () => {
   });
 
   it(`should find minimum from an array of numbers`, () => {
-    expect(pipe.transform(...arr)).toEqual(minOfArr);
+    expect(pipe.transform(arr)).toEqual(minOfArr);
   });
 
   it(`should find minimum from an array of both positive and negative numbers`, () => {
-    expect(pipe.transform(...mixedArr)).toEqual(minOfMixedArr);
+    expect(pipe.transform(mixedArr)).toEqual(minOfMixedArr);
   });
 
   it(`should find minimum from an array with single value`, () => {
-    expect(pipe.transform(...singleValueArr)).toEqual(minOfSingleValueArr);
+    expect(pipe.transform(singleValueArr)).toEqual(minOfSingleValueArr);
   });
 
   it(`should return null for an empty array`, () => {
-    expect(pipe.transform(...emptyArr)).toBeNull();
+    expect(pipe.transform(emptyArr)).toBeNull();
   });
 
   it(`should be null safe`, () => {
-    expect(pipe.transform()).toBeNull();
+    expect(pipe.transform(null)).toBeNull();
   });
 
 });
