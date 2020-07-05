@@ -11,9 +11,13 @@
   "homepage": "https://github.com/nglrx/pipes#readme",
   "bugs": "https://github.com/nglrx/pipes/issues",
   "keywords": [
+    "ng",
     "angular",
     "pipes",
-    "library"
+    "angular pipes",
+    "library",
+    "filters",
+    "angular filters"
   ],
   "scripts": {
     "ng": "ng",
@@ -23,7 +27,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^10.0.2",
     "@angular/common": "^10.0.2",
