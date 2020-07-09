@@ -11,7 +11,7 @@ Usage: `string | camelCase`
 
 ```html
 {{ 'Convert_to camel-case' | camelCase }}
-<!-- convertToCamelCase -->
+<!-- Returns 'convertToCamelCase' -->
 ```
 
 
