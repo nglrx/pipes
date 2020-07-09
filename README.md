@@ -1,6 +1,7 @@
 ![npm](https://img.shields.io/npm/v/@nglrx/pipes?label=npm)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nglrx/pipes)
 ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@nglrx/pipes)
+[![Build Status](https://travis-ci.org/nglrx/pipes.svg?branch=master)](https://travis-ci.org/nglrx/pipes)
 [![codecov](https://codecov.io/gh/nglrx/pipes/branch/master/graph/badge.svg)](https://codecov.io/gh/nglrx/pipes)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nglrx_pipes&metric=alert_status)](https://sonarcloud.io/dashboard?id=nglrx_pipes)
 ![GitHub](https://img.shields.io/github/license/nglrx/pipes?color=blue)
