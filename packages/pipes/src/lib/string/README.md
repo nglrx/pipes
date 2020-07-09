@@ -1,11 +1,9 @@
-# @nglrx/pipes
-
-## String Pipes
+# String Pipes
 
 A collection of pipes exported by `NglrxStringPipesModule`.
 
 
-### 1. camelCase
+## camelCase
 
 Converts a string to camel case and strips hyphens, underscores and whitespaces.
 
@@ -17,7 +15,7 @@ Usage: `string | camelCase`
 ```
 
 
-### 2. charAt
+## charAt
 
 Returns the character value at given position in a string.
 
@@ -31,7 +29,7 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 ```
 
 
-### 3. lowerCase
+## lowerCase
 
 Converts a given string to lower case.
 
@@ -43,7 +41,7 @@ Usage: `string | lowerCase`
 ```
 
 
-### 4. pascalCase
+## pascalCase
 
 Converts a string to pascal case and strips hyphens, underscores and whitespaces.
 
@@ -55,7 +53,7 @@ Usage: `string | pascalCase`
 ```
 
 
-### 5. sentenceCase
+## sentenceCase
 
 Converts a string to sentence case.
 
@@ -67,7 +65,7 @@ Usage: `string | sentenceCase`
 ```
 
 
-### 6. slugify
+## slugify
 
 Slugifies a given string with an optional char separator.
 Default separator char is hyphen '-'.\
@@ -81,7 +79,7 @@ Usage: `string | slugify[:separator]`
 ```
 
 
-### 7. titleCase
+## titleCase
 
 Converts a string to titleCase case.
 
@@ -93,7 +91,7 @@ Usage: `string | titleCase`
 ```
 
 
-### 8. trim
+## trim
 
 Strips the leading and trailing whitespaces from a given string.
 
@@ -105,7 +103,7 @@ Usage: `string | trim`
 ```
 
 
-### 9. trimLeft
+## trimLeft
 
 Strips the leading whitespaces from a given string.
 
@@ -117,7 +115,7 @@ Usage: `string | trimLeft`
 ```
 
 
-### 10. trimRight
+## trimRight
 
 Strips the trailing whitespaces from a given string.
 
@@ -129,7 +127,7 @@ Usage: `string | trimRight`
 ```
 
 
-### 11. upperCase
+## upperCase
 
 Converts a given string to upper case.
 
