@@ -18,7 +18,7 @@ Use [npm](https://www.npmjs.com/) to install  @nglrx/pipes.
 npm i @nglrx/pipes
 ```
 
-## Import
+## Import Module
 
 Import module `NglrxPipesModule` to your module for using all pipes.
 
@@ -37,19 +37,19 @@ export class YourModule { }
 Alternatively, you can use pipes from specific module(s)
 
 ```typescript
-import { NglrxGenericPipesModule, NglrxStringPipesModule } from '@nglrx/pipes';
+import { NglrxNumberPipesModule, NglrxStringPipesModule } from '@nglrx/pipes';
 
 @NgModule({
   //...
   imports: [
-    NglrxGenericPipesModule,
+    NglrxNumberPipesModule,
     NglrxStringPipesModule
   ]
 })
 export class YourModule { }
 ```
 
-## Usage
+## Usage of Pipes
 
 Pipes can be used in your component's *template*
 
@@ -78,5 +78,28 @@ export class YourComponent {
   }
 }
 ```
+
+
+## Library
+
+- [String Pipes](./src/lib/string/README)   
+  1. [camelCase](./src/lib/string/README#camelCase)
+  1. [charAt](#char-at)
+  1. [lowerCase](#lower-case)
+  1. [pascalCase](#pascal-case)
+  1. [sentenceCase](#sentence-case)
+  1. [slugify](#slugify)
+  1. [titleCase](#title-case)
+  1. [trim](#trim)
+  1. [trimLeft](#trim-left)
+  1. [trimRight](#trim-right)
+  1. [upperCase](#upper-case)
+- [Number](#number)
+  1. [max](#max)
+  1. [min](#min)
+  1. [sum](#sum)
+- [Generic](#generic)
+  1. [length](#length)
+  1. [reverse](#reverse)
 
 For more information on pipes, refer to [Angular - pipes](https://angular.io/guide/pipes) documentation.
