@@ -8,7 +8,9 @@ export class NumberUtils {
    * @returns Sum of numbers in array
    */
   static sum(values: number[]): number {
-    return TypeUtils.isNullOrEmpty(values) ? null : values.reduce((sum, value) => sum + value, 0);
+    const sum = TypeUtils.isNullOrEmpty(values) ? null :
+                values.reduce((currSum, value) => currSum + value, 0);
+    return sum;
   }
 
 }
