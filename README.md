@@ -34,33 +34,22 @@ import { NglrxPipesModule } from '@nglrx/pipes';
 export class YourModule { }
 ```
 
-Alternatively, you can use pipes from specific module(s)
-
-```typescript
-import { NglrxNumberPipesModule, NglrxStringPipesModule } from '@nglrx/pipes';
-
-@NgModule({
-  //...
-  imports: [
-    NglrxNumberPipesModule,
-    NglrxStringPipesModule
-  ]
-})
-export class YourModule { }
-```
+Alternatively, you can use pipes from specific module(s) like `NglrxNumberPipesModule` or `NglrxStringPipesModule`.
 
 ## Usage of Pipes
 
 Pipes can be used in your component's *template*
 
 ```html
-{{ 'This-is-a-string' | length }} <!-- Returns 16 -->
+{{ 'This-is-a-string' | length }}
+<!-- Returns 16 -->
 ```
 
 They can also be *chained*
 
 ```html
-{{ '  Another-string  ' | trim | length }} <!-- Returns 14 -->
+{{ '  Another-string  ' | trim | length }}
+<!-- Returns 14 -->
 ```
 
 Or they can be used within *components* or *services* by calling the `transform` method
@@ -80,7 +69,7 @@ export class YourComponent {
 ```
 
 
-## Library
+## Library of Pipes
 
 - [String Pipes](#string-pipes)
   - [camelCase](#camelcase)
