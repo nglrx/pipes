@@ -18,7 +18,7 @@ Use [npm](https://www.npmjs.com/) to install  @nglrx/pipes.
 npm i @nglrx/pipes
 ```
 
-## Import
+## Import Module
 
 Import module `NglrxPipesModule` to your module for using all pipes.
 
@@ -37,19 +37,19 @@ export class YourModule { }
 Alternatively, you can use pipes from specific module(s)
 
 ```typescript
-import { NglrxGenericPipesModule, NglrxStringPipesModule } from '@nglrx/pipes';
+import { NglrxNumberPipesModule, NglrxStringPipesModule } from '@nglrx/pipes';
 
 @NgModule({
   //...
   imports: [
-    NglrxGenericPipesModule,
+    NglrxNumberPipesModule,
     NglrxStringPipesModule
   ]
 })
 export class YourModule { }
 ```
 
-## Usage
+## Usage of Pipes
 
 Pipes can be used in your component's *template*
 
@@ -78,5 +78,29 @@ export class YourComponent {
   }
 }
 ```
+
+
+## Library
+
+- [String Pipes](./src/lib/string#string-pipes)   
+  - [camelCase](./src/lib/string#camelcase)
+  - [charAt](./src/lib/string#charat)
+  - [lowerCase](./src/lib/string#lowercase)
+  - [pascalCase](./src/lib/string#pascalcase)
+  - [sentenceCase](./src/lib/string#sentencecase)
+  - [slugify](./src/lib/string#slugify)
+  - [titleCase](./src/lib/string#titlecase)
+  - [trim](./src/lib/string#trim)
+  - [trimLeft](./src/lib/string#trimleft)
+  - [trimRight](./src/lib/string#trimright)
+  - [upperCase](./src/lib/string#uppercase)
+- [Number Pipes](./src/lib/number#number-pipes)
+  - [avg](./src/lib/number#avg)
+  - [max](./src/lib/number#max)
+  - [min](./src/lib/number#min)
+  - [sum](./src/lib/number#sum)
+- [Generic Pipes](./src/lib/generic#generic-pipes)
+  - [length](./src/lib/generic#length)
+  - [reverse](./src/lib/generic#reverse)
 
 For more information on pipes, refer to [Angular - pipes](https://angular.io/guide/pipes) documentation.

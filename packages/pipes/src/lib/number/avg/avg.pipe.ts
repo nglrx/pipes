@@ -2,12 +2,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { NumberUtils } from '../../utils/number-utils';
 
 @Pipe({
-  name: 'sum'
+  name: 'avg'
 })
-export class SumPipe implements PipeTransform {
+export class AvgPipe implements PipeTransform {
 
   transform(values: number[]): number {
-    return NumberUtils.sum(values);
+    const sum = NumberUtils.sum(values);
+    return sum ? sum / values.length : null;
   }
 
 }
