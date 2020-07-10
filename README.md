@@ -82,25 +82,261 @@ export class YourComponent {
 
 ## Library
 
-- [String Pipes](./packages/pipes/src/lib/string#string-pipes)   
-  - [camelCase](./packages/pipes/src/lib/string#camelcase)
-  - [charAt](./packages/pipes/src/lib/string#charat)
-  - [lowerCase](./packages/pipes/src/lib/string#lowercase)
-  - [pascalCase](./packages/pipes/src/lib/string#pascalcase)
-  - [sentenceCase](./packages/pipes/src/lib/string#sentencecase)
-  - [slugify](./packages/pipes/src/lib/string#slugify)
-  - [titleCase](./packages/pipes/src/lib/string#titlecase)
-  - [trim](./packages/pipes/src/lib/string#trim)
-  - [trimLeft](./packages/pipes/src/lib/string#trimleft)
-  - [trimRight](./packages/pipes/src/lib/string#trimright)
-  - [upperCase](./packages/pipes/src/lib/string#uppercase)
-- [Number Pipes](./packages/pipes/src/lib/number#number-pipes)
-  - [avg](./packages/pipes/src/lib/number#avg)
-  - [max](./packages/pipes/src/lib/number#max)
-  - [min](./packages/pipes/src/lib/number#min)
-  - [sum](./packages/pipes/src/lib/number#sum)
-- [Generic Pipes](./packages/pipes/src/lib/generic#generic-pipes)
-  - [length](./packages/pipes/src/lib/generic#length)
-  - [reverse](./packages/pipes/src/lib/generic#reverse)
+- [String Pipes](#string-pipes)   
+  - [camelCase](#camelcase)
+  - [charAt](#charat)
+  - [lowerCase](#lowercase)
+  - [pascalCase](#pascalcase)
+  - [sentenceCase](#sentencecase)
+  - [slugify](#slugify)
+  - [titleCase](#titlecase)
+  - [trim](#trim)
+  - [trimLeft](#trimleft)
+  - [trimRight](#trimright)
+  - [upperCase](#uppercase)
+- [Number Pipes](#number-pipes)
+  - [avg](#avg)
+  - [max](#max)
+  - [min](#min)
+  - [sum](#sum)
+- [Generic Pipes](#generic-pipes)
+  - [length](#length)
+  - [reverse](#reverse)
+
+---
+
+## String Pipes
+
+A collection of pipes exported by `NglrxStringPipesModule`.
+
+
+## camelCase
+
+Converts a string to camel case and strips hyphens, underscores and whitespaces.
+
+Usage: `string | camelCase`
+
+```html
+{{ 'Convert_to camel-case' | camelCase }}
+<!-- Returns 'convertToCamelCase' -->
+```
+
+
+## charAt
+
+Returns the character value at given position in a string.
+
+Usage: `string | charAt[:position]`
+
+Range of position is from 0 (default) to n-1, where n is length of the string.
+
+```html
+{{ 'This is a sample string.' | charAt:12 }}
+<!-- Returns 'm' -->
+```
+
+
+## lowerCase
+
+Converts a given string to lower case.
+
+Usage: `string | lowerCase`
+
+```html
+{{ 'Convert TO LoWeR-case' | lowerCase }}
+<!-- Returns 'convert to lower-case' -->
+```
+
+
+## pascalCase
+
+Converts a string to pascal case and strips hyphens, underscores and whitespaces.
+
+Usage: `string | pascalCase`
+
+```html
+{{ 'convert_to PASCAL-case' | pascalCase }}
+<!-- Returns 'ConvertToPascalCase' -->
+```
+
+
+## sentenceCase
+
+Converts a string to sentence case.
+
+Usage: `string | sentenceCase`
+
+```html
+{{ 'convert TO Sentence case.' | sentenceCase }}
+<!-- Returns 'Convert to sentence case.' -->
+```
+
+
+## slugify
+
+Slugifies a given string with an optional char separator.
+Default separator char is hyphen '-'.\
+Special characters are stripped from string.
+
+Usage: `string | slugify[:separator]`
+
+```html
+{{ 'this_-is__a - string!' | slugify:'_' }}
+<!-- Returns 'this_is_a_string' -->
+```
+
+
+## titleCase
+
+Converts a string to titleCase case.
+
+Usage: `string | titleCase`
+
+```html
+{{ 'convert TO title cASE.' | titleCase }}
+<!-- Returns 'Convert To Title Case.' -->
+```
+
+
+## trim
+
+Strips the leading and trailing whitespaces from a given string.
+
+Usage: `string | trim`
+
+```html
+{{ ' This is a test string!  ' | trim }}
+<!-- Returns 'This is a test string!' -->
+```
+
+
+## trimLeft
+
+Strips the leading whitespaces from a given string.
+
+Usage: `string | trimLeft`
+
+```html
+{{ ' This is a test string!  ' | trimLeft }}
+<!-- Returns 'This is a test string!  ' -->
+```
+
+
+## trimRight
+
+Strips the trailing whitespaces from a given string.
+
+Usage: `string | trimRight`
+
+```html
+{{ ' This is a test string!  ' | trimRight }}
+<!-- Returns ' This is a test string!' -->
+```
+
+
+## upperCase
+
+Converts a given string to upper case.
+
+Usage: `string | upperCase`
+
+```html
+{{ 'Convert TO UpPeR-case.' | upperCase }}
+<!-- Returns 'CONVERT TO UPPER-CASE.' -->
+```
+
+
+---
+
+## Number Pipes
+
+A collection of pipes exported by `NglrxNumberPipesModule`.
+
+
+## avg
+
+Returns the average of all numbers in a given array.
+
+Usage: `array | avg`
+
+```html
+{{ [10, 45, 200, 5, 92] | avg }}
+<!-- Returns 70.4 -->
+```
+
+
+## max
+
+Finds the maximum from an array of numbers.
+
+Usage: `array | max`
+
+```html
+{{ [10, 45, 200, 5, 92] | max }}
+<!-- Returns 200 -->
+```
+
+
+## min
+
+Finds the minimum from an array of numbers.
+
+Usage: `array | min`
+
+```html
+{{ [10, 45, 200, 5, 92] | min }}
+<!-- Returns 5 -->
+```
+
+
+## sum
+
+Returns the sum of all numbers in a given array.
+
+Usage: `array | sum`
+
+```html
+{{ [10, 45, 200, 5, 92] | sum }}
+<!-- Returns 352 -->
+```
+
+
+---
+
+## Generic Pipes
+A collection of pipes exported by `NglrxGenericPipesModule`.
+
+
+## length
+
+Returns the length of a given string or array.
+
+Usage: `string-OR-array | length`
+
+```html
+{{ 'This is a test string!' | length }}
+<!-- Returns 22 -->
+
+{{ [10, 45, 200, 50, 92] | length }}
+<!-- Returns 5 -->
+```
+
+
+## reverse
+
+Reverses a given string or array (of any type).
+
+Usage: `string-OR-array | reverse`
+
+```html
+{{ 'This is a test string!' | reverse }}
+<!-- Returns '!gnirts tset a si sihT' -->
+
+{{ ['a', 'b', 'c', 'd', 'e'] | reverse }}
+<!-- Returns ['e', 'd', 'c', 'b', 'a'] -->
+```
+
+
+---
 
 For more information on pipes, refer to [Angular - pipes](https://angular.io/guide/pipes) documentation.
