@@ -95,6 +95,7 @@ export class YourComponent {
   - [trimRight](./src/lib/string#trimright)
   - [upperCase](./src/lib/string#uppercase)
 - [Number Pipes](./src/lib/number#number-pipes)
+  - [avg](./src/lib/number#avg)
   - [max](./src/lib/number#max)
   - [min](./src/lib/number#min)
   - [sum](./src/lib/number#sum)

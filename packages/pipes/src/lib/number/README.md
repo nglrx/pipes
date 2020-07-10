@@ -3,6 +3,18 @@
 A collection of pipes exported by `NglrxNumberPipesModule`.
 
 
+## avg
+
+Returns the average of all numbers in a given array.
+
+Usage: `array | avg`
+
+```html
+{{ [10, 45, 200, 5, 92] | avg }}
+<!-- Returns 70.4 -->
+```
+
+
 ## max
 
 Finds the maximum from an array of numbers.
