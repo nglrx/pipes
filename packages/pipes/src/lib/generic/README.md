@@ -1,9 +1,12 @@
-# Generic Pipes
+## Generic Pipes
 
 A collection of pipes exported by `NglrxGenericPipesModule`.
 
+  - [length](#length)
+  - [reverse](#reverse)
 
-## length
+
+### length
 
 Returns the length of a given string or array.
 
@@ -18,7 +21,7 @@ Usage: `string-OR-array | length`
 ```
 
 
-## reverse
+### reverse
 
 Reverses a given string or array (of any type).
 

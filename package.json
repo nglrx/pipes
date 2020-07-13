@@ -1,6 +1,6 @@
 {
   "name": "@nglrx/pipes",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "Kapil Neurgaonkar",
   "description": "A collection of Angular libraries",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/nglrx/pipes.git"
   },
-  "homepage": "https://github.com/nglrx/pipes#readme",
+  "homepage": "https://nglrx.github.io/pipes/",
   "bugs": "https://github.com/nglrx/pipes/issues",
   "keywords": [
     "ng",
@@ -49,7 +49,7 @@
     "@angular/language-service": "^10.0.3",
     "@types/jasmine": "^3.5.11",
     "@types/jasminewd2": "~2.0.8",
-    "@types/node": "^14.0.22",
+    "@types/node": "^14.0.23",
     "codecov": "^3.7.0",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.5.0",

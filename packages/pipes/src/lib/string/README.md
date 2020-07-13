@@ -1,9 +1,21 @@
-# String Pipes
+## String Pipes
 
 A collection of pipes exported by `NglrxStringPipesModule`.
 
+  - [camelCase](#camelcase)
+  - [charAt](#charat)
+  - [lowerCase](#lowercase)
+  - [pascalCase](#pascalcase)
+  - [sentenceCase](#sentencecase)
+  - [slugify](#slugify)
+  - [titleCase](#titlecase)
+  - [trim](#trim)
+  - [trimLeft](#trimleft)
+  - [trimRight](#trimright)
+  - [upperCase](#uppercase)
 
-## camelCase
+
+### camelCase
 
 Converts a string to camel case and strips hyphens, underscores and whitespaces.
 
@@ -15,7 +27,7 @@ Usage: `string | camelCase`
 ```
 
 
-## charAt
+### charAt
 
 Returns the character value at given position in a string.
 
@@ -29,7 +41,7 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 ```
 
 
-## lowerCase
+### lowerCase
 
 Converts a given string to lower case.
 
@@ -41,7 +53,7 @@ Usage: `string | lowerCase`
 ```
 
 
-## pascalCase
+### pascalCase
 
 Converts a string to pascal case and strips hyphens, underscores and whitespaces.
 
@@ -53,7 +65,7 @@ Usage: `string | pascalCase`
 ```
 
 
-## sentenceCase
+### sentenceCase
 
 Converts a string to sentence case.
 
@@ -65,7 +77,7 @@ Usage: `string | sentenceCase`
 ```
 
 
-## slugify
+### slugify
 
 Slugifies a given string with an optional char separator.
 Default separator char is hyphen '-'.\
@@ -79,7 +91,7 @@ Usage: `string | slugify[:separator]`
 ```
 
 
-## titleCase
+### titleCase
 
 Converts a string to titleCase case.
 
@@ -91,7 +103,7 @@ Usage: `string | titleCase`
 ```
 
 
-## trim
+### trim
 
 Strips the leading and trailing whitespaces from a given string.
 
@@ -103,7 +115,7 @@ Usage: `string | trim`
 ```
 
 
-## trimLeft
+### trimLeft
 
 Strips the leading whitespaces from a given string.
 
@@ -115,7 +127,7 @@ Usage: `string | trimLeft`
 ```
 
 
-## trimRight
+### trimRight
 
 Strips the trailing whitespaces from a given string.
 
@@ -127,7 +139,7 @@ Usage: `string | trimRight`
 ```
 
 
-## upperCase
+### upperCase
 
 Converts a given string to upper case.
 

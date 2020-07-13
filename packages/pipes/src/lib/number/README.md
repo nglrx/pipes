@@ -1,9 +1,27 @@
-# Number Pipes
+## Number Pipes
 
 A collection of pipes exported by `NglrxNumberPipesModule`.
 
+  - [abs](#abs)
+  - [avg](#avg)
+  - [max](#max)
+  - [min](#min)
+  - [sum](#sum)
 
-## avg
+
+### abs
+
+Returns the absolute value of given number.
+
+Usage: `number | abs`
+
+```html
+{{ -384 | abs }}
+<!-- Returns 384 -->
+```
+
+
+### avg
 
 Returns the average of all numbers in a given array.
 
@@ -15,7 +33,7 @@ Usage: `array | avg`
 ```
 
 
-## max
+### max
 
 Finds the maximum from an array of numbers.
 
@@ -27,7 +45,7 @@ Usage: `array | max`
 ```
 
 
-## min
+### min
 
 Finds the minimum from an array of numbers.
 
@@ -39,7 +57,7 @@ Usage: `array | min`
 ```
 
 
-## sum
+### sum
 
 Returns the sum of all numbers in a given array.
 
