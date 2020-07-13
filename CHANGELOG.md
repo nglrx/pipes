@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Included the libraries in Readme [\#27](https://github.com/nglrx/pipes/pull/27) ([kneurgao](https://github.com/kneurgao))
 - Fixed prod build issue Lambda not supported [\#26](https://github.com/nglrx/pipes/pull/26) ([kneurgao](https://github.com/kneurgao))
 - 0.1.11 [\#25](https://github.com/nglrx/pipes/pull/25) ([kneurgao](https://github.com/kneurgao))
 
@@ -15,8 +16,8 @@
 
 **Merged pull requests:**
 
-- Included the libraries in Readme [\#27](https://github.com/nglrx/pipes/pull/27) ([kneurgao](https://github.com/kneurgao))
 - Added build status badge to Readme [\#24](https://github.com/nglrx/pipes/pull/24) ([kneurgao](https://github.com/kneurgao))
+- Updated npm version [\#23](https://github.com/nglrx/pipes/pull/23) ([kneurgao](https://github.com/kneurgao))
 - 0.1.10 [\#22](https://github.com/nglrx/pipes/pull/22) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.9](https://github.com/nglrx/pipes/tree/0.1.9) (2020-07-05)
@@ -26,6 +27,7 @@
 **Merged pull requests:**
 
 - 0.1.9 [\#20](https://github.com/nglrx/pipes/pull/20) ([kneurgao](https://github.com/kneurgao))
+- Installled latest version of library [\#17](https://github.com/nglrx/pipes/pull/17) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.8](https://github.com/nglrx/pipes/tree/0.1.8) (2020-05-19)
 
@@ -49,8 +51,6 @@
 
 **Merged pull requests:**
 
-- Updated npm version [\#23](https://github.com/nglrx/pipes/pull/23) ([kneurgao](https://github.com/kneurgao))
-- Installled latest version of library [\#17](https://github.com/nglrx/pipes/pull/17) ([kneurgao](https://github.com/kneurgao))
 - 0.1.6 [\#16](https://github.com/nglrx/pipes/pull/16) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.5](https://github.com/nglrx/pipes/tree/0.1.5) (2020-04-29)
@@ -61,7 +61,6 @@
 
 - Installed latest version of library in project [\#15](https://github.com/nglrx/pipes/pull/15) ([kneurgao](https://github.com/kneurgao))
 - 0.1.5 [\#14](https://github.com/nglrx/pipes/pull/14) ([kneurgao](https://github.com/kneurgao))
-- 0.1.4 [\#12](https://github.com/nglrx/pipes/pull/12) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.4](https://github.com/nglrx/pipes/tree/0.1.4) (2020-04-14)
 
@@ -70,6 +69,7 @@
 **Merged pull requests:**
 
 - Installed new lib pkg version in test pkg [\#13](https://github.com/nglrx/pipes/pull/13) ([kneurgao](https://github.com/kneurgao))
+- 0.1.4 [\#12](https://github.com/nglrx/pipes/pull/12) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.3](https://github.com/nglrx/pipes/tree/0.1.3) (2020-04-12)
 
