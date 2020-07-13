@@ -1,6 +1,6 @@
 {
   "name": "@nglrx/pipes",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "Kapil Neurgaonkar",
   "description": "A collection of Angular pipes",
   "license": "MIT",
