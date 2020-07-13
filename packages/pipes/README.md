@@ -84,6 +84,7 @@ export class YourComponent {
   - [trimRight](#trimright)
   - [upperCase](#uppercase)
 - [Number Pipes](#number-pipes)
+  - [abs](#abs)
   - [avg](#avg)
   - [max](#max)
   - [min](#min)
@@ -237,6 +238,18 @@ Usage: `string | upperCase`
 ## Number Pipes
 
 A collection of pipes exported by `NglrxNumberPipesModule`.
+
+
+### abs
+
+Returns the absolute value of given number.
+
+Usage: `number | abs`
+
+```html
+{{ -384 | abs }}
+<!-- Returns 384 -->
+```
 
 
 ### avg

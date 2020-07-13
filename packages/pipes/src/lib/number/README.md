@@ -2,10 +2,23 @@
 
 A collection of pipes exported by `NglrxNumberPipesModule`.
 
+  - [abs](#abs)
   - [avg](#avg)
   - [max](#max)
   - [min](#min)
   - [sum](#sum)
+
+
+### abs
+
+Returns the absolute value of given number.
+
+Usage: `number | abs`
+
+```html
+{{ -384 | abs }}
+<!-- Returns 384 -->
+```
 
 
 ### avg

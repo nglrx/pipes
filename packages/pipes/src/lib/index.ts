@@ -21,6 +21,7 @@ export { TrimRightPipe } from './string/trim-right/trim-right.pipe';
 export { UpperCasePipe } from './string/upper-case/upper-case.pipe';
 
 export { NglrxNumberPipesModule } from './number/nglrx-number-pipes.module';
+export { AbsPipe } from './number/abs/abs.pipe';
 export { AvgPipe } from './number/avg/avg.pipe';
 export { MaxPipe } from './number/max/max.pipe';
 export { MinPipe } from './number/min/min.pipe';
