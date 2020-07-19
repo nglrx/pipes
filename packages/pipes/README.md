@@ -78,6 +78,7 @@ export class YourComponent {
   - [pascalCase](#pascalcase)
   - [sentenceCase](#sentencecase)
   - [slugify](#slugify)
+  - [split](#split)
   - [titleCase](#titlecase)
   - [trim](#trim)
   - [trimLeft](#trimleft)
@@ -172,6 +173,20 @@ Usage: `string | slugify[:separator]`
 ```html
 {{ 'this_-is__a - string!' | slugify:'_' }}
 <!-- Returns 'this_is_a_string' -->
+```
+
+
+### split
+
+Splits a given string into an array of sub-strings using an optional delimiter.\
+Default delimiter is space ' '.\
+Optionally, you may also specify a limit (integer) on the number of splits.
+
+Usage: `string | split[:delimiter][:limit]`
+
+```html
+{{ 'This_is_a_string_separated_with_underscore' | split:'_':4 }}
+<!-- Returns ['This', 'is', 'a', 'string'] -->
 ```
 
 

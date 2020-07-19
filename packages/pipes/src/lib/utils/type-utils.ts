@@ -21,7 +21,15 @@ export class TypeUtils {
    * @returns true if null or empty, else false
    */
   static isNullOrEmpty(array: any[]): boolean {
-    return array == null || array.length === 0;
+    return !Array.isArray(array) || array.length === 0;
   }
 
+  /**
+   * Checks if value is undefined or null
+   * @param value value of any type
+   * @returns true if undefined or null, else false
+   */
+  static isNullOrUndefined(value: any) {
+    return typeof value === 'undefined' || value === null;
+  }
 }

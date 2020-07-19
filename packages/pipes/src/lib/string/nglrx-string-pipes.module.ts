@@ -6,6 +6,7 @@ import { LowerCasePipe } from './lower-case/lower-case.pipe';
 import { PascalCasePipe } from './pascal-case/pascal-case.pipe';
 import { SentenceCasePipe } from './sentence-case/sentence-case.pipe';
 import { SlugifyPipe } from './slugify/slugify.pipe';
+import { SplitPipe } from './split/split.pipe';
 import { TitleCasePipe } from './title-case/title-case.pipe';
 import { TrimPipe } from './trim/trim.pipe';
 import { TrimLeftPipe } from './trim-left/trim-left.pipe';
@@ -19,6 +20,7 @@ const STRING_PIPES = [
   PascalCasePipe,
   SentenceCasePipe,
   SlugifyPipe,
+  SplitPipe,
   TitleCasePipe,
   TrimPipe,
   TrimLeftPipe,
