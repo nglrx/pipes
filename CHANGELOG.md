@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0](https://github.com/nglrx/pipes/tree/0.2.0) (2020-07-20)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.1.13...0.2.0)
+
+**Merged pull requests:**
+
+- 0.1.14 [\#33](https://github.com/nglrx/pipes/pull/33) ([kneurgao](https://github.com/kneurgao))
+
 ## [0.1.13](https://github.com/nglrx/pipes/tree/0.1.13) (2020-07-19)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.1.12...0.1.13)
@@ -54,6 +62,7 @@
 **Merged pull requests:**
 
 - 0.1.8 [\#19](https://github.com/nglrx/pipes/pull/19) ([kneurgao](https://github.com/kneurgao))
+- Installed latest version of library in project [\#15](https://github.com/nglrx/pipes/pull/15) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.7](https://github.com/nglrx/pipes/tree/0.1.7) (2020-05-19)
 
@@ -78,7 +87,6 @@
 
 **Merged pull requests:**
 
-- Installed latest version of library in project [\#15](https://github.com/nglrx/pipes/pull/15) ([kneurgao](https://github.com/kneurgao))
 - 0.1.5 [\#14](https://github.com/nglrx/pipes/pull/14) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.4](https://github.com/nglrx/pipes/tree/0.1.4) (2020-04-14)
@@ -107,19 +115,6 @@
 
 - Updated version in npm package [\#9](https://github.com/nglrx/pipes/pull/9) ([kneurgao](https://github.com/kneurgao))
 - 0.1.x [\#8](https://github.com/nglrx/pipes/pull/8) ([kneurgao](https://github.com/kneurgao))
-
-## [0.1.0](https://github.com/nglrx/pipes/tree/0.1.0) (2020-04-11)
-
-[Full Changelog](https://github.com/nglrx/pipes/compare/d38da24e3ce882d4e00901fe87bab52b4a7ab629...0.1.0)
-
-**Merged pull requests:**
-
-- 1.0.x [\#7](https://github.com/nglrx/pipes/pull/7) ([kneurgao](https://github.com/kneurgao))
-- 1.0.x [\#6](https://github.com/nglrx/pipes/pull/6) ([kneurgao](https://github.com/kneurgao))
-- 1.0.x [\#5](https://github.com/nglrx/pipes/pull/5) ([kneurgao](https://github.com/kneurgao))
-- 1.0.x [\#4](https://github.com/nglrx/pipes/pull/4) ([kneurgao](https://github.com/kneurgao))
-- 1.0.x [\#3](https://github.com/nglrx/pipes/pull/3) ([kneurgao](https://github.com/kneurgao))
-- 1.0.x [\#2](https://github.com/nglrx/pipes/pull/2) ([kneurgao](https://github.com/kneurgao))
 
 
 
