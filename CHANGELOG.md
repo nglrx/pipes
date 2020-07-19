@@ -1,5 +1,23 @@
 # Changelog
 
+## [Unreleased](https://github.com/nglrx/pipes/tree/HEAD)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.1.12...HEAD)
+
+**Merged pull requests:**
+
+- Update issue templates [\#31](https://github.com/nglrx/pipes/pull/31) ([kneurgao](https://github.com/kneurgao))
+- Create CODE\_OF\_CONDUCT.md [\#30](https://github.com/nglrx/pipes/pull/30) ([kneurgao](https://github.com/kneurgao))
+- Update issue templates [\#29](https://github.com/nglrx/pipes/pull/29) ([kneurgao](https://github.com/kneurgao))
+
+## [0.1.12](https://github.com/nglrx/pipes/tree/0.1.12) (2020-07-13)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.1.11...0.1.12)
+
+**Merged pull requests:**
+
+- 0.1.12 [\#28](https://github.com/nglrx/pipes/pull/28) ([kneurgao](https://github.com/kneurgao))
+
 ## [0.1.11](https://github.com/nglrx/pipes/tree/0.1.11) (2020-07-10)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.1.10...0.1.11)
@@ -27,7 +45,6 @@
 **Merged pull requests:**
 
 - 0.1.9 [\#20](https://github.com/nglrx/pipes/pull/20) ([kneurgao](https://github.com/kneurgao))
-- Installled latest version of library [\#17](https://github.com/nglrx/pipes/pull/17) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.8](https://github.com/nglrx/pipes/tree/0.1.8) (2020-05-19)
 
@@ -36,14 +53,11 @@
 **Merged pull requests:**
 
 - 0.1.8 [\#19](https://github.com/nglrx/pipes/pull/19) ([kneurgao](https://github.com/kneurgao))
+- 0.1.7 [\#18](https://github.com/nglrx/pipes/pull/18) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.7](https://github.com/nglrx/pipes/tree/0.1.7) (2020-05-19)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.1.6...0.1.7)
-
-**Merged pull requests:**
-
-- 0.1.7 [\#18](https://github.com/nglrx/pipes/pull/18) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.6](https://github.com/nglrx/pipes/tree/0.1.6) (2020-05-08)
 
@@ -51,6 +65,7 @@
 
 **Merged pull requests:**
 
+- Installled latest version of library [\#17](https://github.com/nglrx/pipes/pull/17) ([kneurgao](https://github.com/kneurgao))
 - 0.1.6 [\#16](https://github.com/nglrx/pipes/pull/16) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.5](https://github.com/nglrx/pipes/tree/0.1.5) (2020-04-29)
@@ -79,6 +94,7 @@
 
 - 0.1.x [\#11](https://github.com/nglrx/pipes/pull/11) ([kneurgao](https://github.com/kneurgao))
 - Upgraded test packages [\#10](https://github.com/nglrx/pipes/pull/10) ([kneurgao](https://github.com/kneurgao))
+- Updated version in npm package [\#9](https://github.com/nglrx/pipes/pull/9) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.2](https://github.com/nglrx/pipes/tree/0.1.2) (2020-04-12)
 
@@ -86,7 +102,6 @@
 
 **Merged pull requests:**
 
-- Updated version in npm package [\#9](https://github.com/nglrx/pipes/pull/9) ([kneurgao](https://github.com/kneurgao))
 - 0.1.x [\#8](https://github.com/nglrx/pipes/pull/8) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.0](https://github.com/nglrx/pipes/tree/0.1.0) (2020-04-11)
