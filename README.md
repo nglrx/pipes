@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/nglrx/pipes.svg?branch=master)](https://travis-ci.org/nglrx/pipes)
 [![codecov](https://codecov.io/gh/nglrx/pipes/branch/master/graph/badge.svg)](https://codecov.io/gh/nglrx/pipes)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nglrx_pipes&metric=alert_status)](https://sonarcloud.io/dashboard?id=nglrx_pipes)
+![npm](https://img.shields.io/npm/dm/@nglrx/pipes)
 ![GitHub](https://img.shields.io/github/license/nglrx/pipes?color=blue)
 
 # @nglrx/pipes

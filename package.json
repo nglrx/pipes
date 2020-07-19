@@ -23,9 +23,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "changelog": "github_changelog_generator -u nglrx -p pipes -t 322726fbd2bd5b92824171e9090c540897a5788c "
   },
   "private": false,
   "dependencies": {
