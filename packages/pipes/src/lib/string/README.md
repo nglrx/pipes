@@ -5,6 +5,7 @@ A collection of pipes exported by `NglrxStringPipesModule`.
   - [camelCase](#camelcase)
   - [charAt](#charat)
   - [lowerCase](#lowercase)
+  - [padStart](#padstart)
   - [pascalCase](#pascalcase)
   - [sentenceCase](#sentencecase)
   - [slugify](#slugify)
@@ -51,6 +52,19 @@ Usage: `string | lowerCase`
 ```html
 {{ 'Convert TO LoWeR-case' | lowerCase }}
 <!-- Returns 'convert to lower-case' -->
+```
+
+
+### padStart
+
+Pads the string with a fill string so that the resulting string reaches the specified max length. The fill string is prepended of the current string.\
+Default fill string is space ' '.
+
+Usage: `string | padStart:maxLength[:fillString]`
+
+```html
+{{ This is a test string! | padStart:27:'--' }}
+<!-- Returns '-----This is a test string!' -->
 ```
 
 
