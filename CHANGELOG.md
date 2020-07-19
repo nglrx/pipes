@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/nglrx/pipes/tree/HEAD)
+## [0.1.13](https://github.com/nglrx/pipes/tree/0.1.13) (2020-07-19)
 
-[Full Changelog](https://github.com/nglrx/pipes/compare/0.1.12...HEAD)
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.1.12...0.1.13)
 
 **Merged pull requests:**
 
+- 0.1.13 [\#32](https://github.com/nglrx/pipes/pull/32) ([kneurgao](https://github.com/kneurgao))
 - Update issue templates [\#31](https://github.com/nglrx/pipes/pull/31) ([kneurgao](https://github.com/kneurgao))
 - Create CODE\_OF\_CONDUCT.md [\#30](https://github.com/nglrx/pipes/pull/30) ([kneurgao](https://github.com/kneurgao))
 - Update issue templates [\#29](https://github.com/nglrx/pipes/pull/29) ([kneurgao](https://github.com/kneurgao))
@@ -53,11 +54,14 @@
 **Merged pull requests:**
 
 - 0.1.8 [\#19](https://github.com/nglrx/pipes/pull/19) ([kneurgao](https://github.com/kneurgao))
-- 0.1.7 [\#18](https://github.com/nglrx/pipes/pull/18) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.7](https://github.com/nglrx/pipes/tree/0.1.7) (2020-05-19)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.1.6...0.1.7)
+
+**Merged pull requests:**
+
+- 0.1.7 [\#18](https://github.com/nglrx/pipes/pull/18) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.6](https://github.com/nglrx/pipes/tree/0.1.6) (2020-05-08)
 
@@ -94,7 +98,6 @@
 
 - 0.1.x [\#11](https://github.com/nglrx/pipes/pull/11) ([kneurgao](https://github.com/kneurgao))
 - Upgraded test packages [\#10](https://github.com/nglrx/pipes/pull/10) ([kneurgao](https://github.com/kneurgao))
-- Updated version in npm package [\#9](https://github.com/nglrx/pipes/pull/9) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.2](https://github.com/nglrx/pipes/tree/0.1.2) (2020-04-12)
 
@@ -102,6 +105,7 @@
 
 **Merged pull requests:**
 
+- Updated version in npm package [\#9](https://github.com/nglrx/pipes/pull/9) ([kneurgao](https://github.com/kneurgao))
 - 0.1.x [\#8](https://github.com/nglrx/pipes/pull/8) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.0](https://github.com/nglrx/pipes/tree/0.1.0) (2020-04-11)
