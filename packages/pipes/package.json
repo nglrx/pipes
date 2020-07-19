@@ -1,14 +1,14 @@
 {
   "name": "@nglrx/pipes",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "author": "Kapil Neurgaonkar",
-  "description": "A collection of Angular pipes",
+  "description": "A collection of pipes for Angular apps.",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/nglrx/pipes.git"
   },
-  "homepage": "https://github.com/nglrx/pipes#readme",
+  "homepage": "https://nglrx.github.io/pipes/",
   "bugs": "https://github.com/nglrx/pipes/issues",
   "keywords": [
     "ng",
