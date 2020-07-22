@@ -10,6 +10,7 @@ export { ReversePipe } from './generic/reverse/reverse.pipe';
 export { NglrxStringPipesModule } from './string/nglrx-string-pipes.module';
 export { CamelCasePipe } from './string/camel-case/camel-case.pipe';
 export { CharAtPipe } from './string/char-at/char-at.pipe';
+export { ConcatPipe } from './string/concat/concat.pipe';
 export { LowerCasePipe } from './string/lower-case/lower-case.pipe';
 export { PadEndPipe } from './string/pad-end/pad-end.pipe';
 export { PadStartPipe } from './string/pad-start/pad-start.pipe';

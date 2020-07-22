@@ -4,6 +4,7 @@ A collection of pipes exported by `NglrxStringPipesModule`.
 
   - [camelCase](#camelcase)
   - [charAt](#charat)
+  - [concat](#concat)
   - [lowerCase](#lowercase)
   - [padEnd](#padend)
   - [padStart](#padstart)
@@ -41,6 +42,18 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 ```html
 {{ 'This is a sample string.' | charAt:12 }}
 <!-- Returns 'm' -->
+```
+
+
+### concat
+
+Concatenates one or more string(s) to current string at the end.\
+
+Usage: `string | concat:string1[:string2]...`
+
+```html
+{{ 'This' | concat:' is':' a':' string':'!' }}
+<!-- Returns 'This is a string!' -->
 ```
 
 
