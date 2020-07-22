@@ -33,7 +33,7 @@ describe('PadStartPipe', () => {
     expect(pipe.transform(emptyStr, 0, fillStringSlashes)).toEqual(emptyStr);
   });
 
-  it(`should return fill string on padding empty string with fill string`, () => {
+  it(`should return fill string on padding empty string from left with fill string`, () => {
     expect(pipe.transform(fillStringSlashes, fillStringSlashes.length+1, emptyStr))
       .toEqual(fillStringSlashes);
   });
