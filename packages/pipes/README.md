@@ -186,7 +186,7 @@ Optionally, you may also specify a limit (integer) on the number of splits.
 Usage: `string | split[:delimiter][:limit]`
 
 ```html
-{{ 'This_is_a_string_separated_with_underscore' | split:'_':4 }}
+{{ 'This_is_a_string_separated_with_underscore' | sp lit:'_':4 }}
 <!-- Returns ['This', 'is', 'a', 'string'] -->
 ```
 

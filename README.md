@@ -42,15 +42,15 @@ Alternatively, you can use pipes from specific module(s) like `NglrxNumberPipesM
 Pipes can be used in your component's *template*
 
 ```html
-{{ 'This-is-a-string' | length }}
-<!-- Returns 16 -->
+{% raw %}{{ 'This-is-a-string' | length }}
+<!-- Returns 16 -->{% endraw %}
 ```
 
 They can also be *chained*
 
 ```html
-{{ '  Another-string  ' | trim | length }}
-<!-- Returns 14 -->
+{% raw %}{{ '  Another-string  ' | trim | length }}
+<!-- Returns 14 -->{% endraw %}
 ```
 
 Or they can be used within *components* or *services* by calling the `transform` method
@@ -108,8 +108,8 @@ Converts a string to camel case and strips hyphens, underscores and whitespaces.
 Usage: `string | camelCase`
 
 ```html
-{{ 'Convert_to camel-case' | camelCase }}
-<!-- Returns 'convertToCamelCase' -->
+{% raw %}{{ 'Convert_to camel-case' | camelCase }}
+<!-- Returns 'convertToCamelCase' -->{% endraw %}
 ```
 
 
@@ -122,8 +122,8 @@ Usage: `string | charAt[:position]`
 Range of position is from 0 (default) to n-1, where n is length of the string.
 
 ```html
-{{ 'This is a sample string.' | charAt:12 }}
-<!-- Returns 'm' -->
+{% raw %}{{ 'This is a sample string.' | charAt:12 }}
+<!-- Returns 'm' -->{% endraw %}
 ```
 
 
@@ -134,8 +134,8 @@ Converts a given string to lower case.
 Usage: `string | lowerCase`
 
 ```html
-{{ 'Convert TO LoWeR-case' | lowerCase }}
-<!-- Returns 'convert to lower-case' -->
+{% raw %}{{ 'Convert TO LoWeR-case' | lowerCase }}
+<!-- Returns 'convert to lower-case' -->{% endraw %}
 ```
 
 
@@ -146,8 +146,8 @@ Converts a string to pascal case and strips hyphens, underscores and whitespaces
 Usage: `string | pascalCase`
 
 ```html
-{{ 'convert_to PASCAL-case' | pascalCase }}
-<!-- Returns 'ConvertToPascalCase' -->
+{% raw %}{{ 'convert_to PASCAL-case' | pascalCase }}
+<!-- Returns 'ConvertToPascalCase' -->{% endraw %}
 ```
 
 
@@ -158,36 +158,35 @@ Converts a string to sentence case.
 Usage: `string | sentenceCase`
 
 ```html
-{{ 'convert TO Sentence case.' | sentenceCase }}
-<!-- Returns 'Convert to sentence case.' -->
+{% raw %}{{ 'convert TO Sentence case.' | sentenceCase }}
+<!-- Returns 'Convert to sentence case.' -->{% endraw %}
 ```
 
 
 ### slugify
 
 Slugifies a given string with an optional char separator.
-Default separator char is hyphen '-'.\
+Default separator char is hyphen '-'.<br />
 Special characters are stripped from string.
 
 Usage: `string | slugify[:separator]`
 
 ```html
-{{ 'this_-is__a - string!' | slugify:'_' }}
-<!-- Returns 'this_is_a_string' -->
+{% raw %}{{ 'this_-is__a - string!' | slugify:'_' }}
+<!-- Returns 'this_is_a_string' -->{% endraw %}
 ```
 
 
 ### split
 
-Splits a given string into an array of sub-strings using an optional delimiter.\
-Default delimiter is space ' '.\
-Optionally, you may also specify a limit (integer) on the number of splits.
+Splits a given string into an array of sub-strings using an optional delimiter.<br />
+Default delimiter is space ' '. Optionally, you may also specify a limit (integer) on the number of splits.
 
 Usage: `string | split[:delimiter][:limit]`
 
 ```html
-{{ 'This_is_a_string_separated_with_underscore' | split:'_':4 }}
-<!-- Returns ['This', 'is', 'a', 'string'] -->
+{% raw %}{{ 'This_is_a_string_separated_with_underscore' | sp lit:'_':4 }}
+<!-- Returns ['This', 'is', 'a', 'string'] -->{% endraw %}
 ```
 
 
@@ -198,8 +197,8 @@ Converts a string to titleCase case.
 Usage: `string | titleCase`
 
 ```html
-{{ 'convert TO title cASE.' | titleCase }}
-<!-- Returns 'Convert To Title Case.' -->
+{% raw %}{{ 'convert TO title cASE.' | titleCase }}
+<!-- Returns 'Convert To Title Case.' -->{% endraw %}
 ```
 
 
@@ -210,8 +209,8 @@ Strips the leading and trailing whitespaces from a given string.
 Usage: `string | trim`
 
 ```html
-{{ ' This is a test string!  ' | trim }}
-<!-- Returns 'This is a test string!' -->
+{% raw %}{{ ' This is a test string!  ' | trim }}
+<!-- Returns 'This is a test string!' -->{% endraw %}
 ```
 
 
@@ -222,8 +221,8 @@ Strips the leading whitespaces from a given string.
 Usage: `string | trimLeft`
 
 ```html
-{{ ' This is a test string!  ' | trimLeft }}
-<!-- Returns 'This is a test string!  ' -->
+{% raw %}{{ ' This is a test string!  ' | trimLeft }}
+<!-- Returns 'This is a test string!  ' -->{% endraw %}
 ```
 
 
@@ -234,8 +233,8 @@ Strips the trailing whitespaces from a given string.
 Usage: `string | trimRight`
 
 ```html
-{{ ' This is a test string!  ' | trimRight }}
-<!-- Returns ' This is a test string!' -->
+{% raw %}{{ ' This is a test string!  ' | trimRight }}
+<!-- Returns ' This is a test string!' -->{% endraw %}
 ```
 
 
@@ -246,8 +245,8 @@ Converts a given string to upper case.
 Usage: `string | upperCase`
 
 ```html
-{{ 'Convert TO UpPeR-case.' | upperCase }}
-<!-- Returns 'CONVERT TO UPPER-CASE.' -->
+{% raw %}{{ 'Convert TO UpPeR-case.' | upperCase }}
+<!-- Returns 'CONVERT TO UPPER-CASE.' -->{% endraw %}
 ```
 
 
@@ -263,8 +262,8 @@ Returns the absolute value of given number.
 Usage: `number | abs`
 
 ```html
-{{ -384 | abs }}
-<!-- Returns 384 -->
+{% raw %}{{ -384 | abs }}
+<!-- Returns 384 -->{% endraw %}
 ```
 
 
@@ -275,8 +274,8 @@ Returns the average of all numbers in a given array.
 Usage: `array | avg`
 
 ```html
-{{ [10, 45, 200, 5, 92] | avg }}
-<!-- Returns 70.4 -->
+{% raw %}{{ [10, 45, 200, 5, 92] | avg }}
+<!-- Returns 70.4 -->{% endraw %}
 ```
 
 
@@ -287,8 +286,8 @@ Finds the maximum from an array of numbers.
 Usage: `array | max`
 
 ```html
-{{ [10, 45, 200, 5, 92] | max }}
-<!-- Returns 200 -->
+{% raw %}{{ [10, 45, 200, 5, 92] | max }}
+<!-- Returns 200 -->{% endraw %}
 ```
 
 
@@ -299,8 +298,8 @@ Finds the minimum from an array of numbers.
 Usage: `array | min`
 
 ```html
-{{ [10, 45, 200, 5, 92] | min }}
-<!-- Returns 5 -->
+{% raw %}{{ [10, 45, 200, 5, 92] | min }}
+<!-- Returns 5 -->{% endraw %}
 ```
 
 
@@ -311,8 +310,8 @@ Returns the sum of all numbers in a given array.
 Usage: `array | sum`
 
 ```html
-{{ [10, 45, 200, 5, 92] | sum }}
-<!-- Returns 352 -->
+{% raw %}{{ [10, 45, 200, 5, 92] | sum }}
+<!-- Returns 352 -->{% endraw %}
 ```
 
 
@@ -327,11 +326,11 @@ Returns the length of a given string or array.
 Usage: `string-OR-array | length`
 
 ```html
-{{ 'This is a test string!' | length }}
+{% raw %}{{ 'This is a test string!' | length }}
 <!-- Returns 22 -->
 
 {{ [10, 45, 200, 50, 92] | length }}
-<!-- Returns 5 -->
+<!-- Returns 5 -->{% endraw %}
 ```
 
 
@@ -342,12 +341,12 @@ Reverses a given string or array (of any type).
 Usage: `string-OR-array | reverse`
 
 ```html
-{{ 'This is a test string!' | reverse }}
+{% raw %}{{ 'This is a test string!' | reverse }}
 <!-- Returns '!gnirts tset a si sihT' -->
 
 {{ ['a', 'b', 'c', 'd', 'e'] | reverse }}
-<!-- Returns ['e', 'd', 'c', 'b', 'a'] -->
+<!-- Returns ['e', 'd', 'c', 'b', 'a'] -->{% endraw %}
 ```
 
-\
+<br />
 For more information on pipes, refer to [Angular - pipes](https://angular.io/guide/pipes) documentation.
