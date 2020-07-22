@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CamelCasePipe } from './camel-case/camel-case.pipe';
 import { CharAtPipe } from './char-at/char-at.pipe';
 import { LowerCasePipe } from './lower-case/lower-case.pipe';
+import { PadEndPipe } from './pad-end/pad-end.pipe';
 import { PadStartPipe } from './pad-start/pad-start.pipe';
 import { PascalCasePipe } from './pascal-case/pascal-case.pipe';
 import { SentenceCasePipe } from './sentence-case/sentence-case.pipe';
@@ -18,6 +19,7 @@ const STRING_PIPES = [
   CamelCasePipe,
   CharAtPipe,
   LowerCasePipe,
+  PadEndPipe,
   PadStartPipe,
   PascalCasePipe,
   SentenceCasePipe,
