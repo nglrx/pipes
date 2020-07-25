@@ -15,7 +15,7 @@ export class ReversePipe implements PipeTransform {
     } else if (TypeUtils.isArray(value)) {
       return Object.assign([], value).reverse();
     }
-    return null;
+    return value;
   }
 
 }
