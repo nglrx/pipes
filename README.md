@@ -75,7 +75,10 @@ export class YourComponent {
 - [String Pipes](#string-pipes)
   - [camelCase](#camelcase)
   - [charAt](#charat)
+  - [concat](#concat)
   - [lowerCase](#lowercase)
+  - [padEnd](#padend)
+  - [padStart](#padstart)
   - [pascalCase](#pascalcase)
   - [sentenceCase](#sentencecase)
   - [slugify](#slugify)
@@ -127,6 +130,18 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 ```
 
 
+### concat
+
+Concatenates one or more string(s) to current string at the end.<br />
+
+Usage: `string | concat:string1[:string2]...`
+
+```html
+{% raw %}{{ 'This' | concat:' is':' a':' string':'!' }}
+<!-- Returns 'This is a string!' -->{% endraw %}
+```
+
+
 ### lowerCase
 
 Converts a given string to lower case.
@@ -136,6 +151,32 @@ Usage: `string | lowerCase`
 ```html
 {% raw %}{{ 'Convert TO LoWeR-case' | lowerCase }}
 <!-- Returns 'convert to lower-case' -->{% endraw %}
+```
+
+
+### padEnd
+
+Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is appended to the given string.\
+Default fill string is space ' '.
+
+Usage: `string | padEnd:maxLength[:fillString]`
+
+```html
+{% raw %}{{ This is a test string! | padEnd:29:'---' }}
+<!-- Returns 'This is a test string!-------' -->{% endraw %}
+```
+
+
+### padStart
+
+Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is prepended to the given string.<br />
+Default fill string is space ' '.
+
+Usage: `string | padStart:maxLength[:fillString]`
+
+```html
+{% raw %}{{ This is a test string! | padStart:27:'--' }}
+<!-- Returns '-----This is a test string!' -->{% endraw %}
 ```
 
 
