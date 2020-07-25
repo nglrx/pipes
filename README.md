@@ -156,7 +156,7 @@ Usage: `string | lowerCase`
 
 ### padEnd
 
-Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is appended to the given string.\
+Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is appended to the given string.<br />
 Default fill string is space ' '.
 
 Usage: `string | padEnd:maxLength[:fillString]`
