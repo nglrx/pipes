@@ -13,7 +13,7 @@ A collection of pipes for Angular apps.
 
 ## Installation
 
-Use [npm](https://www.npmjs.com/) to install  @nglrx/pipes.
+Use [npm](https://www.npmjs.com/) to install @nglrx/pipes.
 
 ```bash
 npm i @nglrx/pipes
@@ -157,7 +157,7 @@ Usage: `string | lowerCase`
 ### padEnd
 
 Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is appended to the given string.\
-Default fill string is space ' '.
+Default fill string is space `' '`.
 
 Usage: `string | padEnd:maxLength[:fillString]`
 
@@ -170,7 +170,7 @@ Usage: `string | padEnd:maxLength[:fillString]`
 ### padStart
 
 Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is prepended to the given string.\
-Default fill string is space ' '.
+Default fill string is space `' '`.
 
 Usage: `string | padStart:maxLength[:fillString]`
 
@@ -221,7 +221,7 @@ Usage: `string | slugify[:separator]`
 ### split
 
 Splits a given string into an array of sub-strings using an optional delimiter.\
-Default delimiter is space ' '.\
+Default delimiter is space `' '`.\
 Optionally, you may also specify a limit (integer) on the number of splits.
 
 Usage: `string | split[:delimiter][:limit]`
