@@ -29,7 +29,7 @@ describe('TrimLeftPipe', () => {
   });
 
   it(`should be null safe`, () => {
-    expect(pipe.transform(null)).toEqual(null);
+    expect(pipe.transform(null)).toBeNull();
   });
 
 });
