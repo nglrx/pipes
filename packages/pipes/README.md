@@ -363,9 +363,11 @@ A collection of pipes exported by `NglrxGenericPipesModule`.
 
 ### length
 
-Returns the length of a given string or array.
+Returns the length of a given value of any supported type.\
+Supported data types are string, array, number, boolean, or any data type which has own property 'length'.\
+For an array the number of elements is returned. For others the number of characters in value is returned.
 
-Usage: `string-OR-array | length`
+Usage: `value | length`
 
 ```html
 {{ 'This is a test string!' | length }}
@@ -378,9 +380,11 @@ Usage: `string-OR-array | length`
 
 ### reverse
 
-Reverses a given string or array (of any type).
+Reverses a given value of any supported type.\
+Supported data types are string, array, number, boolean.\
+For an array the sequence of elements is reversed. For others the sequence of characters in value is reversed.
 
-Usage: `string-OR-array | reverse`
+Usage: `value | reverse`
 
 ```html
 {{ 'This is a test string!' | reverse }}

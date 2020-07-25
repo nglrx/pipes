@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+
 import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
@@ -14,7 +15,7 @@ export class ReversePipe implements PipeTransform {
     } else if (TypeUtils.isArray(value)) {
       return Object.assign([], value).reverse();
     }
-    return value;
+    return null;
   }
 
 }
