@@ -51,12 +51,12 @@ describe('LengthPipe', () => {
   });
 
   it(`should return null for unsupported types Object, Date`, () => {
-    expect(pipe.transform(obj)).toEqual(null);
-    expect(pipe.transform(date)).toEqual(null);
+    expect(pipe.transform(obj)).toBeNull();
+    expect(pipe.transform(date)).toBeNull();
   });
 
   it(`should be null safe`, () => {
-    expect(pipe.transform(null)).toEqual(null);
+    expect(pipe.transform(null)).toBeNull();
   });
 
 });

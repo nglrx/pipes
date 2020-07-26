@@ -49,12 +49,12 @@ describe('ReversePipe', () => {
   });
 
   it(`should return input for unsupported types Object, Date`, () => {
-    expect(pipe.transform(obj)).toEqual(obj);
-    expect(pipe.transform(date)).toEqual(date);
+    expect(pipe.transform(obj)).toBe(obj);
+    expect(pipe.transform(date)).toBe(date);
   });
 
   it(`should be null safe`, () => {
-    expect(pipe.transform(null)).toEqual(null);
+    expect(pipe.transform(null)).toBeNull();
   });
 
 });

@@ -3,15 +3,16 @@ export class StringUtils {
     return value && value.charAt(position);
   }
 
-  static slugify(value: string, separator?: string): string {
-    separator = separator || '-';
-    return value && this.toLowerCase(value)
-                        .replace(/[^a-z0-9\-_]/g, '')
+  static slugify(value: string, separator: string): string {
+    return value && this.toLowerCase(value.trim())
+                        .replace(/[^a-z0-9\-_]/g, ' ')
+                        .trim()
                         .replace(/[\-_\s]+/g, separator);
   }
 
   static toCamelCase(value: string): string {
     return value && value.split(/[\-_\s]+/g)
+                         .filter(word => !!word)
                          .map((word, index) => {
                            return index === 0 ? this.toLowerCase(word) : this.toSentenceCase(word);
                          })
@@ -24,6 +25,7 @@ export class StringUtils {
 
   static toPascalCase(value: string): string {
     return value && value.split(/[\-_\s]+/g)
+                         .filter(word => !!word)
                          .map((word) => {
                            return this.toSentenceCase(word);
                          })
@@ -34,8 +36,7 @@ export class StringUtils {
     return value && this.toUpperCase(this.charAt(value)) + this.toLowerCase(value.substr(1));
   }
 
-  static toTitleCase(value: string, separator?: string, exclusions?: string[]): string {
-    separator = separator || ' ';
+  static toTitleCase(value: string, separator: string, exclusions?: string[]): string {
     return value && value.split(separator)
                          .map((word, index) => {
                            return index > 0 && exclusions && exclusions.includes(word.toLowerCase())

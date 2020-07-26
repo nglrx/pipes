@@ -10,6 +10,9 @@ describe('SumPipe', () => {
   const singleValueArr = [2];
   const sumOfSingleValueArr = 2
   const emptyArr = [];
+  const sumOfEmptyArr = 0;
+  const nanArray = [783, Infinity, NaN, 0, -391];
+  const sumOfNanArray = NaN;
 
   beforeEach(() => {
     pipe = new SumPipe();
@@ -31,8 +34,12 @@ describe('SumPipe', () => {
     expect(pipe.transform(singleValueArr)).toEqual(sumOfSingleValueArr);
   });
 
-  it(`should return null for an empty array`, () => {
-    expect(pipe.transform(emptyArr)).toBeNull();
+  it(`should return 0 for an empty array`, () => {
+    expect(pipe.transform(emptyArr)).toEqual(sumOfEmptyArr);
+  });
+
+  it('should return NaN if given array contains Infinity', () => {
+    expect(pipe.transform(nanArray)).toEqual(sumOfNanArray);
   });
 
   it(`should be null safe`, () => {
