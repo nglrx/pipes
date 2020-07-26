@@ -1,11 +1,29 @@
 # Changelog
 
-## [0.2.0](https://github.com/nglrx/pipes/tree/0.2.0) (2020-07-20)
+## [0.3.1](https://github.com/nglrx/pipes/tree/0.3.1) (2020-07-26)
 
-[Full Changelog](https://github.com/nglrx/pipes/compare/0.1.13...0.2.0)
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.3.0...0.3.1)
 
 **Merged pull requests:**
 
+- 0.3.1 [\#37](https://github.com/nglrx/pipes/pull/37) ([kneurgao](https://github.com/kneurgao))
+
+## [0.3.0](https://github.com/nglrx/pipes/tree/0.3.0) (2020-07-22)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.2.1...0.3.0)
+
+**Merged pull requests:**
+
+- 0.3.0 [\#36](https://github.com/nglrx/pipes/pull/36) ([kneurgao](https://github.com/kneurgao))
+
+## [0.2.1](https://github.com/nglrx/pipes/tree/0.2.1) (2020-07-19)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.1.13...0.2.1)
+
+**Merged pull requests:**
+
+- 0.2.1 [\#35](https://github.com/nglrx/pipes/pull/35) ([kneurgao](https://github.com/kneurgao))
+- 0.2.0 [\#34](https://github.com/nglrx/pipes/pull/34) ([kneurgao](https://github.com/kneurgao))
 - 0.1.14 [\#33](https://github.com/nglrx/pipes/pull/33) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.13](https://github.com/nglrx/pipes/tree/0.1.13) (2020-07-19)
