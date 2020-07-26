@@ -10,6 +10,8 @@ describe('MinPipe', () => {
   const singleValueArr = [2];
   const minOfSingleValueArr = 2
   const emptyArr = [];
+  const nanArray = [783, Infinity, NaN, 0, -391];
+  const minOfNanArray = NaN;
 
   beforeEach(() => {
     pipe = new MinPipe();
@@ -33,6 +35,10 @@ describe('MinPipe', () => {
 
   it(`should return null for an empty array`, () => {
     expect(pipe.transform(emptyArr)).toBeNull();
+  });
+
+  it('should return NaN if given array contains Infinity', () => {
+    expect(pipe.transform(nanArray)).toEqual(minOfNanArray);
   });
 
   it(`should be null safe`, () => {

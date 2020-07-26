@@ -18,9 +18,9 @@ export class TypeUtils {
   /**
    * Checks if array is null or empty
    * @param array Array of any type
-   * @returns true if null or empty, else false
+   * @returns true if empty, else false
    */
-  static isNullOrEmpty(array: any[]): boolean {
+  static isEmpty(array: any[]): boolean {
     return !Array.isArray(array) || array.length === 0;
   }
 
@@ -32,4 +32,14 @@ export class TypeUtils {
   static isNullOrUndefined(value: any) {
     return typeof value === 'undefined' || value === null;
   }
+
+  /**
+   * Checks if all numbers in a given array are finite
+   * @param values array of numbers
+   * @returns true if all numbers are finite, else false
+   */
+  static areFinite(values: number[]) {
+    return values.every(value => isFinite(value));
+  }
+
 }

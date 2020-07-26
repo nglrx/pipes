@@ -10,6 +10,9 @@ describe('AvgPipe', () => {
   const singleValueArr = [2];
   const avgOfSingleValueArr = 2
   const emptyArr = [];
+  const avgOfEmptyArr = 0;
+  const nanArray = [783, Infinity, NaN, 0, -391];
+  const avgOfNanArray = NaN;
 
   beforeEach(() => {
     pipe = new AvgPipe();
@@ -31,8 +34,12 @@ describe('AvgPipe', () => {
     expect(pipe.transform(singleValueArr)).toEqual(avgOfSingleValueArr);
   });
 
-  it(`should return null for an empty array`, () => {
-    expect(pipe.transform(emptyArr)).toBeNull();
+  it(`should return 0 for an empty array`, () => {
+    expect(pipe.transform(emptyArr)).toEqual(avgOfEmptyArr);
+  });
+
+  it('should return NaN if given array contains Infinity', () => {
+    expect(pipe.transform(nanArray)).toEqual(avgOfNanArray);
   });
 
   it(`should be null safe`, () => {

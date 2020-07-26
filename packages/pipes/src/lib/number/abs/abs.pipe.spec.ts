@@ -10,7 +10,8 @@ describe('AbsPipe', () => {
   const decimalNum = -459.1386;
   const absOfDecimalNum = 459.1386;
   const zero = 0;
-  const absOfZero = 0;
+  const infinity = Infinity;
+  const nan = NaN;
 
   beforeEach(() => {
     pipe = new AbsPipe();
@@ -33,11 +34,19 @@ describe('AbsPipe', () => {
   });
 
   it(`should return zero for absolute value of zero`, () => {
-    expect(pipe.transform(zero)).toEqual(absOfZero);
+    expect(pipe.transform(zero)).toEqual(zero);
+  });
+
+  it('should return NaN for absolute value of NaN', () => {
+    expect(pipe.transform(nan)).toEqual(nan);
+  });
+
+  it('should return Infinity for absolute value of Infinity', () => {
+    expect(pipe.transform(infinity)).toEqual(infinity);
   });
 
   it(`should be null safe`, () => {
-    expect(pipe.transform(null)).toEqual(0);
+    expect(pipe.transform(null)).toEqual(zero);
   });
 
 });

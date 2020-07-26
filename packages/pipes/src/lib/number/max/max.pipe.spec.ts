@@ -10,6 +10,8 @@ describe('MaxPipe', () => {
   const singleValueArr = [2];
   const maxOfSingleValueArr = 2
   const emptyArr = [];
+  const nanArray = [783, Infinity, NaN, 0, -391];
+  const maxOfNanArray = NaN;
 
   beforeEach(() => {
     pipe = new MaxPipe();
@@ -33,6 +35,10 @@ describe('MaxPipe', () => {
 
   it(`should return null for an empty array`, () => {
     expect(pipe.transform(emptyArr)).toBeNull();
+  });
+
+  it('should return NaN if given array contains Infinity', () => {
+    expect(pipe.transform(nanArray)).toEqual(maxOfNanArray);
   });
 
   it(`should be null safe`, () => {
