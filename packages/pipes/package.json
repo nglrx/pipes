@@ -1,6 +1,6 @@
 {
   "name": "@nglrx/pipes",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "author": "Kapil Neurgaonkar",
   "description": "A collection of pipes for Angular apps.",
   "license": "MIT",
@@ -12,10 +12,12 @@
   "bugs": "https://github.com/nglrx/pipes/issues",
   "keywords": [
     "ng",
+    "ngx",
     "angular",
     "pipes",
     "angular pipes",
     "library",
+    "angular library",
     "filters",
     "angular filters"
   ],
