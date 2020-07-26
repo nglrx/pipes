@@ -5,7 +5,7 @@ describe('CamelCasePipe', () => {
 
   const str = 'This iS A TEST string';
   const strCamelCase = 'thisIsATestString';
-  const sluggishStr = 'This IS another-tEst-_strinG';
+  const sluggishStr = '-This IS another-tEst-_strinG_';
   const sluggishStrCamelCase = 'thisIsAnotherTestString';
   const singleCharacterStr = 'A';
   const singleCharacterStrCamelCase = 'a';

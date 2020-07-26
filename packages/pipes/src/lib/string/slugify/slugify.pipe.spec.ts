@@ -4,9 +4,11 @@ describe('SlugifyPipe', () => {
   let pipe: SlugifyPipe;
 
   const str = 'this_-is__a__ test - string!';
-  const sluggifiedStr = 'this-is-a-test-string'
+  const sluggifiedStr = 'this-is-a-test-string';
   const separator = '_';
-  const sluggifiedStrWithSeparator = 'this_is_a_test_string'
+  const sluggifiedStrWithSeparator = 'this_is_a_test_string';
+  const strWithSplChars = '^this:string~is!separated@with#many$special%characters%';
+  const sluggifiedStrWithSplChars = 'this_string_is_separated_with_many_special_characters';
   const emptyStr = '';
   const whitespaceStr = '\t\n ';
 
@@ -24,6 +26,10 @@ describe('SlugifyPipe', () => {
 
   it(`should slugify a string with specified separator`, () => {
     expect(pipe.transform(str, separator)).toEqual(sluggifiedStrWithSeparator);
+  });
+
+  it(`should slugify a string with special characters`, () => {
+    expect(pipe.transform(strWithSplChars, separator)).toEqual(sluggifiedStrWithSplChars);
   });
 
   it(`should return empty string on slugifying an empty string`, () => {

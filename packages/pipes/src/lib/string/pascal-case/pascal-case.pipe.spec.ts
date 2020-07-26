@@ -5,7 +5,7 @@ describe('PascalCasePipe', () => {
 
   const str = 'This iS A TEST string';
   const strPascalCase = 'ThisIsATestString';
-  const sluggishStr = 'This IS another-tEst-_strinG';
+  const sluggishStr = '-This IS another-tEst-_strinG_';
   const sluggishStrPascalCase = 'ThisIsAnotherTestString';
   const singleCharacterStr = 'a';
   const singleCharacterStrPascalCase = 'A';

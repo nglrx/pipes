@@ -36,7 +36,7 @@ describe('TitleCasePipe', () => {
   });
 
   it(`should convert a string to title case with exclusions`, () => {
-    expect(pipe.transform(str, null, exclusions)).toEqual(titleCaseStrWithExclusions);
+    expect(pipe.transform(str, undefined, exclusions)).toEqual(titleCaseStrWithExclusions);
   });
 
   it(`should convert a string to title case with separator and exclusions`, () => {
