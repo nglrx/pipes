@@ -39,7 +39,8 @@ export class TypeUtils {
    * @returns true if all numbers are finite, else false
    */
   static areFinite(values: number[]) {
-    return values.every(value => isFinite(value));
+    const areFinite = values.every(value => isFinite(value));
+    return areFinite;
   }
 
 }
