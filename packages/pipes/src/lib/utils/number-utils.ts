@@ -10,4 +10,14 @@ export class NumberUtils {
     return sum;
   }
 
+  /**
+   * Checks if all numbers in a given array are finite
+   * @param values array of numbers
+   * @returns true if all numbers are finite, else false
+   */
+  static areFinite(values: number[]) {
+    const areFinite = values.every(value => isFinite(value));
+    return areFinite;
+  }
+
 }
