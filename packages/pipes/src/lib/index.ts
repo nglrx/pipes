@@ -6,6 +6,7 @@ export { NglrxPipesModule } from './nglrx-pipes.module';
 export { NglrxGenericPipesModule } from './generic/nglrx-generic-pipes.module';
 export { LengthPipe } from './generic/length/length.pipe';
 export { ReversePipe } from './generic/reverse/reverse.pipe';
+export { TypeOfPipe } from './generic/type-of/type-of.pipe';
 
 export { NglrxStringPipesModule } from './string/nglrx-string-pipes.module';
 export { CamelCasePipe } from './string/camel-case/camel-case.pipe';

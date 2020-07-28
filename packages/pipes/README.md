@@ -97,6 +97,7 @@ export class YourComponent {
 - [Generic Pipes](#generic-pipes)
   - [length](#length)
   - [reverse](#reverse)
+  - [typeOf](#typeof)
 
 
 ## String Pipes
@@ -392,6 +393,22 @@ Usage: `value | reverse`
 
 {{ ['a', 'b', 'c', 'd', 'e'] | reverse }}
 <!-- Returns ['e', 'd', 'c', 'b', 'a'] -->
+```
+
+
+### typeOf
+
+Returns the type of given value.\
+Returns the name of the type in string. All types are supported.
+
+Usage: `value | typeOf`
+
+```html
+{{ 'This is a test string!' | typeOf }}
+<!-- Returns 'string' -->
+
+{{ { foo: 'bar' } | typeOf }}
+<!-- Returns 'object' -->
 ```
 
 \
