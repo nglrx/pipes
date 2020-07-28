@@ -354,7 +354,7 @@ Returns the square root of given number.
 Usage: `number | sqrt`
 
 ```html
-{{ 625 | abs }}
+{{ 625 | sqrt }}
 <!-- Returns 25 -->
 ```
 
