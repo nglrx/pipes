@@ -93,6 +93,7 @@ export class YourComponent {
   - [avg](#avg)
   - [max](#max)
   - [min](#min)
+  - [pow](#pow)
   - [sqrt](#sqrt)
   - [sum](#sum)
 - [Generic Pipes](#generic-pipes)
@@ -344,6 +345,19 @@ Usage: `array | min`
 ```html
 {{ [10, 45, 200, 5, 92] | min }}
 <!-- Returns 5 -->
+```
+
+
+### pow
+
+Returns the value of the base raised to a specified power.\
+Default value of exponent is 0.
+
+Usage: `base | pow [:exponent]`
+
+```html
+{{ 4 | pow: 3 }}
+<!-- Returns 64 -->
 ```
 
 
