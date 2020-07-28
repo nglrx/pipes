@@ -93,6 +93,7 @@ export class YourComponent {
   - [avg](#avg)
   - [max](#max)
   - [min](#min)
+  - [sqrt](#sqrt)
   - [sum](#sum)
 - [Generic Pipes](#generic-pipes)
   - [length](#length)
@@ -343,6 +344,18 @@ Usage: `array | min`
 ```html
 {{ [10, 45, 200, 5, 92] | min }}
 <!-- Returns 5 -->
+```
+
+
+### sqrt
+
+Returns the square root of given number.
+
+Usage: `number | sqrt`
+
+```html
+{{ 625 | abs }}
+<!-- Returns 25 -->
 ```
 
 
