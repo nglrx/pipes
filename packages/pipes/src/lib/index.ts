@@ -30,6 +30,7 @@ export { AbsPipe } from './number/abs/abs.pipe';
 export { AvgPipe } from './number/avg/avg.pipe';
 export { MaxPipe } from './number/max/max.pipe';
 export { MinPipe } from './number/min/min.pipe';
+export { PctPipe } from './number/pct/pct.pipe';
 export { PowPipe } from './number/pow/pow.pipe';
 export { SqrtPipe } from './number/sqrt/sqrt.pipe';
 export { SumPipe } from './number/sum/sum.pipe';

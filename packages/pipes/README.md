@@ -93,6 +93,7 @@ export class YourComponent {
   - [avg](#avg)
   - [max](#max)
   - [min](#min)
+  - [pct](#pct)
   - [pow](#pow)
   - [sqrt](#sqrt)
   - [sum](#sum)
@@ -345,6 +346,19 @@ Usage: `array | min`
 ```html
 {{ [10, 45, 200, 5, 92] | min }}
 <!-- Returns 5 -->
+```
+
+
+### pct
+
+Returns how much percent is a number of the given total. If not specified default value is 100.\
+Optionally, number of decimal places (integer) may be specified to round-off the percentage.
+
+Usage: `number | pct [:total] [:decimalPlaces]`
+
+```html
+{{ 25 | pct : 483 : 2 }}
+<!-- Returns 5.18 -->
 ```
 
 
