@@ -3,11 +3,6 @@ import { TrimLeftPipe } from './trim-left.pipe';
 describe('TrimLeftPipe', () => {
   let pipe: TrimLeftPipe;
 
-  const str = ' This is a test string!  ';
-  const strTrimmedFromLeft = 'This is a test string!  '
-  const emptyStr = '';
-  const whitespaceStr = '  \t \n  ';
-
   beforeEach(() => {
     pipe = new TrimLeftPipe();
   });
@@ -17,15 +12,15 @@ describe('TrimLeftPipe', () => {
   });
 
   it(`should trim a string from left`, () => {
-    expect(pipe.transform(str)).toEqual(strTrimmedFromLeft);
+    expect(pipe.transform(' This is a test string!  ')).toEqual('This is a test string!  ');
   });
 
   it(`should return empty string on trimming an empty string from left`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
+    expect(pipe.transform('')).toEqual('');
   });
 
   it(`should return empty string on trimming string with only whitespaces from left`, () => {
-    expect(pipe.transform(whitespaceStr)).toEqual(emptyStr);
+    expect(pipe.transform('  \t \n  ')).toEqual('');
   });
 
   it(`should be null safe`, () => {

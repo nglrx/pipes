@@ -3,17 +3,6 @@ import { AvgPipe } from './avg.pipe';
 describe('AvgPipe', () => {
   let pipe: AvgPipe;
 
-  const arr = [10, 45, 200, 5, 92];
-  const avgOfArr = 70.4;
-  const mixedArr = [30, 0, -99, -52, -9];
-  const avgOfMixedArr = -26;
-  const singleValueArr = [2];
-  const avgOfSingleValueArr = 2
-  const emptyArr = [];
-  const avgOfEmptyArr = 0;
-  const nanArray = [783, Infinity, NaN, 0, -391];
-  const avgOfNanArray = NaN;
-
   beforeEach(() => {
     pipe = new AvgPipe();
   });
@@ -23,23 +12,23 @@ describe('AvgPipe', () => {
   });
 
   it(`should find avg from an array of numbers`, () => {
-    expect(pipe.transform(arr)).toEqual(avgOfArr);
+    expect(pipe.transform([10, 45, 200, 5, 92])).toEqual(70.4);
   });
 
   it(`should find avg from an array of both positive and negative numbers`, () => {
-    expect(pipe.transform(mixedArr)).toEqual(avgOfMixedArr);
+    expect(pipe.transform([30, 0, -99, -52, -9])).toEqual(-26);
   });
 
   it(`should find avg from an array with single value`, () => {
-    expect(pipe.transform(singleValueArr)).toEqual(avgOfSingleValueArr);
+    expect(pipe.transform([7])).toEqual(7);
   });
 
   it(`should return 0 for an empty array`, () => {
-    expect(pipe.transform(emptyArr)).toEqual(avgOfEmptyArr);
+    expect(pipe.transform([])).toEqual(0);
   });
 
   it('should return NaN if given array contains Infinity', () => {
-    expect(pipe.transform(nanArray)).toEqual(avgOfNanArray);
+    expect(pipe.transform([872, Infinity, NaN, 0, -693])).toEqual(NaN);
   });
 
   it(`should be null safe`, () => {

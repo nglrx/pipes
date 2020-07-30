@@ -3,21 +3,6 @@ import { LengthPipe } from './length.pipe';
 describe('LengthPipe', () => {
   let pipe: LengthPipe;
 
-  const str = 'This is a test string!';
-  const strLength = 22;
-  const emptyStr = '';
-  const emptyStrLength = 0;
-  const num = -12345.67890;
-  const numLength = 11;
-  const bool = true;
-  const boolLength = 4;
-  const arr = ['a', 'b', 'c', 'd', 'e'];
-  const arrLength = 5;
-  const emptyArr = [];
-  const emptyArrLength = 0;
-  const obj = { foo: 'bar' };
-  const date = new Date();
-
   beforeEach(() => {
     pipe = new LengthPipe();
   });
@@ -27,32 +12,32 @@ describe('LengthPipe', () => {
   });
 
   it(`should find length of a string`, () => {
-    expect(pipe.transform(str)).toEqual(strLength);
+    expect(pipe.transform('This is a test string!')).toEqual(22);
   });
 
   it(`should find length of an empty string`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(emptyStrLength);
+    expect(pipe.transform('')).toEqual(0);
   });
 
   it(`should find length of a number`, () => {
-    expect(pipe.transform(num)).toEqual(numLength);
+    expect(pipe.transform(-12345.67890)).toEqual(11);
   });
 
   it(`should find length of a boolean`, () => {
-    expect(pipe.transform(bool)).toEqual(boolLength);
+    expect(pipe.transform(true)).toEqual(4);
   });
 
   it(`should find length of an array`, () => {
-    expect(pipe.transform(arr)).toEqual(arrLength);
+    expect(pipe.transform(['a', 'b', 'c', 'd', 'e'])).toEqual(5);
   });
 
   it(`should find length of an empty array`, () => {
-    expect(pipe.transform(emptyArr)).toEqual(emptyArrLength);
+    expect(pipe.transform([])).toEqual(0);
   });
 
   it(`should return null for unsupported types Object, Date`, () => {
-    expect(pipe.transform(obj)).toBeNull();
-    expect(pipe.transform(date)).toBeNull();
+    expect(pipe.transform({ foo: 'bar' })).toBeNull();
+    expect(pipe.transform(new Date())).toBeNull();
   });
 
   it(`should be null safe`, () => {

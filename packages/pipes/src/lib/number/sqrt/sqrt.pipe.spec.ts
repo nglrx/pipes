@@ -3,15 +3,6 @@ import { SqrtPipe } from './sqrt.pipe';
 describe('SqrtPipe', () => {
   let pipe: SqrtPipe;
 
-  const positiveNum = 625;
-  const sqrtOfPositiveNum = 25;
-  const negativeNum = -25;
-  const decimalNum = 243.36;
-  const sqrtOfDecimalNum = 15.6;
-  const zero = 0;
-  const infinity = Infinity;
-  const nan = NaN;
-
   beforeEach(() => {
     pipe = new SqrtPipe();
   });
@@ -21,31 +12,31 @@ describe('SqrtPipe', () => {
   });
 
   it(`should find square root of positive number`, () => {
-    expect(pipe.transform(positiveNum)).toEqual(sqrtOfPositiveNum);
+    expect(pipe.transform(625)).toEqual(25);
   });
 
   it(`should return NaN for square root of negative number`, () => {
-    expect(pipe.transform(negativeNum)).toEqual(nan);
+    expect(pipe.transform(-25)).toEqual(NaN);
   });
 
   it(`should find square root of decimal number`, () => {
-    expect(pipe.transform(decimalNum)).toEqual(sqrtOfDecimalNum);
+    expect(pipe.transform(243.36)).toEqual(15.6);
   });
 
   it(`should return zero for square root value of zero`, () => {
-    expect(pipe.transform(zero)).toEqual(zero);
+    expect(pipe.transform(0)).toEqual(0);
   });
 
   it('should return NaN for square root value of NaN', () => {
-    expect(pipe.transform(nan)).toEqual(nan);
+    expect(pipe.transform(NaN)).toEqual(NaN);
   });
 
   it('should return Infinity for square root value of Infinity', () => {
-    expect(pipe.transform(infinity)).toEqual(infinity);
+    expect(pipe.transform(Infinity)).toEqual(Infinity);
   });
 
   it(`should be null safe`, () => {
-    expect(pipe.transform(null)).toEqual(zero);
+    expect(pipe.transform(null)).toEqual(0);
   });
 
 });

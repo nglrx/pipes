@@ -3,23 +3,6 @@ import { SplitPipe } from './split.pipe';
 describe('SplitPipe', () => {
   let pipe: SplitPipe;
 
-  const strWithDefaultDelimiter = 'This is a string!';
-  const splitStrWithDefaultDelimiter = ['This', 'is', 'a', 'string!'];
-  const limit = 3;
-  const splitStrWithDefaultDelimiterAndLimit = ['This', 'is', 'a'];
-  const strWithDelimiter = 'This-is-another string';
-  const delimiter = '-';
-  const splitStrWithDelimiter = ['This', 'is', 'another string'];
-  const anotherStrWithDelimiter = '_Yet_another_string_';
-  const anotherDelimiter = '_';
-  const anotherLimit = 4;
-  const splitAnotherStrWithDelimiter = ['', 'Yet', 'another', 'string'];
-  const stringWithWhitespaceDelimiter = 'String  delimited\nwith\twhitespace \t\ncharacters'
-  const whitespaceRegExp = new RegExp('\\s+');
-  const splitStrWithRegExpDelimiter = ['String', 'delimited', 'with', 'whitespace', 'characters'];
-  const emptyStr = '';
-  const splitEmptyStr = [''];
-
   beforeEach(() => {
     pipe = new SplitPipe();
   });
@@ -29,30 +12,31 @@ describe('SplitPipe', () => {
   });
 
   it(`should split a string using default delimiter`, () => {
-    expect(pipe.transform(strWithDefaultDelimiter)).toEqual(splitStrWithDefaultDelimiter);
+    expect(pipe.transform('This is a string!')).toEqual(['This', 'is', 'a', 'string!']);
   });
 
   it(`should split a string using default delimiter and limit`, () => {
-    expect(pipe.transform(strWithDefaultDelimiter, undefined, limit))
-      .toEqual(splitStrWithDefaultDelimiterAndLimit);
+    expect(pipe.transform('This is a string!', undefined, 3))
+      .toEqual(['This', 'is', 'a']);
   });
 
   it(`should split a string using specified delimiter`, () => {
-    expect(pipe.transform(strWithDelimiter, delimiter)).toEqual(splitStrWithDelimiter)
+    expect(pipe.transform('This-is-another string', '-'))
+      .toEqual(['This', 'is', 'another string']);
   });
 
   it(`should split another string using specified delimiter and limit`, () => {
-    expect(pipe.transform(anotherStrWithDelimiter, anotherDelimiter, anotherLimit))
-      .toEqual(splitAnotherStrWithDelimiter);
+    expect(pipe.transform('_Yet_another_string_', '_', 4))
+      .toEqual(['', 'Yet', 'another', 'string']);
   });
 
   it(`should split a string using whitespace RegExp as delimiter`, () => {
-    expect(pipe.transform(stringWithWhitespaceDelimiter, whitespaceRegExp))
-      .toEqual(splitStrWithRegExpDelimiter);
+    expect(pipe.transform('String  delimited\nwith\twhitespace \t\ncharacters', new RegExp('\\s+')))
+      .toEqual(['String', 'delimited', 'with', 'whitespace', 'characters']);
   });
 
   it(`should return empty on splitting an empty string`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(splitEmptyStr);
+    expect(pipe.transform('')).toEqual(['']);
   });
 
   it(`should be null safe`, () => {
