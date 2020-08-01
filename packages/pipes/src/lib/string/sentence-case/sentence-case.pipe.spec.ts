@@ -3,16 +3,6 @@ import { SentenceCasePipe } from './sentence-case.pipe';
 describe('SentenceCasePipe', () => {
   let pipe: SentenceCasePipe;
 
-  const str = 'This IS a Test string!';
-  const sentenceCaseStr = 'This is a test string!'
-  const singleCharStr = 'a';
-  const sentenceCaseSingleCharStr = 'A'
-  const singleWordStr = 'single';
-  const sentenceCaseSingleWordStr = 'Single';
-  const specialCharStr = '*** is not converted.';
-  const emptyStr = '';
-  const whitespaceStr = '\t\n ';
-
   beforeEach(() => {
     pipe = new SentenceCasePipe();
   });
@@ -22,27 +12,27 @@ describe('SentenceCasePipe', () => {
   });
 
   it(`should convert a string to sentence case`, () => {
-    expect(pipe.transform(str)).toEqual(sentenceCaseStr);
+    expect(pipe.transform('This IS a Test string!')).toEqual('This is a test string!');
   });
 
   it(`should convert a string with single character to sentence case`, () => {
-    expect(pipe.transform(singleCharStr)).toEqual(sentenceCaseSingleCharStr);
+    expect(pipe.transform('a')).toEqual('A');
   });
 
   it(`should convert a string with single word to sentence case`, () => {
-    expect(pipe.transform(singleWordStr)).toEqual(sentenceCaseSingleWordStr);
+    expect(pipe.transform('single')).toEqual('Single');
   });
 
-  it(`should return same string on converting a string starting with special character to sentence case`, () => {
-    expect(pipe.transform(specialCharStr)).toEqual(specialCharStr);
+  it(`should return same string for string starting with special char`, () => {
+    expect(pipe.transform('$$$ is not converted.')).toEqual('$$$ is not converted.');
   });
 
   it(`should return empty string on converting an empty string to sentence case`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
+    expect(pipe.transform('')).toEqual('');
   });
 
   it(`should return same string on converting a white space string to sentence case`, () => {
-    expect(pipe.transform(whitespaceStr)).toEqual(whitespaceStr);
+    expect(pipe.transform('\t\n ')).toEqual('\t\n ');
   });
 
   it(`should be null safe`, () => {

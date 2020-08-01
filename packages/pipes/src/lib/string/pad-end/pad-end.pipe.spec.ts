@@ -3,15 +3,6 @@ import { PadEndPipe } from './pad-end.pipe';
 describe('PadEndPipe', () => {
   let pipe: PadEndPipe;
 
-  const str = 'This is a test string!';
-  const maxLengthOfStr = 24;
-  const leftPaddedString = 'This is a test string!  ';
-  const maxLengthOfStrWithFillString = 29;
-  const fillString = '---'
-  const leftPaddedStringWithFillString = 'This is a test string!-------';
-  const emptyStr = '';
-  const fillStringSlashes = '//'
-
   beforeEach(() => {
     pipe = new PadEndPipe();
   });
@@ -21,20 +12,21 @@ describe('PadEndPipe', () => {
   });
 
   it(`should pad a string from right with default fill string`, () => {
-    expect(pipe.transform(str, maxLengthOfStr)).toEqual(leftPaddedString);
+    expect(pipe.transform('This is a test string!', 24)).toEqual('This is a test string!  ');
   });
 
   it(`should pad a string from right with specified fill string`, () => {
-    expect(pipe.transform(str, maxLengthOfStrWithFillString, fillString))
-      .toEqual(leftPaddedStringWithFillString);
+    expect(pipe.transform('This is a test string!', 29, '---'))
+      .toEqual('This is a test string!-------');
   });
 
   it(`should return empty string on trimming an empty string from right`, () => {
-    expect(pipe.transform(emptyStr, 0, fillStringSlashes)).toEqual(emptyStr);
+    expect(pipe.transform('', 0, '//')).toEqual('');
   });
 
   it(`should return fill string on padding empty string from right with fill string`, () => {
-    expect(pipe.transform(fillStringSlashes, fillStringSlashes.length+1, emptyStr))
+    const fillStringSlashes = '//';
+    expect(pipe.transform(fillStringSlashes, fillStringSlashes.length + 1, ''))
       .toEqual(fillStringSlashes);
   });
 

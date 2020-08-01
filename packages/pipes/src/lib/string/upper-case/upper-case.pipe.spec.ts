@@ -3,11 +3,6 @@ import { UpperCasePipe } from './upper-case.pipe';
 describe('UpperCasePipe', () => {
   let pipe: UpperCasePipe;
 
-  const str = 'This is A Test string!';
-  const uppercaseStr = 'THIS IS A TEST STRING!'
-  const emptyStr = '';
-  const whitespaceStr = '\t\n ';
-
   beforeEach(() => {
     pipe = new UpperCasePipe();
   });
@@ -17,15 +12,19 @@ describe('UpperCasePipe', () => {
   });
 
   it(`should convert a string to upper case`, () => {
-    expect(pipe.transform(str)).toEqual(uppercaseStr);
+    expect(pipe.transform('This is A Test string!')).toEqual('THIS IS A TEST STRING!');
   });
 
   it(`should return empty string on converting an empty string to upper case`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
+    expect(pipe.transform('')).toEqual('');
+  });
+
+  it(`should return same string while converting special chars or numbers to upper case`, () => {
+    expect(pipe.transform('~1@3$5^7*9)-')).toEqual('~1@3$5^7*9)-');
   });
 
   it(`should return same string on converting a white space string to upper case`, () => {
-    expect(pipe.transform(whitespaceStr)).toEqual(whitespaceStr);
+    expect(pipe.transform('\t\n ')).toEqual('\t\n ');
   });
 
   it(`should be null safe`, () => {

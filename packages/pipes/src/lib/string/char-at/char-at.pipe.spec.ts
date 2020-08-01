@@ -3,13 +3,6 @@ import { CharAtPipe } from './char-at.pipe';
 describe('CharAtPipe', () => {
   let pipe: CharAtPipe;
 
-  const str = 'This is a test string!';
-  const position = 5;
-  const charAtPosition = 'i';
-  const charAtDefaultPosition = 'T';
-  const invalidPosition = 50;
-  const emptyStr = '';
-
   beforeEach(() => {
     pipe = new CharAtPipe();
   });
@@ -19,23 +12,21 @@ describe('CharAtPipe', () => {
   });
 
   it(`should return the character at a position in string`, () => {
-    expect(pipe.transform(str, position)).toEqual(charAtPosition);
+    expect(pipe.transform('This is a test string!', 5)).toEqual('i');
   });
 
   it(`should return the character at default position i.e. 0 in string`, () => {
-    expect(pipe.transform(str)).toEqual(charAtDefaultPosition);
+    expect(pipe.transform('This is a test string!')).toEqual('T');
   });
 
   it(`should return empty for invalid position in string`, () => {
-    expect(pipe.transform(str, invalidPosition)).toEqual(emptyStr);
+    expect(pipe.transform('This is a test string!', -50)).toEqual('');
+    expect(pipe.transform('This is a test string!', 50)).toEqual('');
   });
 
-  it(`should return empty for a position in an empty string`, () => {
-    expect(pipe.transform(emptyStr, position)).toEqual(emptyStr);
-  });
-
-  it(`should return empty for invalid position in an empty string`, () => {
-    expect(pipe.transform(emptyStr, invalidPosition)).toEqual(emptyStr);
+  it(`should return empty for any position in an empty string`, () => {
+    expect(pipe.transform('', 0)).toEqual('');
+    expect(pipe.transform('', -10)).toEqual('');
   });
 
   it(`should be null safe`, () => {

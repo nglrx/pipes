@@ -3,17 +3,6 @@ import { CamelCasePipe } from './camel-case.pipe';
 describe('CamelCasePipe', () => {
   let pipe: CamelCasePipe;
 
-  const str = 'This iS A TEST string';
-  const strCamelCase = 'thisIsATestString';
-  const sluggishStr = '-This IS another-tEst-_strinG_';
-  const sluggishStrCamelCase = 'thisIsAnotherTestString';
-  const singleCharacterStr = 'A';
-  const singleCharacterStrCamelCase = 'a';
-  const singleWordStr = 'SiNGle';
-  const singleWordStrCamelCase = 'single';
-  const emptyStr = '';
-  const whitespaceStr = '\t\n ';
-
   beforeEach(() => {
     pipe = new CamelCasePipe();
   });
@@ -23,27 +12,27 @@ describe('CamelCasePipe', () => {
   });
 
   it(`should convert a string to camel case`, () => {
-    expect(pipe.transform(str)).toEqual(strCamelCase);
+    expect(pipe.transform('This iS A TEST string')).toEqual('thisIsATestString');
   });
 
   it(`should convert a sluggish string to camel case`, () => {
-    expect(pipe.transform(sluggishStr)).toEqual(sluggishStrCamelCase);
+    expect(pipe.transform('-This IS another-tEst-_strinG_')).toEqual('thisIsAnotherTestString');
   });
 
   it(`should convert a string with single character to camel case`, () => {
-    expect(pipe.transform(singleCharacterStr)).toEqual(singleCharacterStrCamelCase);
+    expect(pipe.transform('A')).toEqual('a');
   });
 
   it(`should convert a string with single word to camel case`, () => {
-    expect(pipe.transform(singleWordStr)).toEqual(singleWordStrCamelCase);
+    expect(pipe.transform('SiNGle')).toEqual('single');
   });
 
   it(`should return empty string on converting an empty string to camel case`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
+    expect(pipe.transform('')).toEqual('');
   });
 
   it(`should return empty string on converting a white space string to camel case`, () => {
-    expect(pipe.transform(whitespaceStr)).toEqual(emptyStr);
+    expect(pipe.transform('\t\n ')).toEqual('');
   });
 
   it(`should be null safe`, () => {

@@ -47,7 +47,7 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 
 ### concat
 
-Concatenates one or more string(s) to current string at the end.\
+Concatenates one or more string(s) to current string at the end.
 
 Usage: `string | concat:string1[:string2]...`
 

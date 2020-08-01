@@ -3,16 +3,6 @@ import { MinPipe } from './min.pipe';
 describe('MinPipe', () => {
   let pipe: MinPipe;
 
-  const arr = [10, 45, 200, 5, 92];
-  const minOfArr = 5;
-  const mixedArr = [30, 0, -99, -52, -9];
-  const minOfMixedArr = -99;
-  const singleValueArr = [2];
-  const minOfSingleValueArr = 2
-  const emptyArr = [];
-  const nanArray = [783, Infinity, NaN, 0, -391];
-  const minOfNanArray = NaN;
-
   beforeEach(() => {
     pipe = new MinPipe();
   });
@@ -22,23 +12,23 @@ describe('MinPipe', () => {
   });
 
   it(`should find minimum from an array of numbers`, () => {
-    expect(pipe.transform(arr)).toEqual(minOfArr);
+    expect(pipe.transform([10, 45, 200, 5, 92])).toEqual(5);
   });
 
   it(`should find minimum from an array of both positive and negative numbers`, () => {
-    expect(pipe.transform(mixedArr)).toEqual(minOfMixedArr);
+    expect(pipe.transform([30, 0, -99, -52, -9])).toEqual(-99);
   });
 
   it(`should find minimum from an array with single value`, () => {
-    expect(pipe.transform(singleValueArr)).toEqual(minOfSingleValueArr);
+    expect(pipe.transform([5])).toEqual(5);
   });
 
   it(`should return null for an empty array`, () => {
-    expect(pipe.transform(emptyArr)).toBeNull();
+    expect(pipe.transform([])).toBeNull();
   });
 
   it('should return NaN if given array contains Infinity', () => {
-    expect(pipe.transform(nanArray)).toEqual(minOfNanArray);
+    expect(pipe.transform([793, Infinity, NaN, 0, -391])).toEqual(NaN);
   });
 
   it(`should be null safe`, () => {

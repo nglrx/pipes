@@ -13,7 +13,7 @@ export class AvgPipe implements PipeTransform {
       return null;
     } else if (TypeUtils.isEmpty(values)) {
       return 0;
-    } else if (!TypeUtils.areFinite(values)) {
+    } else if (!NumberUtils.areFinite(values)) {
       return NaN;
     }
     const sum = NumberUtils.sum(values);

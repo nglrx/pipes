@@ -6,6 +6,7 @@ export { NglrxPipesModule } from './nglrx-pipes.module';
 export { NglrxGenericPipesModule } from './generic/nglrx-generic-pipes.module';
 export { LengthPipe } from './generic/length/length.pipe';
 export { ReversePipe } from './generic/reverse/reverse.pipe';
+export { TypeOfPipe } from './generic/type-of/type-of.pipe';
 
 export { NglrxStringPipesModule } from './string/nglrx-string-pipes.module';
 export { CamelCasePipe } from './string/camel-case/camel-case.pipe';
@@ -29,4 +30,8 @@ export { AbsPipe } from './number/abs/abs.pipe';
 export { AvgPipe } from './number/avg/avg.pipe';
 export { MaxPipe } from './number/max/max.pipe';
 export { MinPipe } from './number/min/min.pipe';
+export { PctPipe } from './number/pct/pct.pipe';
+export { PowPipe } from './number/pow/pow.pipe';
+export { RoundPipe, RoundType } from './number/round/round.pipe';
+export { SqrtPipe } from './number/sqrt/sqrt.pipe';
 export { SumPipe } from './number/sum/sum.pipe';

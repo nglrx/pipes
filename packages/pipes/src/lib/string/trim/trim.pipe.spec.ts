@@ -3,11 +3,6 @@ import { TrimPipe } from './trim.pipe';
 describe('TrimPipe', () => {
   let pipe: TrimPipe;
 
-  const str = ' This is a test string!  ';
-  const trimmedStr = 'This is a test string!'
-  const emptyStr = '';
-  const whitespaceStr = '  \t \n  ';
-
   beforeEach(() => {
     pipe = new TrimPipe();
   });
@@ -17,15 +12,15 @@ describe('TrimPipe', () => {
   });
 
   it(`should trim a string`, () => {
-    expect(pipe.transform(str)).toEqual(trimmedStr);
+    expect(pipe.transform(' This is a test string!  ')).toEqual('This is a test string!');
   });
 
   it(`should return empty string on trimming an empty string`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
+    expect(pipe.transform('')).toEqual('');
   });
 
   it(`should return empty string on trimming a string with only whitespaces`, () => {
-    expect(pipe.transform(whitespaceStr)).toEqual(emptyStr);
+    expect(pipe.transform('  \t \n  ')).toEqual('');
   });
 
   it(`should be null safe`, () => {

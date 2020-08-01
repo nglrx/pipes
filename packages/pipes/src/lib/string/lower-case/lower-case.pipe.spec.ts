@@ -3,11 +3,6 @@ import { LowerCasePipe } from './lower-case.pipe';
 describe('LowerCasePipe', () => {
   let pipe: LowerCasePipe;
 
-  const str = 'This IS a Test string!';
-  const lowercaseStr = 'this is a test string!'
-  const emptyStr = '';
-  const whitespaceStr = '\t\n ';
-
   beforeEach(() => {
     pipe = new LowerCasePipe();
   });
@@ -17,15 +12,19 @@ describe('LowerCasePipe', () => {
   });
 
   it(`should convert a string to lower case`, () => {
-    expect(pipe.transform(str)).toEqual(lowercaseStr);
+    expect(pipe.transform('This IS a Test string!')).toEqual('this is a test string!');
   });
 
   it(`should return empty string on converting an empty string to lower case`, () => {
-    expect(pipe.transform(emptyStr)).toEqual(emptyStr);
+    expect(pipe.transform('')).toEqual('');
+  });
+
+  it(`should return same string while converting special chars or numbers to lower case`, () => {
+    expect(pipe.transform('~1@3$5^7*9)-')).toEqual('~1@3$5^7*9)-');
   });
 
   it(`should return same string on converting a white space string to lower case`, () => {
-    expect(pipe.transform(whitespaceStr)).toEqual(whitespaceStr);
+    expect(pipe.transform('\t\n ')).toEqual('\t\n ');
   });
 
   it(`should be null safe`, () => {
