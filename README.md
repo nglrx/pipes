@@ -95,6 +95,7 @@ export class YourComponent {
   - [min](#min)
   - [pct](#pct)
   - [pow](#pow)
+  - [round](#round)
   - [sqrt](#sqrt)
   - [sum](#sum)
 - [Generic Pipes](#generic-pipes)
@@ -372,6 +373,31 @@ Usage: `base | pow [:exponent]`
 ```html
 {{ 4 | pow: 3 }}
 <!-- Returns 64 -->
+```
+
+
+### round
+
+Returns the rounded value of given number. By default the value is rounded to the nearest integer.
+
+It also accepts an optional argument `RoundType` for rounding the value up or down.\
+`RoundType.Default` = Default rounding as in `Math.round()`
+`RoundType.Floor` = Round down as in `Math.floor()`
+`RoundType.Ceil` = Round up as in `Math.ceil()`
+
+Optionally, the number of decimal places to which the result should be rounded may also be specified.
+
+Usage: `number | round [:decimalPlaces][:roundType]`
+
+```html
+{{ 1234.56789 | round }}
+<!-- Returns 1235 -->
+
+{{ 1234.56789 | round : 3 : RoundType.Floor }}
+<!-- Returns 1234.567 -->
+
+{{ 9876.54321 | round : 2 : RoundType.Ceil }}
+<!-- Returns 9876.54 -->
 ```
 
 
