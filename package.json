@@ -29,7 +29,7 @@
     "test": "ng test --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "changelog": "github_changelog_generator -u nglrx -p pipes -t ebc7d7d4a088bec083e2022597862aac703d77b5"
+    "changelog": "github_changelog_generator -u nglrx -p pipes -t 1135d673e372e3863cb33f333c4c4686fb7080d6"
   },
   "private": false,
   "dependencies": {
