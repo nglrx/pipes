@@ -1,8 +1,8 @@
 {
   "name": "@nglrx/pipes",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "author": "Kapil Neurgaonkar",
-  "description": "A collection of pipes for Angular apps.",
+  "description": "A library of pipes for Angular apps.",
   "license": "MIT",
   "repository": {
     "type": "git",

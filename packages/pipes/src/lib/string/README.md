@@ -35,12 +35,12 @@ Usage: `string | camelCase`
 
 Returns the character value at given position in a string.
 
-Usage: `string | charAt[:position]`
+Usage: `string | charAt [ : position ]`
 
 Range of position is from 0 (default) to n-1, where n is length of the string.
 
 ```html
-{{ 'This is a sample string.' | charAt:12 }}
+{{ 'This is a sample string.' | charAt: 12 }}
 <!-- Returns 'm' -->
 ```
 
@@ -49,10 +49,10 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 
 Concatenates one or more string(s) to current string at the end.
 
-Usage: `string | concat:string1[:string2]...`
+Usage: `string | concat: string1 [ : string2 ] ...`
 
 ```html
-{{ 'This' | concat:' is':' a':' string':'!' }}
+{{ 'This' | concat: ' is': ' a': ' string': '!' }}
 <!-- Returns 'This is a string!' -->
 ```
 
@@ -74,23 +74,23 @@ Usage: `string | lowerCase`
 Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is appended to the given string.\
 Default fill string is space `' '`.
 
-Usage: `string | padEnd:maxLength[:fillString]`
+Usage: `string | padEnd: maxLength [ : fillString ]`
 
 ```html
-{{ This is a test string! | padEnd:29:'---' }}
+{{ This is a test string! | padEnd: 29: '---' }}
 <!-- Returns 'This is a test string!-------' -->
 ```
 
 
 ### padStart
 
-Pads the string with a fill string so that the resulting string reaches the specified max length. The fill string is prepended of the current string.\
+Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is prepended to the given string.\
 Default fill string is space `' '`.
 
-Usage: `string | padStart:maxLength[:fillString]`
+Usage: `string | padStart: maxLength [ : fillString ]`
 
 ```html
-{{ This is a test string! | padStart:27:'--' }}
+{{ This is a test string! | padStart: 27: '--' }}
 <!-- Returns '-----This is a test string!' -->
 ```
 
@@ -125,10 +125,10 @@ Slugifies a given string with an optional char separator.
 Default separator char is hyphen '-'.\
 Special characters are stripped from string.
 
-Usage: `string | slugify[:separator]`
+Usage: `string | slugify [ : separator ]`
 
 ```html
-{{ 'this_-is__a - string!' | slugify:'_' }}
+{{ 'this_-is__a - string!' | slugify: '_' }}
 <!-- Returns 'this_is_a_string' -->
 ```
 
@@ -139,10 +139,10 @@ Splits a given string into an array of sub-strings using an optional delimiter.\
 Default delimiter is space `' '`.\
 Optionally, you may also specify a limit (integer) on the number of splits.
 
-Usage: `string | split[:delimiter][:limit]`
+Usage: `string | split [ : delimiter ] [ : limit ]`
 
 ```html
-{{ 'This_is_a_string_separated_with_underscore' | split:'_':4 }}
+{{ 'This_is_a_string_separated_with_underscore' | split: '_': 4 }}
 <!-- Returns ['This', 'is', 'a', 'string'] -->
 ```
 
