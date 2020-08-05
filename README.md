@@ -125,12 +125,12 @@ Usage: `string | camelCase`
 
 Returns the character value at given position in a string.
 
-Usage: `string | charAt [:position]`
+Usage: `string | charAt [ : position ]`
 
 Range of position is from 0 (default) to n-1, where n is length of the string.
 
 ```html
-{% raw %}{{ 'This is a sample string.' | charAt:12 }}
+{% raw %}{{ 'This is a sample string.' | charAt: 12 }}
 <!-- Returns 'm' -->{% endraw %}
 ```
 
@@ -139,10 +139,10 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 
 Concatenates one or more string(s) to current string at the end.<br />
 
-Usage: `string | concat :string1 [:string2]...`
+Usage: `string | concat: string1 [ : string2 ] ...`
 
 ```html
-{% raw %}{{ 'This' | concat:' is':' a':' string':'!' }}
+{% raw %}{{ 'This' | concat: ' is': ' a': ' string': '!' }}
 <!-- Returns 'This is a string!' -->{% endraw %}
 ```
 
@@ -162,12 +162,12 @@ Usage: `string | lowerCase`
 ### padEnd
 
 Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is appended to the given string.<br />
-Default fill string is space ' '.
+Default fill string is space `' '`.
 
-Usage: `string | padEnd :maxLength [:fillString]`
+Usage: `string | padEnd: maxLength [ : fillString ]`
 
 ```html
-{% raw %}{{ This is a test string! | padEnd:29:'---' }}
+{% raw %}{{ This is a test string! | padEnd: 29: '---' }}
 <!-- Returns 'This is a test string!-------' -->{% endraw %}
 ```
 
@@ -175,12 +175,12 @@ Usage: `string | padEnd :maxLength [:fillString]`
 ### padStart
 
 Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is prepended to the given string.<br />
-Default fill string is space ' '.
+Default fill string is space `' '`.
 
-Usage: `string | padStart :maxLength [:fillString]`
+Usage: `string | padStart: maxLength [ : fillString ]`
 
 ```html
-{% raw %}{{ This is a test string! | padStart:27:'--' }}
+{% raw %}{{ This is a test string! | padStart: 27: '--' }}
 <!-- Returns '-----This is a test string!' -->{% endraw %}
 ```
 
@@ -215,10 +215,10 @@ Slugifies a given string with an optional char separator.
 Default separator char is hyphen '-'.<br />
 Special characters are stripped from string.
 
-Usage: `string | slugify [:separator]`
+Usage: `string | slugify [ : separator ]`
 
 ```html
-{% raw %}{{ 'this_-is__a - string!' | slugify:'_' }}
+{% raw %}{{ 'this_-is__a - string!' | slugify: '_' }}
 <!-- Returns 'this_is_a_string' -->{% endraw %}
 ```
 
@@ -229,10 +229,10 @@ Splits a given string into an array of sub-strings using an optional delimiter.<
 Default delimiter is space `' '`.<br />
 Optionally, you may also specify a limit (integer) on the number of splits.
 
-Usage: `string | split [:delimiter] [:limit]`
+Usage: `string | split [ : delimiter ] [ : limit ]`
 
 ```html
-{% raw %}{{ 'This_is_a_string_separated_with_underscore' | sp lit:'_':4 }}
+{% raw %}{{ 'This_is_a_string_separated_with_underscore' | sp lit: '_': 4 }}
 <!-- Returns ['This', 'is', 'a', 'string'] -->{% endraw %}
 ```
 
@@ -355,10 +355,10 @@ Usage: `array | min`
 Returns how much percent is a number of the given total. If not specified default value is 100.<br />
 Optionally, number of decimal places (integer) may be specified to round-off the percentage.
 
-Usage: `number | pct [:total] [:decimalPlaces]`
+Usage: `number | pct [ : total ] [ : decimalPlaces ]`
 
 ```html
-{% raw %}{{ 25 | pct : 483 : 2 }}
+{% raw %}{{ 25 | pct: 483: 2 }}
 <!-- Returns 5.18 -->{% endraw %}
 ```
 
@@ -368,7 +368,7 @@ Usage: `number | pct [:total] [:decimalPlaces]`
 Returns the value of the base raised to a specified power.<br />
 Default value of exponent is 0.
 
-Usage: `base | pow [:exponent]`
+Usage: `base | pow [ : exponent ]`
 
 ```html
 {% raw %}{{ 4 | pow: 3 }}
@@ -381,22 +381,22 @@ Usage: `base | pow [:exponent]`
 Returns the rounded value of given number. By default the value is rounded to the nearest integer.
 
 It also accepts an optional argument `RoundType` for rounding the value up or down.<br />
-`RoundType.Default` = Default rounding as in `Math.round()`
-`RoundType.Floor` = Round down as in `Math.floor()`
+`RoundType.Default` = Default rounding as in `Math.round()`<br />
+`RoundType.Floor` = Round down as in `Math.floor()`<br />
 `RoundType.Ceil` = Round up as in `Math.ceil()`
 
 Optionally, the number of decimal places to which the result should be rounded may also be specified.
 
-Usage: `number | round [:decimalPlaces] [:roundType]`
+Usage: `number | round [ : decimalPlaces] [ : roundType ]`
 
 ```html
 {% raw %}{{ 1234.56789 | round }}
 <!-- Returns 1235 -->
 
-{{ 1234.56789 | round : 3 : RoundType.Floor }}
+{{ 1234.56789 | round: 3: RoundType.Floor }}
 <!-- Returns 1234.567 -->
 
-{{ 9876.54321 | round : 2 : RoundType.Ceil }}
+{{ 9876.54321 | round: 2: RoundType.Ceil }}
 <!-- Returns 9876.54 -->{% endraw %}
 ```
 
@@ -426,6 +426,7 @@ Usage: `array | sum`
 
 
 ## Generic Pipes
+
 A collection of pipes exported by `NglrxGenericPipesModule`.
 
 
