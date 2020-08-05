@@ -98,6 +98,8 @@ export class YourComponent {
   - [round](#round)
   - [sqrt](#sqrt)
   - [sum](#sum)
+- [Array Pipes](#array-pipes)
+  - [join](#join)
 - [Generic Pipes](#generic-pipes)
   - [length](#length)
   - [reverse](#reverse)
@@ -422,6 +424,24 @@ Usage: `array | sum`
 ```html
 {% raw %}{{ [10, 45, 200, 5, 92] | sum }}
 <!-- Returns 352 -->{% endraw %}
+```
+
+
+## Array Pipes
+
+A collection of pipes exported by `NglrxArrayPipesModule`.
+
+
+### join
+
+Creates a string by concatenating all the strings in the given array using a separator.<br />
+If unspecified, the default separator is comma `','`.
+
+Usage: `array | join [ : separator ]`
+
+```html
+{% raw %}{{ ['This', 'is', 'a', 'string'] | join: '_' }}
+<!-- Returns 'This_is_a_string' -->{% endraw %}
 ```
 
 
