@@ -9,7 +9,7 @@
 
 # @nglrx/pipes
 
-A collection of pipes for Angular apps.
+A library of pipes for Angular apps.
 
 ## Installation
 
