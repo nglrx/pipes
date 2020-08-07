@@ -2,7 +2,20 @@
 
 A collection of pipes exported by `NglrxArrayPipesModule`.
 
+  - [combine](#combine)
   - [join](#join)
+
+
+### combine
+
+Combines an array with other array(s) or single items of same type.
+
+Usage: `array | combine [ : element | array ]...`
+
+```html
+{{ ['a', 'b', 'c'] | combine: ['d', 'e']: 'f' }}
+<!-- Returns ['a', 'b', 'c', 'd', 'e', 'f'] -->
+```
 
 
 ### join
