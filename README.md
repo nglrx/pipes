@@ -99,6 +99,7 @@ export class YourComponent {
   - [sqrt](#sqrt)
   - [sum](#sum)
 - [Array Pipes](#array-pipes)
+  - [combine](#combine)
   - [join](#join)
 - [Generic Pipes](#generic-pipes)
   - [length](#length)
@@ -430,6 +431,18 @@ Usage: `array | sum`
 ## Array Pipes
 
 A collection of pipes exported by `NglrxArrayPipesModule`.
+
+
+### combine
+
+Combines an array with other array(s) or single items of same type.
+
+Usage: `array | combine [ : element | array ]...`
+
+```html
+{% raw %}{{ ['a', 'b', 'c'] | combine: ['d', 'e']: 'f' }}
+<!-- Returns ['a', 'b', 'c', 'd', 'e', 'f'] -->{% endraw %}
+```
 
 
 ### join
