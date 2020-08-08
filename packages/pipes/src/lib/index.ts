@@ -5,6 +5,7 @@ export { NglrxPipesModule } from './nglrx-pipes.module';
 
 export { NglrxArrayPipesModule } from './array/nglrx-array-pipes.module';
 export { CombinePipe } from './array/combine/combine.pipe';
+export { CopyWithinPipe } from './array/copyWithin/copy-within.pipe';
 export { FillPipe } from './array/fill/fill.pipe';
 export { JoinPipe } from './array/join/join.pipe';
 
