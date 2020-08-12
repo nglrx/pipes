@@ -101,8 +101,10 @@ export class YourComponent {
 - [Array Pipes](#array-pipes)
   - [combine](#combine)
   - [copyWithin](#copywithin)
+  - [every](#every)
   - [fill](#fill)
   - [join](#join)
+  - [map](#map)
 - [Generic Pipes](#generic-pipes)
   - [length](#length)
   - [reverse](#reverse)
@@ -142,7 +144,7 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 
 ### concat
 
-Concatenates one or more string(s) to current string at the end.<br />
+Concatenates one or more string(s) to current string at the end.
 
 Usage: `string | concat: string1 [ : string2 ] ...`
 
@@ -451,7 +453,7 @@ Usage: `array | combine [ : element | array ]...`
 
 Copies the portion of array marked by start and end to position specified by `target` within the same array.
 
-If `start` is not specified then it copies from the beginning of array. If `end` is not specified then it copies till the end of array.\
+If `start` is not specified then it copies from the beginning of array. If `end` is not specified then it copies till the end of array.<br />
 Negative values of start and end are treated as length + start/end.
 
 Usage: `array | copyWithin : target [ : start ] [ : end ]`
@@ -462,11 +464,29 @@ Usage: `array | copyWithin : target [ : start ] [ : end ]`
 ```
 
 
+### every
+
+Checks whether all the elements of the given array satisfy the specified test.
+
+A `callbackFn` function must be specified that accepts up to three arguments. The callbackFn is invoked for each element in the given array until it returns a false, or until the last element of the array.<br />
+Optionally, a reference `thisArg` to an object to which the `this` keyword can refer in the callbackFn function may be passed.
+
+Usage: `array | every : callbackFn`
+
+```html
+{% raw %}{{ ['a', 'b', 'c', 'd', 'e'] | every: (n: string) => n !== '' }}
+<!-- Returns true -->
+
+{{ [10, 11, 12, 13, 14] | every: (n: number) => n % 2 === 0) }}
+<!-- Returns false -->{% endraw %}
+```
+
+
 ### fill
 
 Fills the portion of array marked by start and end with specified `value` of same type as array.
 
-If `start` is not specified then it fills from the beginning of array. If `end` is not specified then it fills till the end of array.\
+If `start` is not specified then it fills from the beginning of array. If `end` is not specified then it fills till the end of array.<br />
 Negative values of start and end are treated as length + start/end.
 
 Usage: `array | fill : value [ : start ] [ : end ]`
@@ -487,6 +507,25 @@ Usage: `array | join [ : separator ]`
 ```html
 {% raw %}{{ ['This', 'is', 'a', 'string'] | join: '_' }}
 <!-- Returns 'This_is_a_string' -->{% endraw %}
+```
+
+
+
+### map
+
+Calls the specified callback function on each element of the given array, and returns an array of results returned by callback function.
+
+A `callbackFn` function must be specified that accepts up to three arguments. The callbackFn is invoked for each element in the given array.<br />
+Optionally, a reference `thisArg` to an object to which the `this` keyword can refer in the callbackFn function may be passed.
+
+Usage: `array | map : callbackFn`
+
+```html
+{% raw %}{{ ['a', 'b', 'c', 'd', 'e'] | map: (n: string) => n.toUpperCase() }}
+<!-- Returns ['A', 'B', 'C', 'D', 'E'] -->
+
+{{ [1, 2, 3, 4, 5] | every: (n: number) => n * n) }}
+<!-- Returns [1, 4, 9, 16, 25] -->{% endraw %}
 ```
 
 
