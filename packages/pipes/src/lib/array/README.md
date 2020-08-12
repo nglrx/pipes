@@ -4,6 +4,7 @@ A collection of pipes exported by `NglrxArrayPipesModule`.
 
   - [combine](#combine)
   - [copyWithin](#copywithin)
+  - [every](#every)
   - [fill](#fill)
   - [join](#join)
 
@@ -32,6 +33,24 @@ Usage: `array | copyWithin : target [ : start ] [ : end ]`
 ```html
 {{ [1, 2, 3, 4, 5, 6] | copyWithin: 4: 1: -3 }}
 <!-- Returns [1, 2, 3, 4, 2, 3] -->
+```
+
+
+### every
+
+Checks whether all the elements of the given array satisfy the specified test.
+
+A `callbackFn` function must be specified that accepts up to three arguments. The callbackFn is invoked for each element in the given array until it returns a false, or until the last element of the array.\
+Optionally a reference `thisArg` to an object to which the this keyword can refer in the callbackFn function may be passed.
+
+Usage: `array | every : callbackFn`
+
+```html
+{{ ['a', 'b', 'c', 'd', 'e'] | every: (n: string) => n !== '' }}
+<!-- Returns true -->
+
+{{ [10, 11, 12, 13, 14] | every: (n: number) => n % 2 === 0) }}
+<!-- Returns false -->
 ```
 
 
