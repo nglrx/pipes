@@ -104,6 +104,7 @@ export class YourComponent {
   - [every](#every)
   - [fill](#fill)
   - [join](#join)
+  - [map](#map)
 - [Generic Pipes](#generic-pipes)
   - [length](#length)
   - [reverse](#reverse)
@@ -506,6 +507,25 @@ Usage: `array | join [ : separator ]`
 ```html
 {{ ['This', 'is', 'a', 'string'] | join: '_' }}
 <!-- Returns 'This_is_a_string' -->
+```
+
+
+
+### map
+
+Calls the specified callback function on each element of the given array, and returns an array of results returned by callback function.
+
+A `callbackFn` function must be specified that accepts up to three arguments. The callbackFn is invoked for each element in the given array.\
+Optionally, a reference `thisArg` to an object to which the `this` keyword can refer in the callbackFn function may be passed.
+
+Usage: `array | map : callbackFn`
+
+```html
+{{ ['a', 'b', 'c', 'd', 'e'] | map: (n: string) => n.toUpperCase() }}
+<!-- Returns ['A', 'B', 'C', 'D', 'E'] -->
+
+{{ [1, 2, 3, 4, 5] | every: (n: number) => n * n) }}
+<!-- Returns [1, 4, 9, 16, 25] -->
 ```
 
 
