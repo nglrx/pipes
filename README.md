@@ -468,7 +468,7 @@ Usage: `array | copyWithin : target [ : start ] [ : end ]`
 Checks whether all the elements of the given array satisfy the specified test.
 
 A `callbackFn` function must be specified that accepts up to three arguments. The callbackFn is invoked for each element in the given array until it returns a false, or until the last element of the array.\
-Optionally a reference `thisArg` to an object to which the this keyword can refer in the callbackFn function may be passed.
+Optionally, a reference `thisArg` to an object to which the `this` keyword can refer in the callbackFn function may be passed.
 
 Usage: `array | every : callbackFn`
 

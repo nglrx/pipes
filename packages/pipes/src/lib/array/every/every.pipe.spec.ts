@@ -11,13 +11,13 @@ describe('EveryPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it(`should call callback function for every value in given array`, () => {
-    expect(pipe.transform(['a', 'b', 'c', 'd', 'e'], (n: string) => n !== '')).toEqual(true);
-    expect(pipe.transform([10, 11, 12, 13, 14], (n: number) => n % 2 === 0)).toEqual(false);
+  it(`should return result after invoking callback function for every value in given array`, () => {
+    expect(pipe.transform(['a', 'b', 'c', 'd', 'e'], (n: string) => n !== '')).toBeTruthy();
+    expect(pipe.transform([10, 11, 12, 13, 14], (n: number) => n % 2 === 0)).toBeFalsy();
   });
 
-  it(`should return empty array for an empty array`, () => {
-    expect(pipe.transform([], () => {})).toEqual(true);
+  it(`should return true for an empty array`, () => {
+    expect(pipe.transform([], () => {})).toBeTruthy();
   });
 
   it(`should be null safe`, () => {
