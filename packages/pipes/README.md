@@ -103,6 +103,7 @@ export class YourComponent {
   - [copyWithin](#copywithin)
   - [every](#every)
   - [fill](#fill)
+  - [first](#first)
   - [join](#join)
   - [map](#map)
   - [some](#some)
@@ -495,6 +496,28 @@ Usage: `array | fill : value [ : start ] [ : end ]`
 ```html
 {{ ['a', 'b', 'c', 'd', 'e', 'f'] | fill: '-': 2: -2 }}
 <!-- Returns ['a', 'b', '-', '-', 'e', 'f'] -->
+```
+
+
+### first
+
+Returns the first `count` elements from the given array.
+
+If no count is specified, by default the first element is returned.\
+Negative value of count is treated as `length + count` and values except last `length + count` are returned.\
+No values are returned if either count is `0` or value of count is beyond the limits.
+
+Usage: `array | first [ : count ]`
+
+```html
+{{ ['a', 'b', 'c', 'd', 'e'] | first }}
+<!-- Returns ['a'] -->
+
+{{ [1, 2, 3, 4, 5] | first: 2 }}
+<!-- Returns [1, 2] -->
+
+{{ [1, 2, 3, 4, 5] | first: -2 }}
+<!-- Returns [1, 2, 3] -->
 ```
 
 
