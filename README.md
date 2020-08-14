@@ -498,6 +498,28 @@ Usage: `array | fill : value [ : start ] [ : end ]`
 ```
 
 
+### first
+
+Returns the first `count` elements from the given array.
+
+If no count is specified, by default the first element is returned.<br />
+Negative value of count is treated as `length + count` and values except last `length + count` are returned.<br />
+No values are returned if either count is `0` or value of count is beyond the limits.
+
+Usage: `array | first [ : count ]`
+
+```html
+{% raw %}{{ ['a', 'b', 'c', 'd', 'e'] | first }}
+<!-- Returns ['a'] -->
+
+{{ [1, 2, 3, 4, 5] | first: 2 }}
+<!-- Returns [1, 2] -->
+
+{{ [1, 2, 3, 4, 5] | first: -2 }}
+<!-- Returns [1, 2, 3] -->{% endraw %}
+```
+
+
 ### join
 
 Creates a string by concatenating all the strings in the given array using a separator.<br />
@@ -510,6 +532,27 @@ Usage: `array | join [ : separator ]`
 <!-- Returns 'This_is_a_string' -->{% endraw %}
 ```
 
+
+### last
+
+Returns the last `count` elements from the given array.
+
+If no count is specified, by default the last element is returned.<br />
+Negative value of count is treated as `length + count` and values except first `length + count` are returned.<br />
+No values are returned if either count is `0` or value of count is beyond the limits.
+
+Usage: `array | last [ : count ]`
+
+```html
+{% raw %}{{ ['a', 'b', 'c', 'd', 'e'] | last }}
+<!-- Returns ['e'] -->
+
+{{ [1, 2, 3, 4, 5] | last: 2 }}
+<!-- Returns [4, 5] -->
+
+{{ [1, 2, 3, 4, 5] | last: -2 }}
+<!-- Returns [3, 4, 5] -->{% endraw %}
+```
 
 
 ### map
