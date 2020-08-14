@@ -6,6 +6,7 @@ import { EveryPipe }  from './every/every.pipe';
 import { FillPipe } from './fill/fill.pipe';
 import { JoinPipe } from './join/join.pipe';
 import { MapPipe } from './map/map.pipe';
+import { SomePipe } from './some/some.pipe';
 
 const ARRAY_PIPES = [
   CombinePipe,
@@ -13,7 +14,8 @@ const ARRAY_PIPES = [
   EveryPipe,
   FillPipe,
   JoinPipe,
-  MapPipe
+  MapPipe,
+  SomePipe
 ];
 
 @NgModule({

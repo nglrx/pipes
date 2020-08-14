@@ -10,6 +10,7 @@ export { EveryPipe } from './array/every/every.pipe';
 export { FillPipe } from './array/fill/fill.pipe';
 export { JoinPipe } from './array/join/join.pipe';
 export { MapPipe } from './array/map/map.pipe';
+export { SomePipe } from './array/some/some.pipe';
 
 export { NglrxGenericPipesModule } from './generic/nglrx-generic-pipes.module';
 export { LengthPipe } from './generic/length/length.pipe';
