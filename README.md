@@ -105,6 +105,7 @@ export class YourComponent {
   - [fill](#fill)
   - [join](#join)
   - [map](#map)
+  - [some](#some)
 - [Generic Pipes](#generic-pipes)
   - [length](#length)
   - [reverse](#reverse)
@@ -526,6 +527,23 @@ Usage: `array | map : callbackFn`
 
 {{ [1, 2, 3, 4, 5] | every: (n: number) => n * n) }}
 <!-- Returns [1, 4, 9, 16, 25] -->{% endraw %}
+```
+
+### some
+
+Checks whether some the elements of the given array satisfy the specified test.
+
+A `callbackFn` function must be specified that accepts up to three arguments. The callbackFn is invoked for each element in the given array until it returns a true, or until the last element of the array.<br />
+Optionally, a reference `thisArg` to an object to which the `this` keyword can refer in the callbackFn function may be passed.
+
+Usage: `array | some : callbackFn`
+
+```html
+{% raw %}{{ ['a', 'b', 'c', 'd', 'e'] | some: (n: string) => n === '' }}
+<!-- Returns false -->
+
+{{ [10, 11, 12, 13, 14] | some: (n: number) => n % 2 === 0) }}
+<!-- Returns true -->{% endraw %}
 ```
 
 
