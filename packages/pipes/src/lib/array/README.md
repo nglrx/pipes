@@ -6,6 +6,7 @@ A collection of pipes exported by `NglrxArrayPipesModule`.
   - [copyWithin](#copywithin)
   - [every](#every)
   - [fill](#fill)
+  - [first](#first)
   - [join](#join)
   - [map](#map)
   - [some](#some)
