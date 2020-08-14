@@ -10,6 +10,7 @@ export { EveryPipe } from './array/every/every.pipe';
 export { FillPipe } from './array/fill/fill.pipe';
 export { FirstPipe } from './array/first/first.pipe';
 export { JoinPipe } from './array/join/join.pipe';
+export { LastPipe } from './array/last/last.pipe';
 export { MapPipe } from './array/map/map.pipe';
 export { SomePipe } from './array/some/some.pipe';
 

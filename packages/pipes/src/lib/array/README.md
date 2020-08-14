@@ -8,6 +8,7 @@ A collection of pipes exported by `NglrxArrayPipesModule`.
   - [fill](#fill)
   - [first](#first)
   - [join](#join)
+  - [last](#last)
   - [map](#map)
   - [some](#some)
 
@@ -104,6 +105,28 @@ Usage: `array | join [ : separator ]`
 ```html
 {{ ['This', 'is', 'a', 'string'] | join: '_' }}
 <!-- Returns 'This_is_a_string' -->
+```
+
+
+### last
+
+Returns the last `count` elements from the given array.
+
+If no count is specified, by default the last element is returned.\
+Negative value of count is treated as `length + count` and values except first `length + count` are returned.\
+No values are returned if either count is `0` or value of count is beyond the limits.
+
+Usage: `array | last [ : count ]`
+
+```html
+{{ ['a', 'b', 'c', 'd', 'e'] | last }}
+<!-- Returns ['e'] -->
+
+{{ [1, 2, 3, 4, 5] | last: 2 }}
+<!-- Returns [4, 5] -->
+
+{{ [1, 2, 3, 4, 5] | last: -2 }}
+<!-- Returns [3, 4, 5] -->
 ```
 
 

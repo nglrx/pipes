@@ -6,6 +6,7 @@ import { EveryPipe }  from './every/every.pipe';
 import { FillPipe } from './fill/fill.pipe';
 import { FirstPipe } from './first/first.pipe';
 import { JoinPipe } from './join/join.pipe';
+import { LastPipe } from './last/last.pipe';
 import { MapPipe } from './map/map.pipe';
 import { SomePipe } from './some/some.pipe';
 
@@ -16,6 +17,7 @@ const ARRAY_PIPES = [
   FillPipe,
   FirstPipe,
   JoinPipe,
+  LastPipe,
   MapPipe,
   SomePipe
 ];
