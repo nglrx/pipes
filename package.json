@@ -1,6 +1,6 @@
 {
   "name": "@nglrx/pipes",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Kapil Neurgaonkar",
   "description": "A library of pipes for Angular apps.",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "test": "ng test --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "changelog": "github_changelog_generator -u nglrx -p pipes -t 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"
+    "changelog": "github_changelog_generator -u nglrx -p pipes -t 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"
   },
   "private": false,
   "dependencies": {

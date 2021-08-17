@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.0](https://github.com/nglrx/pipes/tree/0.6.0) (2021-08-17)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.5.1...0.6.0)
+
+**Merged pull requests:**
+
+- \#42 Installed typescript version 4.1.6 [\#45](https://github.com/nglrx/pipes/pull/45) ([kneurgao](https://github.com/kneurgao))
+- Development [\#43](https://github.com/nglrx/pipes/pull/43) ([kneurgao](https://github.com/kneurgao))
+
 ## [0.5.1](https://github.com/nglrx/pipes/tree/0.5.1) (2020-08-14)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.5.0...0.5.1)
