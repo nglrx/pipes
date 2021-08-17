@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.5.0](https://github.com/nglrx/pipes/tree/0.5.0) (2020-08-15)
+## [0.5.1](https://github.com/nglrx/pipes/tree/0.5.1) (2020-08-14)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.5.0...0.5.1)
+
+**Merged pull requests:**
+
+- 0.5.1 [\#41](https://github.com/nglrx/pipes/pull/41) ([kneurgao](https://github.com/kneurgao))
+
+## [0.5.0](https://github.com/nglrx/pipes/tree/0.5.0) (2020-08-14)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.4.1...0.5.0)
 
