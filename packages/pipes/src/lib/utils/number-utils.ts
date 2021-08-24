@@ -6,7 +6,8 @@ export class NumberUtils {
    * @returns Sum of numbers in array
    */
   static sum(values: number[]): number {
-    return values.reduce((currSum, value) => currSum + value, 0);
+    const sum = values.reduce((currSum, value) => currSum + value, 0);
+    return sum;
   }
 
   /**
@@ -14,8 +15,8 @@ export class NumberUtils {
    * @param values array of numbers
    * @returns true if all numbers are finite, else false
    */
-  static areFinite(values: number[]) {
-    return values.every(value => isFinite(value));
+  static areFinite(values: number[]): boolean {
+    return values.every(isFinite);
   }
 
 }
