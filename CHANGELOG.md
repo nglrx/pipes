@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.7.1](https://github.com/nglrx/pipes/tree/0.7.1) (2021-08-24)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.7.0...0.7.1)
+
+**Closed issues:**
+
+- Dependecy conflict on angular 12 [\#42](https://github.com/nglrx/pipes/issues/42)
+
+## [0.7.0](https://github.com/nglrx/pipes/tree/0.7.0) (2021-08-17)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.6.0...0.7.0)
+
+**Merged pull requests:**
+
+- Develop [\#46](https://github.com/nglrx/pipes/pull/46) ([kneurgao](https://github.com/kneurgao))
+
 ## [0.6.0](https://github.com/nglrx/pipes/tree/0.6.0) (2021-08-17)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.5.1...0.6.0)
@@ -138,7 +154,6 @@
 
 - Installled latest version of library [\#17](https://github.com/nglrx/pipes/pull/17) ([kneurgao](https://github.com/kneurgao))
 - 0.1.6 [\#16](https://github.com/nglrx/pipes/pull/16) ([kneurgao](https://github.com/kneurgao))
-- Installed latest version of library in project [\#15](https://github.com/nglrx/pipes/pull/15) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.5](https://github.com/nglrx/pipes/tree/0.1.5) (2020-04-29)
 
@@ -146,6 +161,7 @@
 
 **Merged pull requests:**
 
+- Installed latest version of library in project [\#15](https://github.com/nglrx/pipes/pull/15) ([kneurgao](https://github.com/kneurgao))
 - 0.1.5 [\#14](https://github.com/nglrx/pipes/pull/14) ([kneurgao](https://github.com/kneurgao))
 
 ## [0.1.4](https://github.com/nglrx/pipes/tree/0.1.4) (2020-04-14)
