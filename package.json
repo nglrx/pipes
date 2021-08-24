@@ -2,7 +2,7 @@
   "name": "@nglrx/pipes",
   "version": "0.7.1",
   "author": "Kapil Neurgaonkar",
-  "description": "A library of pipes for Angular apps.",
+  "description": "A library of useful pipes for Angular apps.",
   "license": "MIT",
   "repository": {
     "type": "git",
