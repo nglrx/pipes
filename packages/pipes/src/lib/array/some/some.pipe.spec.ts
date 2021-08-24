@@ -17,7 +17,9 @@ describe('SomePipe', () => {
   });
 
   it(`should return true for an empty array`, () => {
-    expect(pipe.transform([], () => {})).toBeFalsy();
+    expect(pipe.transform([], () => {
+      // Empty function
+    })).toBeFalsy();
   });
 
   it(`should be null safe`, () => {

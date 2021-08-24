@@ -31,7 +31,7 @@ describe('SplitPipe', () => {
   });
 
   it(`should split a string using whitespace RegExp as delimiter`, () => {
-    expect(pipe.transform('String  delimited\nwith\twhitespace \t\ncharacters', new RegExp('\\s+')))
+    expect(pipe.transform('String  delimited\nwith\twhitespace \t\ncharacters', /\s+/))
       .toEqual(['String', 'delimited', 'with', 'whitespace', 'characters']);
   });
 

@@ -19,7 +19,9 @@ describe('MapPipe', () => {
   });
 
   it(`should return empty array for an empty array`, () => {
-    expect(pipe.transform([], () => {})).toEqual([]);
+    expect(pipe.transform([], () => {
+      // Empty function
+    })).toEqual([]);
   });
 
   it(`should be null safe`, () => {

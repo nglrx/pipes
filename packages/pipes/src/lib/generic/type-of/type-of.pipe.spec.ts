@@ -43,7 +43,9 @@ describe('TypeOfPipe', () => {
   });
 
   it(`should find type of function`, () => {
-    expect(pipe.transform(() => {})).toEqual('function');
+    expect(pipe.transform(() => {
+      // Empty function
+    })).toEqual('function');
   });
 
   it(`should find type of undefined`, () => {
