@@ -5,6 +5,7 @@ A collection of pipes exported by `NglrxStringPipesModule`.
   - [camelCase](#camelcase)
   - [charAt](#charat)
   - [concat](#concat)
+  - [interpolate](#interpolate)
   - [lowerCase](#lowercase)
   - [padEnd](#padend)
   - [padStart](#padstart)
@@ -55,6 +56,20 @@ Usage: `string | concat: string1 [ : string2 ] ...`
 ```html
 {{ 'This' | concat: ' is': ' a': ' string': '!' }}
 <!-- Returns 'This is a string!' -->
+```
+
+
+### interpolate
+
+Replaces marked up parameters surrounded by { and } delimiters in given string with target string values.\
+The indices of parameters start from 0 and increment by 1.\
+The target string values can be literals or variables and their position should match the index.
+
+Usage: `string | interpolate: string1 [ : string2 ] ...`
+
+```html
+{{ 'This {0} an {1} {2}!' | interpolate: 'is': 'interpolated': 'string' }}
+<!-- Returns 'This is an interpolated string!' -->
 ```
 
 
