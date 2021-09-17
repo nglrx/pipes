@@ -7,7 +7,7 @@ describe('FillPipe', () => {
     pipe = new FillPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 

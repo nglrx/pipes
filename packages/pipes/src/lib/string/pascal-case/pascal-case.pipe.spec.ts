@@ -7,7 +7,7 @@ describe('PascalCasePipe', () => {
     pipe = new PascalCasePipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 

@@ -7,7 +7,7 @@ describe('MaxPipe', () => {
     pipe = new MaxPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 
@@ -27,7 +27,7 @@ describe('MaxPipe', () => {
     expect(pipe.transform([])).toBeNull();
   });
 
-  it('should return NaN if given array contains Infinity', () => {
+  it(`should return NaN if given array contains Infinity`, () => {
     expect(pipe.transform([783, Infinity, NaN, 0, -391])).toEqual(NaN);
   });
 

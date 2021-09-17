@@ -7,7 +7,7 @@ describe('TypeOfPipe', () => {
     pipe = new TypeOfPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 

@@ -7,7 +7,7 @@ describe('SumPipe', () => {
     pipe = new SumPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 
@@ -27,7 +27,7 @@ describe('SumPipe', () => {
     expect(pipe.transform([])).toEqual(0);
   });
 
-  it('should return NaN if given array contains Infinity', () => {
+  it(`should return NaN if given array contains Infinity`, () => {
     expect(pipe.transform([783, Infinity, NaN, 0, -391])).toEqual(NaN);
   });
 

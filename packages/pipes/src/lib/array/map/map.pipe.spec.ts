@@ -7,7 +7,7 @@ describe('MapPipe', () => {
     pipe = new MapPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 

@@ -7,7 +7,7 @@ describe('JoinPipe', () => {
     pipe = new JoinPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 
