@@ -76,10 +76,12 @@ export class YourComponent {
   - [camelCase](#camelcase)
   - [charAt](#charat)
   - [concat](#concat)
+  - [interpolate](#interpolate)
   - [lowerCase](#lowercase)
   - [padEnd](#padend)
   - [padStart](#padstart)
   - [pascalCase](#pascalcase)
+  - [repeat](#repeat)
   - [sentenceCase](#sentencecase)
   - [slugify](#slugify)
   - [split](#split)
@@ -157,6 +159,20 @@ Usage: `string | concat: string1 [ : string2 ] ...`
 ```
 
 
+### interpolate
+
+Replaces marked up parameters surrounded by { and } delimiters in given string with target string values.<br />
+The indices of parameters start from 0 and increment by 1.<br />
+The target string values can be literals or variables and their position should match the index.
+
+Usage: `string | interpolate: string1 [ : string2 ] ...`
+
+```html
+{% raw %}{{ 'This {0} an {1} {2}!' | interpolate: 'is': 'interpolated': 'string' }}
+<!-- Returns 'This is an interpolated string!' -->{% endraw %}
+```
+
+
 ### lowerCase
 
 Converts a given string to lower case.
@@ -204,6 +220,20 @@ Usage: `string | pascalCase`
 ```html
 {% raw %}{{ 'convert_to PASCAL-case' | pascalCase }}
 <!-- Returns 'ConvertToPascalCase' -->{% endraw %}
+```
+
+
+### repeat
+
+Repeats a given string 'count' number of times separated by an optional delimiter.<br />
+Default count is `1`. Default delimiter is empty string `''`.<br />
+An error is thrown if the value of count is less than 1.
+
+Usage: `string | repeat [ : count ] [ : delimiter ]`
+
+```html
+{% raw %}{{ 'Repeated' | repeat: 5: '_' }}
+<!-- Returns Repeated_Repeated_Repeated_Repeated_Repeated -->{% endraw %}
 ```
 
 
@@ -570,7 +600,7 @@ Usage: `array | map : callbackFn`
 {% raw %}{{ ['a', 'b', 'c', 'd', 'e'] | map: (n: string) => n.toUpperCase() }}
 <!-- Returns ['A', 'B', 'C', 'D', 'E'] -->
 
-{{ [1, 2, 3, 4, 5] | every: (n: number) => n * n) }}
+{{ [1, 2, 3, 4, 5] | map: (n: number) => n * n) }}
 <!-- Returns [1, 4, 9, 16, 25] -->{% endraw %}
 ```
 
