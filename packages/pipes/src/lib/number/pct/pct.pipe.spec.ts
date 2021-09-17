@@ -7,7 +7,7 @@ describe('PctPipe', () => {
     pipe = new PctPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 
@@ -35,11 +35,11 @@ describe('PctPipe', () => {
     expect(pipe.transform(0)).toEqual(0);
   });
 
-  it('should return NaN for percentage of NaN', () => {
+  it(`should return NaN for percentage of NaN`, () => {
     expect(pipe.transform(NaN)).toEqual(NaN);
   });
 
-  it('should return Infinity for percentage of Infinity', () => {
+  it(`should return Infinity for percentage of Infinity`, () => {
     expect(pipe.transform(Infinity)).toEqual(Infinity);
   });
 

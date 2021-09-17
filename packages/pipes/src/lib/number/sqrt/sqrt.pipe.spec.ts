@@ -7,7 +7,7 @@ describe('SqrtPipe', () => {
     pipe = new SqrtPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 
@@ -27,11 +27,11 @@ describe('SqrtPipe', () => {
     expect(pipe.transform(0)).toEqual(0);
   });
 
-  it('should return NaN for square root value of NaN', () => {
+  it(`should return NaN for square root value of NaN`, () => {
     expect(pipe.transform(NaN)).toEqual(NaN);
   });
 
-  it('should return Infinity for square root value of Infinity', () => {
+  it(`should return Infinity for square root value of Infinity`, () => {
     expect(pipe.transform(Infinity)).toEqual(Infinity);
   });
 

@@ -7,7 +7,7 @@ describe('TrimLeftPipe', () => {
     pipe = new TrimLeftPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 

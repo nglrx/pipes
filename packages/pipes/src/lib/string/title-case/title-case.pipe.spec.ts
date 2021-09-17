@@ -7,7 +7,7 @@ describe('TitleCasePipe', () => {
     pipe = new TitleCasePipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 

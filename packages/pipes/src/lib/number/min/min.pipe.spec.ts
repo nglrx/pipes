@@ -7,7 +7,7 @@ describe('MinPipe', () => {
     pipe = new MinPipe();
   });
 
-  it('should create an instance', () => {
+  it(`should create an instance`, () => {
     expect(pipe).toBeTruthy();
   });
 
@@ -27,7 +27,7 @@ describe('MinPipe', () => {
     expect(pipe.transform([])).toBeNull();
   });
 
-  it('should return NaN if given array contains Infinity', () => {
+  it(`should return NaN if given array contains Infinity`, () => {
     expect(pipe.transform([793, Infinity, NaN, 0, -391])).toEqual(NaN);
   });
 
