@@ -6,7 +6,7 @@ import { StringUtils } from '../../utils/string-utils';
 })
 export class TitleCasePipe implements PipeTransform {
 
-  static readonly DEFAULT_SEPARATOR = ' ';
+  private static readonly DEFAULT_SEPARATOR = ' ';
 
   transform(value: string, separator: string = TitleCasePipe.DEFAULT_SEPARATOR,
             exclusions?: string[]): string {

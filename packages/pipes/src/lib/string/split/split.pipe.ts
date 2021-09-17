@@ -7,7 +7,7 @@ import { TypeUtils } from '../../utils/type-utils';
 })
 export class SplitPipe implements PipeTransform {
 
-  static readonly DEFAULT_DELIMITER = ' ';
+  private static readonly DEFAULT_DELIMITER = ' ';
 
   transform(value: string, delimiter: string | RegExp = SplitPipe.DEFAULT_DELIMITER,
             limit?: number): Array<string> {

@@ -6,7 +6,7 @@ import { StringUtils } from '../../utils/string-utils';
 })
 export class SlugifyPipe implements PipeTransform {
 
-  static readonly DEFAULT_SEPARATOR = '-';
+  private static readonly DEFAULT_SEPARATOR = '-';
 
   transform(value: string, separator: string = SlugifyPipe.DEFAULT_SEPARATOR): string {
     return StringUtils.slugify(value, separator);
