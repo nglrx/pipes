@@ -143,7 +143,7 @@ Usage: `array | map : callbackFn`
 {{ ['a', 'b', 'c', 'd', 'e'] | map: (n: string) => n.toUpperCase() }}
 <!-- Returns ['A', 'B', 'C', 'D', 'E'] -->
 
-{{ [1, 2, 3, 4, 5] | every: (n: number) => n * n) }}
+{{ [1, 2, 3, 4, 5] | map: (n: number) => n * n) }}
 <!-- Returns [1, 4, 9, 16, 25] -->
 ```
 
