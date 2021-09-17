@@ -26,7 +26,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
-    "test": "ng test --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false",
+    "test:chrome": "ng test --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false",
+    "test:edge": "ng test --browsers=EdgeHeadless --code-coverage --no-watch",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "changelog": "github_changelog_generator -u nglrx -p pipes -t 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"
@@ -57,6 +58,7 @@
     "@angular/cli": "^12.2.1",
     "@angular/compiler-cli": "^12.2.1",
     "@angular/language-service": "^12.2.1",
+    "@chiragrupani/karma-chromium-edge-launcher": "^2.1.1",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^14.0.27",
