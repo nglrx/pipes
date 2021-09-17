@@ -80,6 +80,7 @@ export class YourComponent {
   - [padEnd](#padend)
   - [padStart](#padstart)
   - [pascalCase](#pascalcase)
+  - [repeat](#repeat)
   - [sentenceCase](#sentencecase)
   - [slugify](#slugify)
   - [split](#split)
@@ -204,6 +205,20 @@ Usage: `string | pascalCase`
 ```html
 {{ 'convert_to PASCAL-case' | pascalCase }}
 <!-- Returns 'ConvertToPascalCase' -->
+```
+
+
+### repeat
+
+Repeats a given string 'count' number of times separated by an optional delimiter.\
+Default count is `1`. Default delimiter is empty string `''`.\
+An error is thrown if the value of count is less than 1.
+
+Usage: `string | repeat [ : count ] [ : delimiter ]`
+
+```html
+{{ 'Repeated' | repeat: 5: '_' }}
+<!-- Returns Repeated_Repeated_Repeated_Repeated_Repeated -->
 ```
 
 

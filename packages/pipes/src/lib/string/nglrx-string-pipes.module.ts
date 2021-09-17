@@ -7,6 +7,7 @@ import { LowerCasePipe } from './lower-case/lower-case.pipe';
 import { PadEndPipe } from './pad-end/pad-end.pipe';
 import { PadStartPipe } from './pad-start/pad-start.pipe';
 import { PascalCasePipe } from './pascal-case/pascal-case.pipe';
+import { RepeatPipe } from './repeat/repeat.pipe';
 import { SentenceCasePipe } from './sentence-case/sentence-case.pipe';
 import { SlugifyPipe } from './slugify/slugify.pipe';
 import { SplitPipe } from './split/split.pipe';
@@ -24,6 +25,7 @@ const STRING_PIPES = [
   PadEndPipe,
   PadStartPipe,
   PascalCasePipe,
+  RepeatPipe,
   SentenceCasePipe,
   SlugifyPipe,
   SplitPipe,
