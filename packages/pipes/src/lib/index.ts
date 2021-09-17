@@ -38,6 +38,7 @@ export { LowerCasePipe } from './string/lower-case/lower-case.pipe';
 export { PadEndPipe } from './string/pad-end/pad-end.pipe';
 export { PadStartPipe } from './string/pad-start/pad-start.pipe';
 export { PascalCasePipe } from './string/pascal-case/pascal-case.pipe';
+export { RepeatPipe } from './string/repeat/repeat.pipe';
 export { SentenceCasePipe } from './string/sentence-case/sentence-case.pipe';
 export { SplitPipe } from './string/split/split.pipe';
 export { SlugifyPipe } from './string/slugify/slugify.pipe';
