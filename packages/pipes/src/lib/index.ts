@@ -47,4 +47,5 @@ export { TitleCasePipe } from './string/title-case/title-case.pipe';
 export { TrimPipe } from './string/trim/trim.pipe';
 export { TrimLeftPipe } from './string/trim-left/trim-left.pipe';
 export { TrimRightPipe } from './string/trim-right/trim-right.pipe';
+export { TruncatePipe } from './string/truncate/truncate.pipe';
 export { UpperCasePipe } from './string/upper-case/upper-case.pipe';
