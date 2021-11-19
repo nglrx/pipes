@@ -16,6 +16,7 @@ import { TitleCasePipe } from './title-case/title-case.pipe';
 import { TrimPipe } from './trim/trim.pipe';
 import { TrimLeftPipe } from './trim-left/trim-left.pipe';
 import { TrimRightPipe } from './trim-right/trim-right.pipe';
+import { TruncatePipe } from './truncate/truncate.pipe';
 import { UpperCasePipe } from './upper-case/upper-case.pipe';
 
 const STRING_PIPES = [
@@ -35,6 +36,7 @@ const STRING_PIPES = [
   TrimPipe,
   TrimLeftPipe,
   TrimRightPipe,
+  TruncatePipe,
   UpperCasePipe,
 ];
 

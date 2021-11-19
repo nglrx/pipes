@@ -89,6 +89,7 @@ export class YourComponent {
   - [trim](#trim)
   - [trimLeft](#trimleft)
   - [trimRight](#trimright)
+  - [truncate](#truncate)
   - [upperCase](#uppercase)
 - [Number Pipes](#number-pipes)
   - [abs](#abs)
@@ -322,6 +323,20 @@ Usage: `string | trimRight`
 ```html
 {{ ' This is a test string!  ' | trimRight }}
 <!-- Returns ' This is a test string!' -->
+```
+
+
+### truncate
+
+Shortens the given string to specified `length` followed by an ellipsis `'...'`.
+Optionally, you may also specify a suffix (string).
+An error is thrown if the value of `length` is less than 1.
+
+Usage: `string | truncate : length [ : suffix ]`
+
+```html
+{{ 'This is a test string!' | truncate : 14 }}
+<!-- Returns 'This is a test...' -->
 ```
 
 
