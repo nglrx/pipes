@@ -19,6 +19,11 @@ describe('TruncatePipe', () => {
     expect(pipe.transform('This is a test string!', 14, '.....')).toEqual('This is a test.....');
   });
 
+  it(`should truncate a string using specified length while preserving words`, () => {
+    expect(pipe.transform('This is a test string!', 13, '..', true)).toEqual('This is a test..');
+    expect(pipe.transform('This is a test string!', 15, undefined, true)).toEqual('This is a test string!');
+  });
+
   it(`should not truncate a string when specified length >= length of string`, () => {
     const str = 'This is a test string!';
     expect(pipe.transform(str, 22)).toEqual(str);
