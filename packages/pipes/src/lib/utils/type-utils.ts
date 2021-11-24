@@ -29,8 +29,17 @@ export class TypeUtils {
    * @param value value of any type
    * @returns true if undefined or null, else false
    */
-  static isNullOrUndefined(value: any) {
+  static isNullOrUndefined(value: any): boolean {
     return typeof value === 'undefined' || value === null;
+  }
+
+  /**
+   * Checks if string is null or empty
+   * @param value value of type string
+   * @returns true if null or empty, else false
+   */
+   static isNullOrEmpty(value: string): boolean {
+    return TypeUtils.isNullOrUndefined(value) || value.length === 0;
   }
 
 }
