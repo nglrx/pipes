@@ -94,6 +94,7 @@ export class YourComponent {
 - [Number Pipes](#number-pipes)
   - [abs](#abs)
   - [avg](#avg)
+  - [floor](#floor)
   - [max](#max)
   - [min](#min)
   - [pct](#pct)
@@ -378,6 +379,20 @@ Usage: `array | avg`
 ```html
 {{ [10, 45, 200, 5, 92] | avg }}
 <!-- Returns 70.4 -->
+```
+
+
+### floor
+
+Returns the greatest number with specified decimal places less than or equal to given number. By default the value is rounded-down to the nearest integer.
+
+Optionally, the number of decimal places to which the result should be rounded-down may also be specified.
+
+Usage: `number | floor [ : decimalPlaces]`
+
+```html
+{{ 1234.56789 | floor: 3 }}
+<!-- Returns 1234.567 -->
 ```
 
 
