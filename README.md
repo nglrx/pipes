@@ -94,6 +94,8 @@ export class YourComponent {
 - [Number Pipes](#number-pipes)
   - [abs](#abs)
   - [avg](#avg)
+  - [ceil](#ceil)
+  - [floor](#floor)
   - [max](#max)
   - [min](#min)
   - [pct](#pct)
@@ -381,6 +383,34 @@ Usage: `array | avg`
 ```
 
 
+### ceil
+
+Returns the smallest number with specified decimal places greater than or equal to given number. By default the value is rounded-up to the nearest integer.
+
+Optionally, the number of decimal places to which the result should be rounded-up may also be specified.
+
+Usage: `number | ceil [ : decimalPlaces]`
+
+```html
+{% raw %}{{ 9876.54321 | ceil: 2 }}
+<!-- Returns 9876.55 -->{% endraw %}
+```
+
+
+### floor
+
+Returns the greatest number with specified decimal places less than or equal to given number. By default the value is rounded-down to the nearest integer.
+
+Optionally, the number of decimal places to which the result should be rounded-down may also be specified.
+
+Usage: `number | floor [ : decimalPlaces]`
+
+```html
+{% raw %}{{ 1234.56789 | floor: 3 }}
+<!-- Returns 1234.567 -->{% endraw %}
+```
+
+
 ### max
 
 Finds the maximum from an array of numbers.
@@ -452,7 +482,7 @@ Usage: `number | round [ : decimalPlaces] [ : roundType ]`
 <!-- Returns 1234.567 -->
 
 {{ 9876.54321 | round: 2: RoundType.Ceil }}
-<!-- Returns 9876.54 -->{% endraw %}
+<!-- Returns 9876.55 -->{% endraw %}
 ```
 
 
