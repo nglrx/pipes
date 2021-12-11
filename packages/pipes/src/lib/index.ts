@@ -22,6 +22,7 @@ export { TypeOfPipe } from './generic/type-of/type-of.pipe';
 export { NglrxNumberPipesModule } from './number/nglrx-number-pipes.module';
 export { AbsPipe } from './number/abs/abs.pipe';
 export { AvgPipe } from './number/avg/avg.pipe';
+export { FloorPipe } from './number/floor/floor.pipe';
 export { MaxPipe } from './number/max/max.pipe';
 export { MinPipe } from './number/min/min.pipe';
 export { PctPipe } from './number/pct/pct.pipe';
