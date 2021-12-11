@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { AbsPipe } from './abs/abs.pipe';
 import { AvgPipe } from './avg/avg.pipe';
+import { CeilPipe } from './ceil/ceil.pipe';
 import { FloorPipe } from './floor/floor.pipe';
 import { MaxPipe } from './max/max.pipe';
 import { MinPipe } from './min/min.pipe';
@@ -14,6 +15,7 @@ import { SumPipe } from './sum/sum.pipe';
 const NUMBER_PIPES = [
   AbsPipe,
   AvgPipe,
+  CeilPipe,
   FloorPipe,
   MaxPipe,
   MinPipe,

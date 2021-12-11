@@ -94,6 +94,7 @@ export class YourComponent {
 - [Number Pipes](#number-pipes)
   - [abs](#abs)
   - [avg](#avg)
+  - [ceil](#ceil)
   - [floor](#floor)
   - [max](#max)
   - [min](#min)
@@ -379,6 +380,20 @@ Usage: `array | avg`
 ```html
 {{ [10, 45, 200, 5, 92] | avg }}
 <!-- Returns 70.4 -->
+```
+
+
+### ceil
+
+Returns the smallest number with specified decimal places greater than or equal to given number. By default the value is rounded-up to the nearest integer.
+
+Optionally, the number of decimal places to which the result should be rounded-up may also be specified.
+
+Usage: `number | ceil [ : decimalPlaces]`
+
+```html
+{{ 9876.54321 | ceil: 2 }}
+<!-- Returns 9876.55 -->
 ```
 
 
