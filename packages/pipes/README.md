@@ -482,7 +482,7 @@ Usage: `number | round [ : decimalPlaces] [ : roundType ]`
 <!-- Returns 1234.567 -->
 
 {{ 9876.54321 | round: 2: RoundType.Ceil }}
-<!-- Returns 9876.54 -->
+<!-- Returns 9876.55 -->
 ```
 
 

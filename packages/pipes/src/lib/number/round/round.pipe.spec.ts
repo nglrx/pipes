@@ -49,4 +49,20 @@ describe('RoundPipe', () => {
     expect(pipe.transform(-9876.54321, 3, RoundType.Ceil)).toEqual(-9876.543);
   });
 
+  it(`should return zero for round off of zero`, () => {
+    expect(pipe.transform(0)).toEqual(0);
+  });
+
+  it(`should return NaN for round off of NaN`, () => {
+    expect(pipe.transform(NaN)).toEqual(NaN);
+  });
+
+  it(`should return Infinity for round off of Infinity`, () => {
+    expect(pipe.transform(Infinity)).toEqual(Infinity);
+  });
+
+  it(`should be null safe`, () => {
+    expect(pipe.transform(null)).toEqual(0);
+  });
+
 });
