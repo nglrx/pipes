@@ -28,7 +28,7 @@
     "build:prod": "ng build --configuration production",
     "test:chrome": "ng test --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false",
     "test:edge": "ng test --browsers=EdgeHeadless --code-coverage --no-watch",
-    "test": "npm run test:edge",
+    "test": "npm run test:chrome",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "changelog": "github_changelog_generator -u nglrx -p pipes -t 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"
