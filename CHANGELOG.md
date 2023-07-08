@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1](https://github.com/nglrx/pipes/tree/0.8.1) (2021-12-11)
+
+[Full Changelog](https://github.com/nglrx/pipes/compare/0.7.1...0.8.1)
+
+**Merged pull requests:**
+
+- Develop [\#47](https://github.com/nglrx/pipes/pull/47) ([kneurgao](https://github.com/kneurgao))
+
 ## [0.7.1](https://github.com/nglrx/pipes/tree/0.7.1) (2021-08-24)
 
 [Full Changelog](https://github.com/nglrx/pipes/compare/0.7.0...0.7.1)
