@@ -31,7 +31,7 @@
     "test": "npm run test:chrome",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "changelog": "github_changelog_generator -u nglrx -p pipes -t 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"
+    "changelog": "github_changelog_generator -u nglrx -p pipes"
   },
   "private": false,
   "dependencies": {
