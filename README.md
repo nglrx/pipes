@@ -2,7 +2,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/nglrx/pipes)
 ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@nglrx/pipes)
 [![Build Status](https://travis-ci.org/nglrx/pipes.svg?branch=master)](https://travis-ci.org/nglrx/pipes)
-[![codecov](https://codecov.io/gh/nglrx/pipes/branch/master/graph/badge.svg)](https://codecov.io/gh/nglrx/pipes)
+[![codecov](https://codecov.io/gh/nglrx/pipes/branch/master/graph/badge.svg?token=0K2414DUM9)](https://codecov.io/gh/nglrx/pipes)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nglrx_pipes&metric=alert_status)](https://sonarcloud.io/dashboard?id=nglrx_pipes)
 ![npm](https://img.shields.io/npm/dm/@nglrx/pipes)
 ![GitHub](https://img.shields.io/github/license/nglrx/pipes?color=blue)
@@ -24,51 +24,47 @@ npm i @nglrx/pipes
 Import module `NglrxPipesModule` to your module for using all pipes.
 
 ```typescript
-import { NglrxPipesModule } from '@nglrx/pipes';
+import { NglrxPipesModule } from "@nglrx/pipes";
 
 @NgModule({
   //...
-  imports: [
-    NglrxPipesModule
-  ]
+  imports: [NglrxPipesModule],
 })
-export class YourModule { }
+export class YourModule {}
 ```
 
 Alternatively, you can use pipes from specific module(s) like `NglrxNumberPipesModule` or `NglrxStringPipesModule`.
 
 ## Usage of Pipes
 
-Pipes can be used in your component's *template*
+Pipes can be used in your component's _template_
 
 ```html
 {{ 'This-is-a-string' | length }}
 <!-- Returns 16 -->
 ```
 
-They can also be *chained*
+They can also be _chained_
 
 ```html
-{{ '  Another-string  ' | trim | length }}
+{{ ' Another-string ' | trim | length }}
 <!-- Returns 14 -->
 ```
 
-Or they can be used within *components* or *services* by calling the `transform` method
+Or they can be used within _components_ or _services_ by calling the `transform` method
 
 ```typescript
-import { LengthPipe } from '@nglrx/pipes';
+import { LengthPipe } from "@nglrx/pipes";
 
 @Component({
-  providers: [ LengthPipe ]
+  providers: [LengthPipe],
 })
 export class YourComponent {
-  
   constructor(private lengthPipe: LengthPipe) {
-    this.lengthPipe.transform('Yet-another-string'); // Returns 18
+    this.lengthPipe.transform("Yet-another-string"); // Returns 18
   }
 }
 ```
-
 
 ## Library of Pipes
 
@@ -118,11 +114,9 @@ export class YourComponent {
   - [reverse](#reverse)
   - [typeOf](#typeof)
 
-
 ## String Pipes
 
 A collection of pipes exported by `NglrxStringPipesModule`.
-
 
 ### camelCase
 
@@ -134,7 +128,6 @@ Usage: `string | camelCase`
 {{ 'Convert_to camel-case' | camelCase }}
 <!-- Returns 'convertToCamelCase' -->
 ```
-
 
 ### charAt
 
@@ -149,7 +142,6 @@ Range of position is from 0 (default) to n-1, where n is length of the string.
 <!-- Returns 'm' -->
 ```
 
-
 ### concat
 
 Concatenates one or more string(s) to current string at the end.
@@ -160,7 +152,6 @@ Usage: `string | concat: string1 [ : string2 ] ...`
 {{ 'This' | concat: ' is': ' a': ' string': '!' }}
 <!-- Returns 'This is a string!' -->
 ```
-
 
 ### interpolate
 
@@ -175,7 +166,6 @@ Usage: `string | interpolate: string1 [ : string2 ] ...`
 <!-- Returns 'This is an interpolated string!' -->
 ```
 
-
 ### lowerCase
 
 Converts a given string to lower case.
@@ -186,7 +176,6 @@ Usage: `string | lowerCase`
 {{ 'Convert TO LoWeR-case' | lowerCase }}
 <!-- Returns 'convert to lower-case' -->
 ```
-
 
 ### padEnd
 
@@ -200,7 +189,6 @@ Usage: `string | padEnd: maxLength [ : fillString ]`
 <!-- Returns 'This is a test string!-------' -->
 ```
 
-
 ### padStart
 
 Pads the given string with a fill string so that the resulting string reaches the specified max length. The fill string is prepended to the given string.\
@@ -213,7 +201,6 @@ Usage: `string | padStart: maxLength [ : fillString ]`
 <!-- Returns '-----This is a test string!' -->
 ```
 
-
 ### pascalCase
 
 Converts a string to pascal case and strips hyphens, underscores and whitespaces.
@@ -224,7 +211,6 @@ Usage: `string | pascalCase`
 {{ 'convert_to PASCAL-case' | pascalCase }}
 <!-- Returns 'ConvertToPascalCase' -->
 ```
-
 
 ### repeat
 
@@ -239,7 +225,6 @@ Usage: `string | repeat [ : count ] [ : delimiter ]`
 <!-- Returns Repeated_Repeated_Repeated_Repeated_Repeated -->
 ```
 
-
 ### sentenceCase
 
 Converts a string to sentence case.
@@ -250,7 +235,6 @@ Usage: `string | sentenceCase`
 {{ 'convert TO Sentence case.' | sentenceCase }}
 <!-- Returns 'Convert to sentence case.' -->
 ```
-
 
 ### slugify
 
@@ -265,7 +249,6 @@ Usage: `string | slugify [ : separator ]`
 <!-- Returns 'this_is_a_string' -->
 ```
 
-
 ### split
 
 Splits a given string into an array of sub-strings using an optional delimiter.\
@@ -279,7 +262,6 @@ Usage: `string | split [ : delimiter ] [ : limit ]`
 <!-- Returns ['This', 'is', 'a', 'string'] -->
 ```
 
-
 ### titleCase
 
 Converts a string to titleCase case.
@@ -291,7 +273,6 @@ Usage: `string | titleCase`
 <!-- Returns 'Convert To Title Case.' -->
 ```
 
-
 ### trim
 
 Strips the leading and trailing whitespaces from a given string.
@@ -299,10 +280,9 @@ Strips the leading and trailing whitespaces from a given string.
 Usage: `string | trim`
 
 ```html
-{{ ' This is a test string!  ' | trim }}
+{{ ' This is a test string! ' | trim }}
 <!-- Returns 'This is a test string!' -->
 ```
-
 
 ### trimLeft
 
@@ -311,10 +291,9 @@ Strips the leading whitespaces from a given string.
 Usage: `string | trimLeft`
 
 ```html
-{{ ' This is a test string!  ' | trimLeft }}
+{{ ' This is a test string! ' | trimLeft }}
 <!-- Returns 'This is a test string!  ' -->
 ```
-
 
 ### trimRight
 
@@ -323,10 +302,9 @@ Strips the trailing whitespaces from a given string.
 Usage: `string | trimRight`
 
 ```html
-{{ ' This is a test string!  ' | trimRight }}
+{{ ' This is a test string! ' | trimRight }}
 <!-- Returns ' This is a test string!' -->
 ```
-
 
 ### truncate
 
@@ -341,7 +319,6 @@ Usage: `string | truncate : length [ : suffix ]`
 <!-- Returns 'This is a test...' -->
 ```
 
-
 ### upperCase
 
 Converts a given string to upper case.
@@ -353,11 +330,9 @@ Usage: `string | upperCase`
 <!-- Returns 'CONVERT TO UPPER-CASE.' -->
 ```
 
-
 ## Number Pipes
 
 A collection of pipes exported by `NglrxNumberPipesModule`.
-
 
 ### abs
 
@@ -370,7 +345,6 @@ Usage: `number | abs`
 <!-- Returns 384 -->
 ```
 
-
 ### avg
 
 Returns the average of all numbers in a given array.
@@ -381,7 +355,6 @@ Usage: `array | avg`
 {{ [10, 45, 200, 5, 92] | avg }}
 <!-- Returns 70.4 -->
 ```
-
 
 ### ceil
 
@@ -396,7 +369,6 @@ Usage: `number | ceil [ : decimalPlaces]`
 <!-- Returns 9876.55 -->
 ```
 
-
 ### floor
 
 Returns the greatest number with specified decimal places less than or equal to given number. By default the value is rounded-down to the nearest integer.
@@ -410,7 +382,6 @@ Usage: `number | floor [ : decimalPlaces]`
 <!-- Returns 1234.567 -->
 ```
 
-
 ### max
 
 Finds the maximum from an array of numbers.
@@ -422,7 +393,6 @@ Usage: `array | max`
 <!-- Returns 200 -->
 ```
 
-
 ### min
 
 Finds the minimum from an array of numbers.
@@ -433,7 +403,6 @@ Usage: `array | min`
 {{ [10, 45, 200, 5, 92] | min }}
 <!-- Returns 5 -->
 ```
-
 
 ### pct
 
@@ -447,7 +416,6 @@ Usage: `number | pct [ : total ] [ : decimalPlaces ]`
 <!-- Returns 5.18 -->
 ```
 
-
 ### pow
 
 Returns the value of the base raised to a specified power.\
@@ -459,7 +427,6 @@ Usage: `base | pow [ : exponent ]`
 {{ 4 | pow: 3 }}
 <!-- Returns 64 -->
 ```
-
 
 ### round
 
@@ -485,7 +452,6 @@ Usage: `number | round [ : decimalPlaces] [ : roundType ]`
 <!-- Returns 9876.55 -->
 ```
 
-
 ### sqrt
 
 Returns the square root of given number.
@@ -496,7 +462,6 @@ Usage: `number | sqrt`
 {{ 625 | sqrt }}
 <!-- Returns 25 -->
 ```
-
 
 ### sum
 
@@ -509,11 +474,9 @@ Usage: `array | sum`
 <!-- Returns 352 -->
 ```
 
-
 ## Array Pipes
 
 A collection of pipes exported by `NglrxArrayPipesModule`.
-
 
 ### combine
 
@@ -525,7 +488,6 @@ Usage: `array | combine [ : element | array ]...`
 {{ ['a', 'b', 'c'] | combine: ['d', 'e']: 'f' }}
 <!-- Returns ['a', 'b', 'c', 'd', 'e', 'f'] -->
 ```
-
 
 ### copyWithin
 
@@ -540,7 +502,6 @@ Usage: `array | copyWithin : target [ : start ] [ : end ]`
 {{ [1, 2, 3, 4, 5, 6] | copyWithin: 4: 1: -3 }}
 <!-- Returns [1, 2, 3, 4, 2, 3] -->
 ```
-
 
 ### every
 
@@ -559,7 +520,6 @@ Usage: `array | every : callbackFn`
 <!-- Returns false -->
 ```
 
-
 ### fill
 
 Fills the portion of array marked by start and end with specified `value` of same type as array.
@@ -573,7 +533,6 @@ Usage: `array | fill : value [ : start ] [ : end ]`
 {{ ['a', 'b', 'c', 'd', 'e', 'f'] | fill: '-': 2: -2 }}
 <!-- Returns ['a', 'b', '-', '-', 'e', 'f'] -->
 ```
-
 
 ### first
 
@@ -596,7 +555,6 @@ Usage: `array | first [ : count ]`
 <!-- Returns [1, 2, 3] -->
 ```
 
-
 ### join
 
 Creates a string by concatenating all the strings in the given array using a separator.\
@@ -608,7 +566,6 @@ Usage: `array | join [ : separator ]`
 {{ ['This', 'is', 'a', 'string'] | join: '_' }}
 <!-- Returns 'This_is_a_string' -->
 ```
-
 
 ### last
 
@@ -631,7 +588,6 @@ Usage: `array | last [ : count ]`
 <!-- Returns [3, 4, 5] -->
 ```
 
-
 ### map
 
 Calls the specified callback function on each element of the given array, and returns an array of results returned by callback function.
@@ -648,7 +604,6 @@ Usage: `array | map : callbackFn`
 {{ [1, 2, 3, 4, 5] | map: (n: number) => n * n) }}
 <!-- Returns [1, 4, 9, 16, 25] -->
 ```
-
 
 ### some
 
@@ -667,11 +622,9 @@ Usage: `array | some : callbackFn`
 <!-- Returns true -->
 ```
 
-
 ## Generic Pipes
 
 A collection of pipes exported by `NglrxGenericPipesModule`.
-
 
 ### length
 
@@ -689,7 +642,6 @@ Usage: `value | length`
 <!-- Returns 5 -->
 ```
 
-
 ### reverse
 
 Reverses a given value of any supported type.\
@@ -705,7 +657,6 @@ Usage: `value | reverse`
 {{ ['a', 'b', 'c', 'd', 'e'] | reverse }}
 <!-- Returns ['e', 'd', 'c', 'b', 'a'] -->
 ```
-
 
 ### typeOf
 
