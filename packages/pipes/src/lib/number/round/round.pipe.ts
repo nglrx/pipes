@@ -7,7 +7,8 @@ export enum RoundType {
 }
 
 @Pipe({
-  name: 'round'
+    name: 'round',
+    standalone: false
 })
 export class RoundPipe implements PipeTransform {
 

@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { StringUtils } from '../../utils/string-utils';
 
 @Pipe({
-  name: 'charAt'
+    name: 'charAt',
+    standalone: false
 })
 export class CharAtPipe implements PipeTransform {
 

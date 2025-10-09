@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'combine'
+    name: 'combine',
+    standalone: false
 })
 export class CombinePipe implements PipeTransform {
 

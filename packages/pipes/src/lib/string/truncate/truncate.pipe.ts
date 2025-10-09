@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
-  name: 'truncate',
+    name: 'truncate',
+    standalone: false
 })
 export class TruncatePipe implements PipeTransform {
   private static readonly DEFAULT_SUFFIX = '...';

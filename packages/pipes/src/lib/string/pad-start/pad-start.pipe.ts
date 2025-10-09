@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
-  name: 'padStart'
+    name: 'padStart',
+    standalone: false
 })
 export class PadStartPipe implements PipeTransform {
 

@@ -4,7 +4,8 @@ import { NumberUtils } from '../../utils/number-utils';
 import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
-  name: 'avg'
+    name: 'avg',
+    standalone: false
 })
 export class AvgPipe implements PipeTransform {
 

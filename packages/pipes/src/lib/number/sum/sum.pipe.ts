@@ -4,7 +4,8 @@ import { NumberUtils } from '../../utils/number-utils';
 import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
-  name: 'sum'
+    name: 'sum',
+    standalone: false
 })
 export class SumPipe implements PipeTransform {
 

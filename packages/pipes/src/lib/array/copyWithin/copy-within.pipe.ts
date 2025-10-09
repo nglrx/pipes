@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'copyWithin'
+    name: 'copyWithin',
+    standalone: false
 })
 export class CopyWithinPipe implements PipeTransform {
 

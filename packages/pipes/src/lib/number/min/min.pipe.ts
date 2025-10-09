@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
-  name: 'min'
+    name: 'min',
+    standalone: false
 })
 export class MinPipe implements PipeTransform {
 

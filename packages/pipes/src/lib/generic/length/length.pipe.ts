@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { TypeUtils } from '../../utils/type-utils';
 
 @Pipe({
-  name: 'length'
+    name: 'length',
+    standalone: false
 })
 export class LengthPipe implements PipeTransform {
 
